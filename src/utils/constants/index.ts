@@ -6,3 +6,9 @@ export const headerNavLinks = [
 	{ title: 'Магазины', href: '#' },
 	{ title: 'Пункт выдачи', href: '#' },
 ];
+
+export const headerContactPhoneNums = [
+	{ title: '0550 550 550', href: 'tel:0550550550' },
+	{ title: '0550 550 550', href: 'tel:0550550550' },
+	{ title: '0550 550 550', href: 'tel:0550550550' },
+];
