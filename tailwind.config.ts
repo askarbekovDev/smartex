@@ -11,8 +11,10 @@ export default {
   ],
   theme: {
     screens: {
-      w1200: { max: '1200px' },
-      w1100: { max: '1100px' },
+      w1440: { max: '1440px' },
+      w1350: { max: '1350px' },
+      w1250: { max: '1250px' },
+      w1150: { max: '1150px' },
       w1050: { max: '1050px' },
       w950: { max: '950px' },
       w850: { max: '850px' },

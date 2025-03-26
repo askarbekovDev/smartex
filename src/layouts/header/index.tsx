@@ -8,7 +8,8 @@ import {
 } from '../../../public/icons/index';
 import Link from 'next/link';
 import Image from 'next/image';
-import { headerContactPhoneNums, headerNavLinks } from '@/utils/constants';
+import { headerContactPhoneNums } from '@/utils/constants';
+import { BurgerMenu, NavLinks } from '@/components';
 
 export const Header: FC = () => {
 	return (
@@ -33,7 +34,7 @@ export const Header: FC = () => {
 						</Link>
 						<div
 							className='absolute left-[-10px] pointer-events-none top-[39px] bg-white shadow-xl rounded-b-2xl opacity-0 translate-y-[-10px] 
-            transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 px-4 py-[10px]'
+            transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 px-4 py-[10px] z-10'
 						>
 							{headerContactPhoneNums.map((phoneNum, idx) => (
 								<div
@@ -53,29 +54,12 @@ export const Header: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className='container flex items-center justify-between w-full h-20  px-[150px]'>
+			<div className='container flex items-center justify-between w-full h-20'>
 				<Link href='/'>
 					<Image src='images/main-logo.svg' width={110} height={34} alt='Smartex' />
 				</Link>
-				<div className='flex items-center gap-5 uiNavLink'>
-					{headerNavLinks.map((navLink, idx) => (
-						<Link
-							className='hover:text-secondary hover:underline underline-offset-4 decoration-[1px]'
-							key={idx}
-							href={navLink.href}
-						>
-							{navLink.title}
-						</Link>
-					))}
-					<span className='flex gap-5 uiBtnText'>
-						<Link className='text-white px-4 py-2 rounded-2xl bg-success' href='#'>
-							Войти
-						</Link>
-						<Link className='px-4 py-2 rounded-2xl border-[1px] border-success' href='#'>
-							Регистрация
-						</Link>
-					</span>
-				</div>
+				<BurgerMenu />
+				<NavLinks />
 			</div>
 		</header>
 	);
