@@ -1,4 +1,9 @@
+import { FAQ } from '@/components';
+
 export default function Home() {
-  return <div className='h1'>HOME PAGE
-  </div>;
+	return (
+		<div className='container'>
+			<FAQ />
+		</div>
+	);
 }
