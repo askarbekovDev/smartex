@@ -22,7 +22,7 @@ export const BurgerMenu: FC = () => {
 						Войти
 					</Link>
 					<Link
-						className='w-full text-center py-3 rounded-lg border-[1px] border-success mb-32'
+						className='w-full text-center py-3 rounded-lg border-[1px] border-success mb-10'
 						href='#'
 					>
 						Регистрация
