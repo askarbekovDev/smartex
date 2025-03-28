@@ -1,0 +1,1 @@
+import { NewsCart } from "./NewsCart"

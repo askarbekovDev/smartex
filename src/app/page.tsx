@@ -1,4 +1,9 @@
+import { NewsBlock } from '@/modules';
+
 export default function Home() {
-  return <div className='h1'>HOME PAGE
-  </div>;
+	return (
+		<>
+			<NewsBlock />
+		</>
+	);
 }

@@ -14,7 +14,8 @@
   --warning: #ffa000; /* Желтый-оранжевый (предупреждение) */
   --info: #1976d2; /* Синий (информация) */
   --dark: #242426; /* Глубокий черный */
-
+  --black: #000000;
+  --white: #ffffff;
   --font-lato: 'Lato', sans-serif;
   --font-rubik: 'Rubik', sans-serif;
 }
