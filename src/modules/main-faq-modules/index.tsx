@@ -20,7 +20,7 @@ export const FAQ = () => {
 					{smart.map((item) => (
 						<SelectFaq
 							key={item.id}
-							variant='green'
+							variant='red'
 							title={item.title}
 							image={item.image}
 							description={item.description}

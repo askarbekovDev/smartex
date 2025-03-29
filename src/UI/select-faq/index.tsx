@@ -21,7 +21,7 @@ export const SelectFaq = ({
 }: SelectFaqProps) => {
 	const icon = image || (variant === 'red' ? DontIcon : FaqIcon);
 	const baseClass =
-		'h-[56px] rounded-[8px] flex items-center px-[16px] cursor-pointer transition-colors duration-200 border-b  w750:border-b w750:rounded-none  w750:border-b-gray-300 ';
+		'min-h-[56px] text-wrap break-normal whitespace-normal w-full rounded-[8px] flex items-center px-[16px] cursor-pointer transition-colors duration-200 border border-solid border-[#CAC9C9] w750:rounded-none w750:border-none w750:border-b w750:border-b-gray-300';
 
 	const activeClass = isActive
 		? 'bg-success text-background border-success'
@@ -32,7 +32,7 @@ export const SelectFaq = ({
 			return (
 				<>
 					<div
-						className={`w750:w-full flex flex-row-reverse justify-end gap-3 ${baseClass} ${activeClass} `}
+						className={`flex justify-between break-normal whitespace-normal gap-3 w750:border-none w750:border-b w750:border-b-gray-300 ${baseClass} ${activeClass}`}
 						onClick={onClick}
 					>
 						<div>{title}</div>
@@ -42,13 +42,13 @@ export const SelectFaq = ({
 					{isActive && (
 						<div
 							className={`
-						w750:block hidden
-						overflow-hidden
-						transition-[max-height,opacity]
-						duration-700
-						ease-in-out
-						${isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'}
-					`}
+						  w750:block hidden
+						  overflow-hidden
+						  transition-[max-height,opacity]
+						  duration-700
+						  ease-in-out
+						  ${isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'}
+					    `}
 						>
 							<p className='text-sm text-gray-600 leading-relaxed'>{description}</p>
 						</div>
@@ -60,7 +60,7 @@ export const SelectFaq = ({
 			return (
 				<>
 					<div
-						className={`w-full w750:w-full w750:max-w-full  flex flex-row-reverse justify-end gap-3 ${baseClass} rounded-[8px] border border-solid border-gray-200 ${activeClass}`}
+						className={`w-full w750:w-full w750:max-w-full w750:border-none w750:border-b w750:border-b-gray-300 flex flex-row-reverse justify-end gap-3 ${baseClass} rounded-[8px] border border-solid border-gray-200 ${activeClass}`}
 						onClick={onClick}
 					>
 						<div>{title}</div>
