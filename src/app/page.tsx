@@ -1,4 +1,4 @@
-import { FAQ } from '@/components';
+import { FAQ } from '@/modules';
 
 export default function Home() {
 	return (

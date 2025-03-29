@@ -1,0 +1,44 @@
+'use client';
+import { SelectFaq } from '@/UI';
+import Image from 'next/image';
+import { useState } from 'react';
+import FaqIcon from '../../../public/icons/faq-icon.svg';
+import { smart } from './constants';
+
+export const FAQ = () => {
+	const [activeId, setActiveId] = useState<number | null>(1);
+
+	const activeItem = smart.find((item) => item.id === activeId);
+	console.log(activeItem);
+	return (
+		<section className='w-full'>
+			<div className='mb-6'>
+				<h1 className='text-2xl md:text-3xl font-bold text-gray-800'>Популярные вопросы</h1>
+			</div>
+			<div className='flex gap-6 w-full'>
+				<div className='flex flex-col w-full gap-4'>
+					{smart.map((item) => (
+						<SelectFaq
+							key={item.id}
+							variant='green'
+							title={item.title}
+							image={item.image}
+							description={item.description}
+							isActive={activeId === item.id}
+							onClick={() => setActiveId(activeId === item.id ? null : item.id)}
+						/>
+					))}
+				</div>
+
+				<div className='w-full max-w-[558px] h-fit border w750:hidden border-gray-300 rounded-lg flex p-4 shadow-sm items-start gap-4'>
+					{activeItem ? (
+						<p className='text-sm text-gray-600 leading-relaxed'>{activeItem?.description}</p>
+					) : (
+						<p>Что за вопрос вас инетересуют</p>
+					)}
+					<Image src={FaqIcon} alt='FaqIcon' className='w-6 h-6 mt-1 shrink-0' />
+				</div>
+			</div>
+		</section>
+	);
+};

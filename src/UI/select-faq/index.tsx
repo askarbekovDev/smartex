@@ -8,6 +8,7 @@ interface SelectFaqProps {
 	image?: StaticImageData;
 	isActive?: boolean;
 	onClick?: () => void;
+	description?: string;
 }
 
 export const SelectFaq = ({
@@ -16,11 +17,12 @@ export const SelectFaq = ({
 	variant = 'green',
 	isActive = false,
 	onClick,
+	description,
 }: SelectFaqProps) => {
 	const icon = image || (variant === 'red' ? DontIcon : FaqIcon);
-
 	const baseClass =
-		'h-[56px] rounded-[8px] flex items-center border px-[16px] cursor-pointer transition-colors duration-200';
+		'h-[56px] rounded-[8px] flex items-center px-[16px] cursor-pointer transition-colors duration-200 border-b  w750:border-b w750:rounded-none  w750:border-b-gray-300 ';
+
 	const activeClass = isActive
 		? 'bg-success text-background border-success'
 		: 'bg-background text-primary border-[#CAC9C9]';
@@ -28,35 +30,70 @@ export const SelectFaq = ({
 	switch (variant) {
 		case 'green':
 			return (
-				<div
-					className={`max-w-[558px] justify-between ${baseClass} ${activeClass}`}
-					onClick={onClick}
-				>
-					<div>{title}</div>
-					<Image src={FaqIcon} alt='FaqIcon' />
-				</div>
+				<>
+					<div
+						className={`w750:w-full flex flex-row-reverse justify-end gap-3 ${baseClass} ${activeClass} `}
+						onClick={onClick}
+					>
+						<div>{title}</div>
+						<Image src={FaqIcon} alt='FaqIcon' />
+					</div>
+
+					{isActive && (
+						<div
+							className={`
+						w750:block hidden
+						overflow-hidden
+						transition-[max-height,opacity]
+						duration-700
+						ease-in-out
+						${isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'}
+					`}
+						>
+							<p className='text-sm text-gray-600 leading-relaxed'>{description}</p>
+						</div>
+					)}
+				</>
 			);
 
 		case 'red':
 			return (
-				<div
-					className={`max-w-[317px] flex-row-reverse justify-end gap-3 ${baseClass} ${activeClass}`}
-					onClick={onClick}
-				>
-					<div>{title}</div>
-					<Image src={DontIcon} alt='DontIcon' />
-				</div>
+				<>
+					<div
+						className={`w-full w750:w-full w750:max-w-full  flex flex-row-reverse justify-end gap-3 ${baseClass} rounded-[8px] border border-solid border-gray-200 ${activeClass}`}
+						onClick={onClick}
+					>
+						<div>{title}</div>
+						<Image src={DontIcon} alt='DontIcon' />
+					</div>
+					{isActive && (
+						<div
+							className={`
+                    w750:block hidden
+                    overflow-hidden
+                    transition-[max-height,opacity]
+                    duration-700
+                    ease-in-out
+                    ${isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'}
+                  `}
+						>
+							<p className='text-sm text-gray-600 leading-relaxed'>{description}</p>
+						</div>
+					)}
+				</>
 			);
 
 		case 'orange':
 			return (
-				<div
-					className={`max-w-[317px] flex-row-reverse justify-end gap-3 ${baseClass} ${activeClass}`}
-					onClick={onClick}
-				>
-					<div>{title}</div>
-					<Image src={icon} alt='SmartIcon' />
-				</div>
+				<>
+					<div
+						className={`w750:w-full flex-row-reverse justify-end gap-3 ${baseClass} ${activeClass}`}
+						onClick={onClick}
+					>
+						<div>{title}</div>
+						<Image src={icon} alt='SmartIcon' />
+					</div>
+				</>
 			);
 
 		default:
