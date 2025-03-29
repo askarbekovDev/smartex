@@ -1,0 +1,46 @@
+'use client';
+
+import React, { useRef, useState } from 'react';
+import clsx from 'clsx';
+
+interface ToggleButtonProps {
+	buttons: string[];
+	defaultWidth: number;
+}
+
+export const ToggleButton = ({ buttons, defaultWidth }: ToggleButtonProps) => {
+	const [activeIndex, setActiveIndex] = useState<number>(0);
+	const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+	const handleClickBtn = (index: number) => {
+		setActiveIndex(index);
+	};
+
+	return (
+		<div className='relative w-fit rounded h-10 border border-[#CAC9C9] flex'>
+			<div
+				className='absolute h-full bg-success transition-all duration-300 rounded'
+				style={{
+					width: buttonRefs.current[activeIndex]?.offsetWidth || defaultWidth,
+					left: buttonRefs.current[activeIndex]?.offsetLeft || 0,
+				}}
+			></div>
+
+			{buttons.map((label, index) => (
+				<button
+					key={index}
+					ref={(el) => {
+						if (el) buttonRefs.current[index] = el;
+					}}
+					className={clsx(
+						'relative supportCaption px-4 py-2 cursor-pointer border-0 outline-0 text-center transition-colors',
+						activeIndex === index ? 'text-white' : 'text-black'
+					)}
+					onClick={() => handleClickBtn(index)}
+				>
+					{label}
+				</button>
+			))}
+		</div>
+	);
+};
