@@ -34,7 +34,7 @@ export const Header: FC = () => {
 						</Link>
 						<div
 							className='absolute left-[-10px] pointer-events-none top-[39px] bg-white shadow-xl rounded-b-2xl opacity-0 translate-y-[-10px] 
-            transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 px-4 py-[10px] z-10'
+            transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 px-4 py-[10px] z-30'
 						>
 							{headerContactPhoneNums.map((phoneNum, idx) => (
 								<div
