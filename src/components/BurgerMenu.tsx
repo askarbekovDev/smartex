@@ -5,21 +5,13 @@ import { Burger, CloseIcon } from '../../public/icons';
 import { headerNavLinks } from '@/utils/constants';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { Backdrop } from '@/UI/Backdrop';
 
 export const BurgerMenu: FC = () => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(false);
 	return (
 		<>
-			<div
-				onClick={() => setMenuOpen(false)}
-				className={clsx(
-					'fixed inset-0 bg-black/40 transition-all duration-300 z-30',
-					{
-						'opacity-100 pointer-events-auto': menuOpen,
-						'opacity-0 pointer-events-none': !menuOpen,
-					}
-				)}
-			></div>
+			<Backdrop isOpen={menuOpen} setIsOpen={setMenuOpen} />
 			<div className='hidden group relative w1150:block'>
 				<div className='cursor-pointer py-1 pl-2' onClick={() => setMenuOpen(true)}>
 					<Burger />

@@ -1,34 +1,35 @@
 'use client';
 
 import React, { FC, useState } from 'react';
-import { MailIcon } from '../../public/icons';
+import { CloseIcon, MailIcon } from '../../public/icons';
 import clsx from 'clsx';
+import { Backdrop } from '@/UI/Backdrop';
 
 export const ContactUsPopUp: FC = () => {
 	const [feedbackOpen, setFeedbackOpen] = useState<boolean>(false);
 	return (
 		<>
+			<Backdrop isOpen={feedbackOpen} setIsOpen={setFeedbackOpen} />
 			<div onClick={() => setFeedbackOpen(true)} className='cursor-pointer'>
 				<MailIcon />
 			</div>
 			<div
-				onClick={() => setFeedbackOpen(false)}
 				className={clsx(
-					'fixed inset-0 bg-black/40 transition-all duration-300 z-30',
+					'absolute top-12 rounded-2xl max-w-[588px] w-full h-fit bg-white transition-all duration-300 z-40',
 					{
-						'opacity-100 pointer-events-auto': feedbackOpen,
-						'opacity-0 pointer-events-none': !feedbackOpen,
+						'scale-100 opacity-100': feedbackOpen,
+						'scale-50 opacity-0': !feedbackOpen,
 					}
 				)}
 			>
+				<h4 className='h4 text-secondary-text p-12'>Свяжитесь с нами</h4>
+				<div
+					onClick={() => setFeedbackOpen(false)}
+					className='absolute top-5 right-8 cursor-pointer'
+				>
+					<CloseIcon />
+				</div>
 			</div>
-      <div
-					onClick={(e) => e.stopPropagation()}
-					className={clsx('absolute ml-20 mt-20 w-[588px] h-[726px] bg-white transition-all duration-300', {
-						'scale-100': feedbackOpen,
-						'scale-50 hidden': !feedbackOpen,
-					})}
-				></div>
 		</>
 	);
 };

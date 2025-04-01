@@ -9,8 +9,6 @@ export default function Home() {
 			<IntroBlock />
 			<IntroBlock />
 			<IntroBlock />
-			<IntroBlock />
-			<IntroBlock />
 		</div>
 	);
 }
