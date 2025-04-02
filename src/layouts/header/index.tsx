@@ -8,8 +8,7 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import { headerContactPhoneNums } from '@/utils/constants';
-import { BurgerMenu, NavLinks } from '@/components';
-import { ContactUsPopUp } from '@/components/ContactUsPopUp';
+import { BurgerMenu, ContactUsForm, NavLinks } from '@/components';
 
 export const Header: FC = () => {
 	return (
@@ -23,7 +22,7 @@ export const Header: FC = () => {
 						<Link href='#'>
 							<TelegramIcon />
 						</Link>
-						<ContactUsPopUp />
+						<ContactUsForm />
 					</div>
 					<div className='flex items-center h-full relative group'>
 						<Link href='#' className='flex items-center h-full uiNavLink gap-2 text-white'>
