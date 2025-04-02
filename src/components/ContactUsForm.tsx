@@ -1,12 +1,12 @@
 'use client';
 
 import React, { FC, useEffect, useState } from 'react';
-import { CloseIcon, MailIcon } from '../../public/icons';
-import clsx from 'clsx';
-import { Backdrop, CustomInput } from '@/UI';
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useForm } from 'react-hook-form';
+import clsx from 'clsx';
+import { CloseIcon, MailIcon } from '../../public/icons';
+import { Backdrop, CustomInput } from '@/UI';
 
 const formSchema = z.object({
 	fullName: z.string().min(3, 'Введите полное имя'),
@@ -48,6 +48,7 @@ export const ContactUsForm: FC = () => {
 
 	const onSubmit = (data: FormData) => {
 		console.log('Отправленные данные:', data);
+		setFeedbackOpen(false);
 		reset();
 	};
 
@@ -83,55 +84,48 @@ export const ContactUsForm: FC = () => {
 					</div>
 
 					<form onSubmit={handleSubmit(onSubmit)} className='w-full pt-6 space-y-4'>
-						<div>
-							<span className='bodyText'>
-								{errors.fullName ? (
-									<span className='text-red-500'>{errors.fullName.message}</span>
-								) : (
-									'*Ф.И.О'
-								)}
-							</span>
-							<CustomInput placeholder='*Ф.И.О' {...register('fullName')} />
-						</div>
+						<span className='bodyText'>
+							{errors.fullName ? (
+								<span className='text-error'>{errors.fullName.message}</span>
+							) : (
+								'*Ф.И.О'
+							)}
+						</span>
+						<CustomInput placeholder='*Ф.И.О' {...register('fullName')} />
 
-						<div>
-							<span className='bodyText'>
-								{errors.email ? (
-									<span className='text-red-500'>{errors.email.message}</span>
-								) : (
-									'*Электронный адрес'
-								)}
-							</span>
-							<CustomInput type='email' placeholder='*Электронный адрес' {...register('email')} />
-						</div>
+						<span className='bodyText'>
+							{errors.email ? (
+								<span className='text-error'>{errors.email.message}</span>
+							) : (
+								'*Электронный адрес'
+							)}
+						</span>
+						<CustomInput type='email' placeholder='*Электронный адрес' {...register('email')} />
 
-						<div>
-							<span className='bodyText'>
-								{errors.phoneNumber ? (
-									<span className='text-red-500'>{errors.phoneNumber.message}</span>
-								) : (
-									'*Номер телефона'
-								)}
-							</span>
-							<CustomInput type='tel' placeholder='*Номер телефона' {...register('phoneNumber')} />
-						</div>
+						<span className='bodyText'>
+							{errors.phoneNumber ? (
+								<span className='text-error'>{errors.phoneNumber.message}</span>
+							) : (
+								'*Номер телефона'
+							)}
+						</span>
+						<CustomInput type='tel' placeholder='*Номер телефона' {...register('phoneNumber')} />
 
-						<div>
-							<span className='bodyText'>
-								{errors.message ? (
-									<span className='text-red-500'>{errors.message.message}</span>
-								) : (
-									'*Написать сообщение'
-								)}
-							</span>
-							<textarea
-								className='w-full py-4 px-5 bodyText placeholder:text-secondary-text text-primary-text 
+						<span className='bodyText'>
+							{errors.message ? (
+								<span className='text-error'>{errors.message.message}</span>
+							) : (
+								'*Написать сообщение'
+							)}
+						</span>
+
+						<textarea
+							className='w-full py-4 px-5 bodyText placeholder:text-secondary-text text-primary-text 
 							           border-1 border-border rounded-lg outline-0 bg-background resize-none w550:bg-white'
-								placeholder='*Напишите ваше сообщение...'
-								rows={7}
-								{...register('message')}
-							></textarea>
-						</div>
+							placeholder='*Напишите ваше сообщение...'
+							rows={7}
+							{...register('message')}
+						></textarea>
 
 						<button
 							type='submit'
