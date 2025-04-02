@@ -12,5 +12,3 @@ export const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(({ ...
 		/>
 	);
 });
-
-CustomInput.displayName = 'CustomInput';
