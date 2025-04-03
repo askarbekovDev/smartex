@@ -1,7 +1,7 @@
 'use client';
 
 import React, { FC, useState } from 'react';
-import { BurgerTablet, CloseIconTablet } from '../../public/icons';
+import { BurgerMobile, BurgerTablet, CloseIconTablet } from '../../public/icons';
 import { headerNavLinks } from '@/utils/constants';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -13,8 +13,11 @@ export const BurgerMenu: FC = () => {
 		<>
 			<Backdrop isOpen={menuOpen} setIsOpen={setMenuOpen} />
 			<div className='hidden group relative w1150:block'>
-				<div className='cursor-pointer py-1 pl-2' onClick={() => setMenuOpen(true)}>
+				<div className='cursor-pointer py-1 pl-2 w550:hidden' onClick={() => setMenuOpen(true)}>
 					<BurgerTablet />
+				</div>
+				<div className='hidden cursor-pointer py-1 pl-2 w550:block' onClick={() => setMenuOpen(true)}>
+					<BurgerMobile />
 				</div>
 				<div
 					className={clsx(
