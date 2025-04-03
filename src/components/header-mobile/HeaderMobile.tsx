@@ -22,26 +22,19 @@ export const HeaderMobile: FC = () => {
 			<div className='relative flex justify-between items-end border-border border-r-1 border-l-1 w-full h-full'>
 				<div
 					className={clsx('absolute bottom-4 left-4 transition-all duration-500', {
-						'translate-y-0 pointer-events-auto': !menuOpen,
-						'translate-y-14 pointer-events-none': menuOpen,
+						'translate-y-0 pointer-events-auto opacity-100': !menuOpen,
+						'translate-y-14 pointer-events-none opacity-0': menuOpen,
 					})}
 				>
 					<Link href='/'>
 						<Image src='images/main-logo.svg' width={110} height={34} alt='Smartex' />
 					</Link>
 				</div>
-				<div
-					className={clsx('pl-4 pb-3 transition-all duration-500', {
-						'translate-x-0 opacity-100 pointer-events-auto': menuOpen,
-						'translate-x-50 opacity-0 pointer-events-none': !menuOpen,
-					})}
-				>
-					<MobileNumsMenu />
-					<SocialMediaLinks />
-				</div>
+				<MobileNumsMenu />
+				<SocialMediaLinks />
 				<div
 					onClick={() => setMenuOpen(!menuOpen)}
-					className='relative flex justify-center items-center w-17 h-17 border-border border-l-1 border-t-1 rounded-tl-[20px]'
+					className='flex justify-center items-center w-17 h-17 border-border border-l-1 border-t-1 rounded-tl-[20px]'
 				>
 					{menuOpen ? <CloseIconMobile /> : <BurgerMobile />}
 					<DropDownMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

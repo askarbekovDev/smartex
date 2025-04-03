@@ -12,18 +12,21 @@ type DropDownMenuProps = {
 export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) => {
 	return (
 		<div
+    onClick={e=>e.stopPropagation()}
 			className={clsx(
 				`absolute w-[350px] px-14 py-10 gap-3 z-40 flex flex-col transition-all duration-500 whitespace-nowrap right-0 top-[-24px] 
-						bg-whte shadow-xl rounded-b-2xl w750:w-[300px] w750:px-10 w550:w-[250px] w550:px-8 w550:gap-2 w550:pb-6
-            bg-red-600`,
+						bg-white shadow-xl rounded-b-2xl w750:w-[300px] w750:px-10
+            w550:top-[107px] w550:w-full w550:rounded-b-none w550:px-px w550:shadow-none w550:-translate-x-1/2 w550:left-1/2`,
 				{
 					'pointer-events-auto opacity-100 translate-y-0': menuOpen,
-					'opacity-0 pointer-events-none translate-y-[-10px]': !menuOpen,
+					'opacity-0 pointer-events-none translate-y-[-10px] w550:translate-y-[-40px]': !menuOpen,
 				}
 			)}
 		>
+			<div className='hidden w550:block absolute h-full w-10 bg-white top-0 left-[-39px]'></div>
+			<div className='hidden w550:block absolute h-full w-10 bg-white top-0 right-[-39px]'></div>
 			<div
-				className='absolute right-8 top-4 cursor-pointer w750:right-6 w550:right-4'
+				className='absolute right-8 top-4 cursor-pointer w750:right-6 w550:hidden'
 				onClick={() => setMenuOpen(false)}
 			>
 				<CloseIconTablet />

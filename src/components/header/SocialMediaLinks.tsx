@@ -5,7 +5,7 @@ import { ContactUsForm } from './ContactUsForm';
 
 export const SocialMediaLinks: FC = () => {
 	return (
-		<div className='flex items-center gap-4'>
+		<div className='flex items-center gap-4 bg-red-500'>
 			<Link href='#'>
 				<InstagramIcon />
 			</Link>
