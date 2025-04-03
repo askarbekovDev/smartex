@@ -8,13 +8,13 @@ export default function Home() {
 			<br />
 			<br />
 			<br />
-			
+{/* 			
 			<IntroBlock />
 			<IntroBlock />
 			<IntroBlock />
 			<IntroBlock />
 			<IntroBlock />
-			<IntroBlock />
+			<IntroBlock /> */}
 		</div>
 	);
 }
