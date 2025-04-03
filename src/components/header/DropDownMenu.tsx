@@ -12,7 +12,7 @@ type DropDownMenuProps = {
 export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) => {
 	return (
 		<div
-			onClick={(e) => e.stopPropagation()}
+    onClick={e=>e.stopPropagation()}
 			className={clsx(
 				`absolute w-[350px] px-14 py-10 gap-3 z-40 flex flex-col transition-all duration-500 whitespace-nowrap right-0 top-[-24px] 
 						bg-white shadow-xl rounded-b-2xl w750:w-[300px] w750:px-10
