@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import clsx from 'clsx';
-import { CloseIcon, MailIcon } from '../../public/icons';
+import { CloseIconTablet, MailIcon } from '../../public/icons';
 import { Backdrop, CustomInput } from '@/UI';
 
 const formSchema = z.object({
@@ -80,7 +80,7 @@ export const ContactUsForm: FC = () => {
 						onClick={() => setFeedbackOpen(false)}
 						className='absolute top-5 right-8 cursor-pointer w550:right-6 w450:right-4 w370:hidden'
 					>
-						<CloseIcon />
+						<CloseIconTablet />
 					</div>
 
 					<form onSubmit={handleSubmit(onSubmit)} className='w-full pt-6 space-y-4'>

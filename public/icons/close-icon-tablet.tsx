@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-export const CloseIcon: FC = () => {
+export const CloseIconTablet: FC = () => {
 	return (
 		<svg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'>
 			<rect x='3' y='3' width='24' height='24' rx='12' fill='#959595' />
