@@ -8,7 +8,7 @@ export const MobileNumsMenu: FC = () => {
 		<div className='flex items-center h-full relative group w550:py-2 w550:mb-2'>
 			<Link href='#' className='flex items-center h-full uiNavLink gap-2 text-white'>
 				<PhoneIcon />
-				<span>Связаться с нами</span>
+				<span className='w550:text-[13px]'>Связаться с нами</span>
 			</Link>
 			<div
 				className='absolute left-[-15%] pointer-events-none top-[39px] bg-white shadow-xl rounded-b-2xl opacity-0 translate-y-[-10px] z-50

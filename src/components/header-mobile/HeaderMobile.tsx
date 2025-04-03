@@ -30,8 +30,15 @@ export const HeaderMobile: FC = () => {
 						<Image src='images/main-logo.svg' width={110} height={34} alt='Smartex' />
 					</Link>
 				</div>
-				<MobileNumsMenu />
-				<SocialMediaLinks />
+				<div
+					className={clsx('pl-4 pb-3 transition-all duration-500 z-50 absolute bottom-[24px]', {
+						'translate-x-0 opacity-100 pointer-events-auto': menuOpen,
+						'translate-x-50 opacity-0 pointer-events-none': !menuOpen,
+					})}
+				>
+					<MobileNumsMenu />
+				</div>
+				<SocialMediaLinks menuOpen={menuOpen} />
 				<div
 					onClick={() => setMenuOpen(!menuOpen)}
 					className='flex justify-center items-center w-17 h-17 border-border border-l-1 border-t-1 rounded-tl-[20px]'
