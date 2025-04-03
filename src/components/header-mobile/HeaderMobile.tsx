@@ -31,7 +31,7 @@ export const HeaderMobile: FC = () => {
 					</Link>
 				</div>
 				<div
-					className={clsx('pl-4 pb-3 transition-all duration-500 z-50 absolute bottom-[24px]', {
+					className={clsx('h-fit pl-4 transition-all duration-500 z-50 absolute bottom-[44px]', {
 						'translate-x-0 opacity-100 pointer-events-auto': menuOpen,
 						'translate-x-50 opacity-0 pointer-events-none': !menuOpen,
 					})}
