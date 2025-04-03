@@ -14,7 +14,7 @@ export const Header: FC = () => {
 	return (
 		<header className='w-full h-30'>
 			<div className='bg-primary w-full'>
-				<div className='container flex items-center justify-between w-full h-10'>
+				<div className='container h-10 flex items-center justify-between'>
 					<div className='flex items-center gap-4'>
 						<Link href='#'>
 							<InstagramIcon />
@@ -30,7 +30,7 @@ export const Header: FC = () => {
 							<span>Связаться с нами</span>
 						</Link>
 						<div
-							className='absolute left-[-10px] pointer-events-none top-[39px] bg-white shadow-xl rounded-b-2xl opacity-0 translate-y-[-10px] 
+							className='absolute left-[-15%] pointer-events-none top-[39px] bg-white shadow-xl rounded-b-2xl opacity-0 translate-y-[-10px] 
             transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 px-4 py-[10px] z-50'
 						>
 							{headerContactPhoneNums.map((phoneNum, idx) => (

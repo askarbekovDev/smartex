@@ -5,16 +5,13 @@ export default function Home() {
 		<div className=''>
 			<br />
 			<br />
-			<br />
-			<br />
-			<br />
-{/* 			
+			
 			<IntroBlock />
 			<IntroBlock />
 			<IntroBlock />
 			<IntroBlock />
 			<IntroBlock />
-			<IntroBlock /> */}
+			<IntroBlock />
 		</div>
 	);
 }
