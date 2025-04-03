@@ -1,7 +1,7 @@
 'use client';
 
 import React, { FC, useState } from 'react';
-import { BurgerTablet, CloseIconTablet } from '../../public/icons';
+import { BurgerTablet, CloseIconTablet } from '../../../public/icons';
 import { headerNavLinks } from '@/utils/constants';
 import Link from 'next/link';
 import clsx from 'clsx';
