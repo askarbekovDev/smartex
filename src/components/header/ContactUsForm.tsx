@@ -54,7 +54,7 @@ export const ContactUsForm: FC = () => {
 
 	return (
 		<>
-			<Backdrop isOpen={feedbackOpen} setIsOpen={setFeedbackOpen} />
+			<Backdrop isOpen={feedbackOpen} setIsOpen={setFeedbackOpen} increaseZ={true} />
 			<div onClick={() => setFeedbackOpen(true)} className='cursor-pointer'>
 				<MailIcon />
 			</div>
@@ -62,7 +62,7 @@ export const ContactUsForm: FC = () => {
 			<div
 				className={clsx(
 					`absolute top-14 transition-all duration-300 z-50 px-5 max-w-[588px] w-full pointer-events-none
-					 w750:transform w750:-translate-x-1/2 w750:left-1/2 w750:px-9 w550:px-6 w450:px-0`,
+					 w750:transform w750:-translate-x-1/2 w750:left-1/2 w750:px-9 w550:px-6 w450:px-0 w450:top-8`,
 					{
 						'scale-100 opacity-100': feedbackOpen,
 						'scale-50 opacity-0': !feedbackOpen,

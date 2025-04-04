@@ -15,7 +15,7 @@ export const SocialMediaLinks: FC<SocialMediaProps> = ({ menuOpen }) => {
 				'flex items-center gap-4 w450:pl-4 w450:pb-3 w450:transition-all w450:duration-500',
 				{
 					'w450:opacity-100 w450:pointer-events-auto': menuOpen,
-					'w450:translate-x-50 w450:opacity-0 w450:pointer-events-none': !menuOpen,
+					'w450:translate-x-24 w450:opacity-0 w450:pointer-events-none': !menuOpen,
 				}
 			)}
 		>
