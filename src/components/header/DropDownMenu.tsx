@@ -12,7 +12,7 @@ type DropDownMenuProps = {
 export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) => {
 	return (
 		<div
-    onClick={e=>e.stopPropagation()}
+			onClick={(e) => e.stopPropagation()}
 			className={clsx(
 				`absolute w-[350px] px-14 py-10 gap-3 z-40 flex flex-col transition-all duration-500 whitespace-nowrap right-0 top-[-24px] 
 						bg-white shadow-xl rounded-b-2xl w750:w-[300px] w750:px-10
@@ -23,8 +23,11 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) =
 				}
 			)}
 		>
-			<div className='hidden w550:block absolute h-full w-10 bg-white top-0 left-[-39px]'></div>
-			<div className='hidden w550:block absolute h-full w-10 bg-whte top-0 right-[-39px] bg-red-200'></div>
+			<div className='hidden w550:block absolute h-full w-10 bg-white top-0 left-[-39px]' />
+			<div
+				className='hidden w550:block absolute h-full w-[26px] bg-whte top-0 right-[-26px] bg-white
+                   w450:w-[21px] w450:right-[-21px] w370:w-[17px] w370:right-[-17px]'
+			/>
 			<div
 				className='absolute right-8 top-4 cursor-pointer w750:right-6 w550:hidden'
 				onClick={() => setMenuOpen(false)}
