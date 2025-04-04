@@ -12,7 +12,7 @@ export const HeaderMobile: FC = () => {
 	return (
 		<div
 			className={clsx(
-				'hidden container w550:block h-[108px] border-b-1 transition-all duration-500',
+				'hidden container w450:block h-[108px] border-b-1 transition-all duration-500',
 				{
 					'bg-primary border-primary': menuOpen,
 					'bg-background border-border': !menuOpen,
