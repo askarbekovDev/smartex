@@ -62,7 +62,7 @@ export const ContactUsForm: FC = () => {
 			<div
 				className={clsx(
 					`absolute top-12 transition-all duration-300 z-50 px-5 max-w-[588px] w-full pointer-events-none
-					w750:transform w750:-translate-x-1/2 w750:left-1/2 w750:px-9 w550:px-0`,
+					w750:transform w750:-translate-x-1/2 w750:left-1/2 w750:px-9 w550:px-6 w450:px-0`,
 					{
 						'scale-100 opacity-100': feedbackOpen,
 						'scale-50 opacity-0': !feedbackOpen,
@@ -71,7 +71,7 @@ export const ContactUsForm: FC = () => {
 			>
 				<div
 					className={clsx(
-						`relative rounded-2xl w-full h-fit bg-white p-12 w750:p-10 w550:px-8 pointer-events-auto w550:bg-background w450:px-5`,
+						`relative rounded-2xl w-full h-fit bg-white p-12 w750:p-10 pointer-events-auto w550:bg-background w550:px-7 w450:px-5`,
 						{ 'pointer-events-none': !feedbackOpen }
 					)}
 				>
@@ -130,7 +130,7 @@ export const ContactUsForm: FC = () => {
 						<button
 							type='submit'
 							className='w-full uiBtnText text-secondary-text border-2 border-border p-5 rounded-2xl bg-background 
-							           w750:rounded-xl w550:rounded-md w550:bg-primary w550:border-0 w550:text-background'
+							           w750:rounded-xl w450:rounded-md w550:bg-white w450:bg-primary w450:border-0 w450:text-background'
 						>
 							ОТПРАВИТЬ СООБЩЕНИЕ
 						</button>

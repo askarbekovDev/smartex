@@ -10,7 +10,7 @@ export const Backdrop: FC<BackdropProps> = ({ isOpen, setIsOpen }) => {
 	return (
 		<div
 			onClick={() => setIsOpen(false)}
-			className={clsx('fixed inset-0 bg-black/40 transition-all duration-300 z-30 w550:z-50', {
+			className={clsx('fixed inset-0 bg-black/40 transition-all duration-300 z-30 w450:z-50', {
 				'opacity-100 pointer-events-auto': isOpen,
 				'opacity-0 pointer-events-none': !isOpen,
 			})}

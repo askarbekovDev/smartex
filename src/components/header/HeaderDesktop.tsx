@@ -5,7 +5,7 @@ import { BurgerMenu, MobileNumsMenu, NavLinks, SocialMediaLinks } from '@/compon
 
 export const HeaderDesktop: FC = () => {
 	return (
-		<div className='w-full h-30 w550:hidden'>
+		<div className='w-full h-30 w450:hidden'>
 			<div className='bg-primary w-full'>
 				<div className='container h-10 flex items-center justify-between'>
 					<SocialMediaLinks />
