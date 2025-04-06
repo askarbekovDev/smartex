@@ -39,6 +39,12 @@ export const IntroBlock: FC = () => {
 			</div>
 			<div className='w-full relative'>
 				<div className='absolute bottom-[-1px] left-[-1px] pt-4 pr-4 pb-px pl-px bg-background rounded-tr-2xl'>
+					<div className='absolute right-[-17px] bottom-px w-[17px] h-[17px] rotate-270'>
+						<CornerSmoother />
+					</div>
+					<div className='absolute left-px top-[-17px] w-[17px] h-[17px] rotate-270'>
+						<CornerSmoother />
+					</div>
 					<div className='p-2 border-1 border-border rounded-2xl bg-white'>
 						<Image alt='The Alien' src='/images/alien-like.svg' width={88} height={91} />
 					</div>
