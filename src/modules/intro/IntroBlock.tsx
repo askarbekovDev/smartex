@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { FC } from 'react';
 import { CornerSmoother } from '../../../public/icons';
 import { StatisticsWrapper } from '@/UI';
+import Link from 'next/link';
 
 export const IntroBlock: FC = () => {
 	return (
@@ -28,7 +29,7 @@ export const IntroBlock: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className='h-[600px] w850:h-[400px] rounded-[15px] overflow-hidden flex items-center justify-center'>
+			<div className='h-[600px] rounded-[15px] overflow-hidden flex items-center justify-center'>
 				<Image
 					alt='The Ship'
 					src='/images/intro-image.png'
@@ -47,6 +48,20 @@ export const IntroBlock: FC = () => {
 					</div>
 					<div className='p-2 border-1 border-border rounded-2xl bg-white'>
 						<Image alt='The Alien' src='/images/alien-like.svg' width={88} height={91} />
+					</div>
+				</div>
+				<div className='absolute right-[-1px] bottom-[-1px] pt-4 pl-4 pr-px pb-px rounded-tl-2xl bg-background'>
+					<Link
+						href='/'
+						className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white'
+					>
+						Калькулятор
+					</Link>
+					<div className='absolute left-[-17px] bottom-px w-[17px] h-[17px] rotate-180'>
+						<CornerSmoother />
+					</div>
+					<div className='absolute right-px top-[-17px] w-[17px] h-[17px] rotate-180'>
+						<CornerSmoother />
 					</div>
 				</div>
 			</div>
