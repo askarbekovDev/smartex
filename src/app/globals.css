@@ -2,166 +2,170 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #f8f9fa; /* Светло-серый (фон) */
-  --primary: #071668; /* Темно-синий (основной цвет) */
-  --primary-text: #212121; /* Темно-серый (текст на основном фоне) */
-  --secondary: #ff9500; /* Оранжевый (второстепенный цвет) */
-  --secondary-text: #616161; /* Серый (текст на второстепенном фоне) */
-  --border: #afafaf; /* Серый (границы, разделители) */
-  --icons: #959595; /* Серый (цвет иконок) */
-  --success: #4caf50; /* Зеленый (успешно) */
-  --error: #d32f2f; /* Красный (ошибка) */
-  --warning: #ffa000; /* Желтый-оранжевый (предупреждение) */
-  --info: #1976d2; /* Синий (информация) */
-  --dark: #242426; /* Глубокий черный */
-  --black: #000000;
-  --white: #ffffff;
-  --font-lato: 'Lato', sans-serif;
-  --font-rubik: 'Rubik', sans-serif;
+	--background: #f8f9fa; /* Светло-серый (фон) */
+	--primary: #071668; /* Темно-синий (основной цвет) */
+	--primary-text: #212121; /* Темно-серый (текст на основном фоне) */
+	--secondary: #ff9500; /* Оранжевый (второстепенный цвет) */
+	--secondary-text: #616161; /* Серый (текст на второстепенном фоне) */
+	--border: #afafaf; /* Серый (границы, разделители) */
+	--icons: #959595; /* Серый (цвет иконок) */
+	--success: #4caf50; /* Зеленый (успешно) */
+	--error: #d32f2f; /* Красный (ошибка) */
+	--warning: #ffa000; /* Желтый-оранжевый (предупреждение) */
+	--info: #1976d2; /* Синий (информация) */
+	--dark: #242426; /* Глубокий черный */
+	--black: #000000;
+	--white: #ffffff;
+
+	--font-lato: 'Lato', sans-serif;
+	--font-rubik: 'Rubik', sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--primary-text);
+	background: var(--background);
+	color: var(--primary-text);
 }
 
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 150px;
-  @media (max-width: 1440px) {
-    padding: 0 10.5%;
-  }
-  @media (max-width: 1300px) {
-    padding: 0 8%;
-  }
-  @media (max-width: 1000px) {
-    padding: 0 6.8%;
-  }
-  @media (max-width: 500px) {
-    padding: 0 4.2%;
-  }
-  @media (max-width: 390px) {
-    padding: 0 16px;
-  }
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 150px;
+	@media (max-width: 1340px) {
+		padding: 0 10.5%;
+	}
+	@media (max-width: 1200px) {
+		padding: 0 8%;
+	}
+	@media (max-width: 1000px) {
+		padding: 0 6.8%;
+	}
+  @media (max-width: 550px) {
+		padding: 0 25px;
+	}
+	@media (max-width: 450px) {
+		padding: 0 20px;
+	}
+	@media (max-width: 370px) {
+		padding: 0 16px;
+	}
 }
 
 .h1 {
-  font-family: var(--font-rubik);
-  font-weight: 500;
-  font-size: 58px;
-  line-height: 50px;
-  letter-spacing: 0px;
+	font-family: var(--font-rubik);
+	font-weight: 500;
+	font-size: 58px;
+	line-height: 50px;
+	letter-spacing: 0px;
 }
 
 .h2 {
-  font-family: var(--font-rubik);
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 32px;
-  letter-spacing: 0px;
+	font-family: var(--font-rubik);
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 32px;
+	letter-spacing: 0px;
 }
 
 .h3 {
-  font-family: var(--font-rubik);
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 30px;
-  letter-spacing: 0px;
+	font-family: var(--font-rubik);
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 30px;
+	letter-spacing: 0px;
 }
 
 .h4 {
-  font-family: var(--font-rubik);
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 26px;
-  letter-spacing: 0px;
+	font-family: var(--font-rubik);
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 0px;
 }
 
 .h5 {
-  font-family: var(--font-rubik);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0px;
+	font-family: var(--font-rubik);
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0px;
 }
 
 .h6 {
-  font-family: var(--font-rubik);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0px;
+	font-family: var(--font-rubik);
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 0px;
 }
 
 .bodyLarge {
-  font-family: var(--font-lato);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: 0px;
 }
 
 .bodyText {
-  font-family: var(--font-lato);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0px;
 }
 
 .bodySmall {
-  font-family: var(--font-lato);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0px;
 }
 
 .bodyBold {
-  font-family: var(--font-lato);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0px;
 }
 
 .uiNavLink {
-  font-family: var(--font-lato);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0px;
 }
 
 .uiBtnText {
-  font-family: var(--font-lato);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0px;
 }
 
 .uiInputLabel {
-  font-family: var(--font-lato);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 0px;
 }
 
 .supportCaption {
-  font-family: var(--font-lato);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0px;
 }
 
 .supportBadge {
-  font-family: var(--font-lato);
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0px;
+	font-family: var(--font-lato);
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0px;
 }

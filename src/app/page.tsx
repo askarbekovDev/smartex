@@ -1,9 +1,17 @@
-import { NewsBlock } from '@/modules';
+import { IntroBlock } from '@/modules';
 
 export default function Home() {
 	return (
-		<>
-			<NewsBlock />
-		</>
+		<div className=''>
+			<br />
+			<br />
+			
+			<IntroBlock />
+			<IntroBlock />
+			<IntroBlock />
+			<IntroBlock />
+			<IntroBlock />
+			<IntroBlock />
+		</div>
 	);
 }

@@ -25,7 +25,6 @@ export default {
 			w420: { max: '420px' },
 			w370: { max: '370px' },
 		},
-
 		extend: {
 			colors: {
 				background: 'var(--background)', // Светло-серый (фон)
@@ -40,6 +39,8 @@ export default {
 				warning: 'var(--warning)', // Желтый-оранжевый (предупреждение)
 				info: 'var(--info)', // Синий (информация)
 				dark: 'var(--dark)', // Глубокий черный
+				black: 'var(--black)', // #000000
+				white: 'var(--white)', // #ffffff
 			},
 			fontFamily: {
 				rubik: 'var(--font-rubik)',
