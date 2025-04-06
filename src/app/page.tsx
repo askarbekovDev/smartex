@@ -1,3 +1,17 @@
+import { IntroBlock } from '@/modules';
+
 export default function Home() {
-	return <div className='container'>HOME PAGE</div>;
+	return (
+		<div className=''>
+			<br />
+			<br />
+			
+			<IntroBlock />
+			<IntroBlock />
+			<IntroBlock />
+			<IntroBlock />
+			<IntroBlock />
+			<IntroBlock />
+		</div>
+	);
 }
