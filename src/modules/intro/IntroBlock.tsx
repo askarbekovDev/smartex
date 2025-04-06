@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const IntroBlock: FC = () => {
 	return (
 		<div className='container'>
-			<div className='w-full relative'>
+			<div className='w-full relative w850:hidden'>
 				<div className='absolute top-[-1px] left-[-1px] max-w-[335px] h-[140px] w-full bg-background w1150:h-[106px]'>
 					<div className='pl-px'>
 						<h6 className='h6 pt-10 pb-3 text-secondary-text w1150:pt-6'>
@@ -36,7 +36,7 @@ export const IntroBlock: FC = () => {
 			</div>
 			<div
 				className='h-[600px] rounded-[15px] overflow-hidden flex items-center justify-center 
-			w1150:h-[500px] w1050:h-[460px]'
+			w1150:h-[500px] w1050:h-[460px] w850:h-[236px]'
 			>
 				<Image
 					alt='The Ship'
@@ -46,7 +46,7 @@ export const IntroBlock: FC = () => {
 					className='h-full w-full object-cover'
 				/>
 			</div>
-			<div className='w-full relative'>
+			<div className='w-full relative w850:hidden'>
 				<div className='absolute bottom-[-1px] left-[-1px] pt-4 pr-4 pb-px pl-px bg-background rounded-tr-2xl'>
 					<div className='absolute right-[-17px] bottom-px w-[17px] h-[17px] rotate-270'>
 						<CornerSmoother />
