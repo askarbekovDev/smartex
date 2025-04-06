@@ -8,9 +8,11 @@ export const IntroBlock: FC = () => {
 	return (
 		<div className='container'>
 			<div className='w-full relative'>
-				<div className='absolute top-[-1px] left-[-1px] max-w-[335px] h-[140px] w-full bg-background'>
+				<div className='absolute top-[-1px] left-[-1px] max-w-[335px] h-[140px] w-full bg-background w1150:h-[106px]'>
 					<div className='pl-px'>
-						<h6 className='h6 pt-10 pb-3 text-secondary-text'>Сервис доставки посылок</h6>
+						<h6 className='h6 pt-10 pb-3 text-secondary-text w1150:pt-6'>
+							Сервис доставки посылок
+						</h6>
 						<h1 className='h1 text-secondary'>SMARTEX</h1>
 					</div>
 					<div className='absolute right-[-17px] top-px w-[17px] h-[17px]'>
@@ -19,7 +21,10 @@ export const IntroBlock: FC = () => {
 					<div className='absolute right-[-17px] bottom-px w-[17px] h-[17px] rotate-270'>
 						<CornerSmoother />
 					</div>
-					<div className='absolute flex items-center p-4 pl-px bg-background top-[139px] rounded-tr-2xl rounded-br-2xl gap-6'>
+					<div
+						className='absolute flex items-center p-4 pl-px bg-background top-[139px] rounded-tr-2xl rounded-br-2xl gap-6
+					w1150:gap-4 w1150:top-[105px]'
+					>
 						<StatisticsWrapper title='23' subTitle='Пункт выдачи' />
 						<StatisticsWrapper title='100 000+' subTitle='Счастливых клиентов' />
 						<StatisticsWrapper title='100 000+' subTitle='Успешных доставок' />
@@ -29,7 +34,10 @@ export const IntroBlock: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className='h-[600px] rounded-[15px] overflow-hidden flex items-center justify-center'>
+			<div
+				className='h-[600px] rounded-[15px] overflow-hidden flex items-center justify-center 
+			w1150:h-[500px] w1050:h-[460px]'
+			>
 				<Image
 					alt='The Ship'
 					src='/images/intro-image.png'
@@ -53,7 +61,8 @@ export const IntroBlock: FC = () => {
 				<div className='absolute right-[-1px] bottom-[-1px] pt-4 pl-4 pr-px pb-px rounded-tl-2xl bg-background'>
 					<Link
 						href='/'
-						className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white'
+						className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white 
+						w1150:w-[173px] w1150:rounded-[14px]'
 					>
 						Калькулятор
 					</Link>
