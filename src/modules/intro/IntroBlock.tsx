@@ -36,7 +36,7 @@ export const IntroBlock: FC = () => {
 			</div>
 			<div
 				className='h-[600px] rounded-[15px] overflow-hidden flex items-center justify-center 
-			w1150:h-[500px] w1050:h-[460px] w850:h-[236px]'
+			w1150:h-[500px] w1050:h-[460px] w850:h-[236px] w450:mt-4 w370:h-[190px]'
 			>
 				<Image
 					alt='The Ship'
@@ -72,6 +72,49 @@ export const IntroBlock: FC = () => {
 					<div className='absolute right-px top-[-17px] w-[17px] h-[17px] rotate-180'>
 						<CornerSmoother />
 					</div>
+				</div>
+			</div>
+
+			<div className='hidden w850:block pt-4'>
+				<div className='flex justify-between'>
+					<div>
+						<h6 className='bodyText text-[18px]! pb-3 text-primary-text w550:text-[16px]!'>
+							Сервис доставки посылок
+						</h6>
+						<h1 className='h4 text-secondary text-[30px]! w550:text-[24px]!'>SMARTEX</h1>
+					</div>
+					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>
+						<Image
+							alt='The Alien'
+							src='/images/alien-like.svg'
+							width={0}
+							height={0}
+							layout='responsive'
+						/>
+					</div>
+				</div>
+
+				<div className='grid gap-4 grid-cols-2 pt-4 b-green-400 w550:gap-3 w420:grid-cols-1 w370:gap-2'>
+					<StatisticsWrapper title='23' subTitle='Пункт выдачи' textCenter={true} wFull={true} />
+					<StatisticsWrapper
+						title='100 000+'
+						subTitle='Счастливых клиентов'
+						textCenter={true}
+						wFull={true}
+					/>
+					<StatisticsWrapper
+						title='100 000+'
+						subTitle='Успешных доставок'
+						textCenter={true}
+						wFull={true}
+					/>
+					<Link
+						href='/'
+						className='flex items-center justify-center min-w-full h-[76px] rounded-2xl bg-success uiBtnText text-white 
+						w1150:w-[173px] w1150:rounded-[10px] w550:h-16 w550:w-full'
+					>
+						Калькулятор
+					</Link>
 				</div>
 			</div>
 		</div>
