@@ -1,1 +1,2 @@
-export { IntroBlock } from './intro/IntroBlock';
+export { IntroBlock } from './intro';
+export { SearchSection } from './search-modules';
