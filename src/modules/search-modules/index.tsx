@@ -4,8 +4,10 @@ import SearchIcon from '../../../public/icons/search-icon';
 export const SearchSection: FC = () => {
 	return (
 		<div className='container'>
-			<h1 className='h3 pt-[100px] pb-[12px] w1150:pt-20 w950:pt-15'>Отследить посылку</h1>
-			<p className='bodyLarge text-secondary-text'>
+			<h1 className='h3 pt-[100px] pb-[12px] w1150:pt-20 w950:pt-15 w550:text-[24px]! w550:leading-[26px]!'>
+				Отследить посылку
+			</h1>
+			<p className='bodyLarge text-secondary-text w550:text-[16px]!'>
 				Введите трекинг номер и отслеживайте процесс доставки.
 			</p>
 
