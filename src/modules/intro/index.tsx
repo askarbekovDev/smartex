@@ -111,7 +111,7 @@ export const IntroBlock: FC = () => {
 					<Link
 						href='/'
 						className='flex items-center justify-center min-w-full h-[76px] rounded-2xl bg-success uiBtnText text-white 
-						w1150:w-[173px] w1150:rounded-[10px] w550:h-16 w550:w-full'
+						w1150:w-[173px] w1150:rounded-[10px] w550:h-16 w550:w-full w420:h-11 w420:rounded-lg'
 					>
 						Калькулятор
 					</Link>
