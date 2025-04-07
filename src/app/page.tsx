@@ -1,11 +1,19 @@
-import { IntroBlock, SearchSection } from '@/modules';
+import { IntroBlock, PinduoduoBlock, SearchSection } from '@/modules';
 
 export default function Home() {
 	return (
 		<>
 			<IntroBlock />
 			<SearchSection />
-			<br /><br /><br /><br /><br /><br /><br /><br />
+			<PinduoduoBlock />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
 		</>
 	);
 }
