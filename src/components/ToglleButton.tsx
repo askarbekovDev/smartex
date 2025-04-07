@@ -13,7 +13,7 @@ export const ToggleButton = ({ buttons, defaultWidth }: ToggleButtonProps) => {
 	const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
 	const handleClickBtn = (index: number) => {
-		setActiveIndex(index);``
+		setActiveIndex(index);
 	};
 
 	return (
