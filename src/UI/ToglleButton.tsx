@@ -33,8 +33,11 @@ export const ToggleButton = ({ buttons, defaultWidth }: ToggleButtonProps) => {
 						if (el) buttonRefs.current[index] = el;
 					}}
 					className={clsx(
-						'relative supportCaption w550:text-[13px]! w550:font-normal! w550:leading-[16px]! px-4 py-2 cursor-pointer border-0 outline-0 text-center transition-colors',
-						activeIndex === index ? 'text-white' : 'text-black'
+						'relative supportCaption w650:text-[13px]! px-4 py-2 cursor-pointer border-0 outline-0 text-center transition-colors',
+						{
+							'text-white': activeIndex === index,
+							'text-black': activeIndex !== index,
+						}
 					)}
 					onClick={() => handleClickBtn(index)}
 				>
