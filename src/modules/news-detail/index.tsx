@@ -1,4 +1,4 @@
-import { NewsCart } from '@/components/NewsCart';
+import { NewsCart } from '@/components/news/NewsCart';
 import Image from 'next/image';
 import React from 'react';
 import { Date } from '../../../public/icons';
@@ -6,34 +6,34 @@ import { Date } from '../../../public/icons';
 export const NewsDetail = () => {
 	return (
 		<div className='container'>
-			<div className='py-[60px]'>
+			<div className='py-[100px] w950:py-[60px] w650:py-[86px]'>
 				<div className='mt-10 flex flex-col items-center'>
 					<div className='w-full flex w950:flex-col-reverse justify-between items-center w950:items-start'>
-						<h2 className='h2 w950:text-[28px]! w650:text-[24px]!'>Новости SMARTEX</h2>
+						<h2 className='h2 w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Новости SMARTEX</h2>
 					</div>
-					<div className={`w-full mt-12 bg-white overflow-hidden`}>
-						<div className='w-full h-[420px] w950:h-[380px] w650:h-[300px] relative overflow-hidden'>
+					<div className='w-full mt-12 w950:mt-6 bg-white overflow-hidden rounded-[16px]'>
+						<div className='w-full rounded-b-[16px] h-[420px] w950:h-[380px] w650:h-[300px] relative overflow-hidden'>
 							<Image
-								src='/images/news-detail-image.svg'
+								src='/images/new-cart-image.jpg'
 								alt='smartex-news-image'
-								fill
-								className='object-cover'
-								priority
+                                width={1140}
+                                height={420}
+								className='w-full h-full object-cover'
 							/>
 						</div>
 						<div className='w-full mt-6 px-4 pb-4 flex flex-col gap-3'>
 							<p className='text-success bodyBold'>Блог</p>
-							<div className='flex items-center gap-4 w650:flex-col w650:items-start'>
+							<div className='flex items-center gap-4 w550:flex-col w550:items-start'>
 								<h5 className='text-primary-text h5'>SMARTEX</h5>
 								<div className='flex items-center gap-2'>
-									<Date />
+									<Date width='24px' height='24px'/>
 									<p className='bodySmall text-secondary-text text-[13px] leading-[16px]'>
 										1 месяц назад
 									</p>
 								</div>
 							</div>
 							<h6 className='h6 text-primary-text'>Новости новости новости?</h6>
-							<p className={`bodyText text-secondary-text`}>
+							<p className='bodyText text-secondary-text'>
 								Наш сервис позволяет вам быстро и надежно доставлять посылки из США, Китай и из
 								Турции прямо в Кыргызстан.Step into a visual journey that encapsulates the essence
 								of my lens. Each photograph in this portfolio is a narrative, a frozen moment in
@@ -51,9 +51,9 @@ export const NewsDetail = () => {
 				</div>
 				<div className='mt-25 flex flex-col items-center'>
 					<div className='w-full flex w950:flex-col-reverse justify-between items-center w950:items-start'>
-						<h2 className='h2 w950:text-[28px]! w650:text-[24px]!'>Похожие новости</h2>
+						<h2 className='h2 w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Похожие новости</h2>
 					</div>
-					<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 gap-6'>
+					<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
 						{[1, 2, 3].map((el, index) => (
 							<NewsCart key={index} idx={index} />
 						))}

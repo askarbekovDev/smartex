@@ -1,12 +1,13 @@
-import { NewsDetail } from '@/modules'
-import React from 'react'
+import { NewsDetail, NewsIntro } from '@/modules';
+import React from 'react';
 
 const NewsDetailPage = () => {
-  return (
-    <>
-        <NewsDetail/>
-    </>
-  )
-}
+	return (
+		<>
+			<NewsIntro />
+			<NewsDetail />
+		</>
+	);
+};
 
-export default NewsDetailPage
+export default NewsDetailPage;

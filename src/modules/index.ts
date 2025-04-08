@@ -1,4 +1,7 @@
-export { NewsBlock } from "./news-block/index";
-export { NewsDetail } from "./news-detail/index";
+export { NewsBlock } from "./news-block";
+export { NewsDetail } from "./news-detail";
 export { NewsRoom } from "./news-room";
-export { IntroBlock } from './intro/IntroBlock';
+export { NewsIntro } from "./news-intro";
+export { IntroBlock } from './intro';
+export { SearchSection } from './search-modules';
+export { PinduoduoBlock } from './pinduoduo-block'

@@ -1,17 +1,19 @@
-import { IntroBlock } from '@/modules';
+import { IntroBlock, NewsBlock, PinduoduoBlock, SearchSection } from '@/modules';
 
 export default function Home() {
 	return (
-		<div className=''>
+		<>
+			<IntroBlock />
+			<SearchSection />
+			<PinduoduoBlock />
 			<br />
 			<br />
-			
-			<IntroBlock />
-			<IntroBlock />
-			<IntroBlock />
-			<IntroBlock />
-			<IntroBlock />
-			<IntroBlock />
-		</div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+		</>
 	);
 }

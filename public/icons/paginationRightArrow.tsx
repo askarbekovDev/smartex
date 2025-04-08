@@ -6,9 +6,9 @@ export const PaginationRightArrow = () => {
 			<path
 				d='M0.970222 1.00952L6.98755 7.02685L0.970222 13.0442'
 				stroke='white'
-				stroke-width='1.41584'
-				stroke-linecap='round'
-				stroke-linejoin='round'
+				strokeWidth='1.41584'
+				strokeLinecap='round'
+				strokeLinejoin='round'
 			/>
 		</svg>
 	);

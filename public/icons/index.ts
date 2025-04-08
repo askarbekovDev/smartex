@@ -8,3 +8,4 @@ export { BurgerTablet } from './burger-tablet';
 export { CloseIconTablet } from './close-icon-tablet';
 export { BurgerMobile } from './burger-mobile';
 export { CloseIconMobile } from './close-icon-mobile';
+export { CornerSmoother } from './corner-smoother';
