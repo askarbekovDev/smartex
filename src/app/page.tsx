@@ -6,6 +6,7 @@ export default function Home() {
 			<IntroBlock />
 			<SearchSection />
 			<PinduoduoBlock />
+			<hr />
 			<br />
 			<br />
 			<br />
