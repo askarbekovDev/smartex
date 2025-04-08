@@ -1,4 +1,4 @@
-import { IntroBlock, PinduoduoBlock, SearchSection } from '@/modules';
+import { IntroBlock, NewsBlock, PinduoduoBlock, SearchSection } from '@/modules';
 
 export default function Home() {
 	return (
