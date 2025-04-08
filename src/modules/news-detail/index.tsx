@@ -9,7 +9,7 @@ export const NewsDetail = () => {
 			<div className='py-[100px] w950:py-[60px] w650:py-[86px]'>
 				<div className='mt-10 flex flex-col items-center'>
 					<div className='w-full flex w950:flex-col-reverse justify-between items-center w950:items-start'>
-						<h2 className='h2 w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Новости SMARTEX</h2>
+						<h2 className='h2 text-primary-text w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Новости SMARTEX</h2>
 					</div>
 					<div className='w-full mt-12 w950:mt-6 bg-white overflow-hidden rounded-[16px]'>
 						<div className='w-full rounded-b-[16px] h-[420px] w950:h-[380px] w650:h-[300px] relative overflow-hidden'>
@@ -51,7 +51,7 @@ export const NewsDetail = () => {
 				</div>
 				<div className='mt-25 flex flex-col items-center'>
 					<div className='w-full flex w950:flex-col-reverse justify-between items-center w950:items-start'>
-						<h2 className='h2 w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Похожие новости</h2>
+						<h2 className='h2 text-primary-text w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Похожие новости</h2>
 					</div>
 					<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
 						{[1, 2, 3].map((el, index) => (
