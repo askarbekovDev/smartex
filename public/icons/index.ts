@@ -1,4 +1,4 @@
-export { Date } from "./date"
+export { Date } from './date';
 export { InstagramIcon } from './instagram-icon';
 export { TelegramIcon } from './telegram-icon';
 export { PhoneIcon } from './phone-icon';
@@ -9,3 +9,4 @@ export { CloseIconTablet } from './close-icon-tablet';
 export { BurgerMobile } from './burger-mobile';
 export { CloseIconMobile } from './close-icon-mobile';
 export { CornerSmoother } from './corner-smoother';
+export { PlayIcon } from './play-icon';
