@@ -7,12 +7,14 @@ const rubik = Rubik({
 	variable: '--font-rubik',
 	subsets: ['latin'],
 	weight: ['300', '400', '500', '700', '900'],
+	display: 'swap',
 });
 
 const lato = Lato({
 	variable: '--font-lato',
 	subsets: ['latin'],
 	weight: ['100', '300', '400', '700', '900'],
+	display: 'swap',
 });
 
 export const metadata: Metadata = {
