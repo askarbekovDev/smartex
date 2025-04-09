@@ -1,4 +1,10 @@
-import { IntroBlock, PinduoduoBlock, SearchSection } from '@/modules';
+import {
+	IntroBlock,
+	NewsBlock,
+	PinduoduoBlock,
+	PopularQuestionsBlock,
+	SearchSection,
+} from '@/modules';
 
 export default function Home() {
 	return (
@@ -6,14 +12,9 @@ export default function Home() {
 			<IntroBlock />
 			<SearchSection />
 			<PinduoduoBlock />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
+			<NewsBlock />
+			<PopularQuestionsBlock />
+			<hr />
 		</>
 	);
 }
