@@ -45,6 +45,7 @@ export default {
 			fontFamily: {
 				rubik: 'var(--font-rubik)',
 				lato: 'var(--font-lato)',
+				roboto: 'var(--font-roboto)',
 			},
 		},
 	},
