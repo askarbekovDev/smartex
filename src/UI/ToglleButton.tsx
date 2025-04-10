@@ -14,12 +14,15 @@ export const ToggleButton = ({ buttons, defaultWidth }: ToggleButtonProps) => {
 
 	const handleClickBtn = (index: number) => {
 		setActiveIndex(index);
-	};	
+	};
 
 	return (
-		<div className='relative w-fit rounded h-10 border border-[#CAC9C9] flex'>
+		<div className='relative w-fit rounded border border-border flex'>
 			<div
-				className='absolute h-full bg-success transition-all duration-300 rounded'
+				className={clsx('absolute max-h-15 bg-success transition-all duration-300 rounded', {
+					'w450:h-full': buttons.length > 2,
+					'h-full': buttons.length,
+				})}
 				style={{
 					width: buttonRefs.current[activeIndex]?.offsetWidth || defaultWidth,
 					left: buttonRefs.current[activeIndex]?.offsetLeft || 0,
@@ -33,10 +36,11 @@ export const ToggleButton = ({ buttons, defaultWidth }: ToggleButtonProps) => {
 						if (el) buttonRefs.current[index] = el;
 					}}
 					className={clsx(
-						'relative supportCaption w650:text-[13px]! px-4 py-2 cursor-pointer border-0 outline-0 text-center transition-colors',
+						`relative supportCaption w650:text-[13px]! px-4 py-2 cursor-pointer border-0 outline-0 text-center transition-colors`,
 						{
 							'text-white': activeIndex === index,
 							'text-black': activeIndex !== index,
+							'w450:px-4 w450:py-1': buttons.length > 2,
 						}
 					)}
 					onClick={() => handleClickBtn(index)}

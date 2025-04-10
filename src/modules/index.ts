@@ -7,4 +7,4 @@ export { SearchSection } from './search-modules';
 export { PinduoduoBlock } from './pinduoduo-block';
 export { PopularQuestionsBlock } from './popular-questions-block';
 export { IntroAboutUs } from './intro-about-us';
-export { WhatDoWeDoBlock } from './what-do-we-do';
+export { WhatWeDoBlock } from './what-we-do';

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import { IntroAboutUs, WhatDoWeDoBlock } from '@/modules';
+import { IntroAboutUs, WhatWeDoBlock } from '@/modules';
 
 const AboutUs: FC = () => {
 	return (
 		<>
 			<IntroAboutUs />
-			<WhatDoWeDoBlock />
+			<WhatWeDoBlock />
 			<hr />
 			<br />
 			<br />
