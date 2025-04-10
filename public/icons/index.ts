@@ -10,3 +10,4 @@ export { BurgerMobile } from './burger-mobile';
 export { CloseIconMobile } from './close-icon-mobile';
 export { CornerSmoother } from './corner-smoother';
 export { PlayIcon } from './play-icon';
+export { AlienCardEmoji } from './alien-card-emoji';
