@@ -6,6 +6,11 @@ const AboutUs: FC = () => {
 		<>
 			<IntroAboutUs />
 			<WhatDoWeDoBlock />
+			<hr />
+			<br />
+			<br />
+			<br />
+			<br />
 		</>
 	);
 };
