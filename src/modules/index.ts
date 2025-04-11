@@ -9,3 +9,5 @@ export { WhySmartex } from './why-smartex';
 export { IntroOurWork } from './our-work-intro';
 export { PinduoduoBlock } from './pinduoduo-block';
 export { PopularQuestionsBlock } from './popular-questions-block';
+export { IntroAboutUs } from './intro-about-us';
+export { WhatWeDoBlock } from './what-we-do';

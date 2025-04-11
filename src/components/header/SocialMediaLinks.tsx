@@ -10,7 +10,7 @@ type SocialMediaProps = {
 
 export const SocialMediaLinks: FC<SocialMediaProps> = ({ menuOpen }) => {
 	return (
-		<div
+		<nav
 			className={clsx(
 				'flex items-center gap-4 w450:pl-4 w450:pb-3 w450:transition-all w450:duration-500',
 				{
@@ -26,6 +26,6 @@ export const SocialMediaLinks: FC<SocialMediaProps> = ({ menuOpen }) => {
 				<TelegramIcon />
 			</Link>
 			<ContactUsForm />
-		</div>
+		</nav>
 	);
 };
