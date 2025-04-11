@@ -1,10 +1,9 @@
-import { ProhibitedGoods } from '@/modules';
+import { TarifPage } from '@/modules';
 
 const Tarif = () => {
 	return (
 		<div className='container'>
-			{/* <TarifPage /> */}
-			<ProhibitedGoods />
+			<TarifPage />
 		</div>
 	);
 };
