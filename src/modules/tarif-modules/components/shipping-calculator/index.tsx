@@ -5,6 +5,8 @@ import Shirina from '../../../../../public/icons/shirina-icon.svg';
 import Vesy from '../../../../../public/icons/vesy-icon.svg';
 import Warning from '../../../../../public/icons/warning-icon.svg';
 import InoDostavka from '../../../../../public/images/ino-dostavka.png';
+import { ShippingSelector } from './lib';
+
 export const ShippingCalculator = () => {
 	return (
 		<section className='flex gap-[23px] w850:flex-wrap mx-auto mt-6'>
@@ -15,10 +17,11 @@ export const ShippingCalculator = () => {
 			>
 				<div>
 					<p className={clsx('mb-[24px]')}>Выберите страну отправления</p>
-					<CustomInput
+					{/* <CustomInput
 						placeholder='0 сом'
 						className='h-[72px] w550:h-[52px] w-full border border-solid border-border rounded-[16px] p-4 outline-0 bg-background w550:bodySmall w550:bg-white'
-					/>
+					/> */}
+					<ShippingSelector />
 				</div>
 				<div className='flex gap-4 mt-4'>
 					<p>Введите размеры (См)</p>
