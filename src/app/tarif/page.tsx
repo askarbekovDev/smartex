@@ -4,6 +4,10 @@ const Tarif = () => {
 	return (
 		<div className='container'>
 			<TarifPage />
+      <br />
+      <br />
+      <br />
+      <br />
 		</div>
 	);
 };
