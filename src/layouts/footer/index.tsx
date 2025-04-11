@@ -37,10 +37,10 @@ export const Footer = () => {
 				</motion.div>
 			</div>
 
-			<footer className='w-full border-t border-gray-300'>
+			<footer className='w-full border-t  border-gray-300'>
 				{/* App Download Section */}
 				<div className='w-full bg-background'>
-					<div className='mx-auto syima_container flex w750:flex-col w750:h-full w750:items-end h-[22.5rem]'>
+					<div className='mx-auto  flex w750:flex-col w750:h-full w750:items-end h-[22.5rem]'>
 						{/* Text Content */}
 						<div className='w-[45%] w750:w-full flex flex-col justify-center items-start p-4 bg-white'>
 							<div className='h3'>
@@ -99,7 +99,7 @@ export const Footer = () => {
 
 				{/* Contact Info */}
 				<div className='w-full bg-primary flex  min-h-[250px] px-1 py-4 justify-center items-center'>
-					<div className='syima_container px-4 flex flex-wrap w-full w750:flex-col justify-between gap-4'>
+					<div className=' px-4 flex flex-wrap w-full w750:flex-col justify-between gap-4'>
 						{/* Logo */}
 						<div className='flex flex-col gap-2 max-w-[300px]'>
 							<Image src={SmartexText} alt='SmartexText' />
@@ -148,7 +148,7 @@ export const Footer = () => {
 
 				{/* sub_footer */}
 				<div className='w-full bg-secondary py-4'>
-					<div className='syima_container flex justify-between items-center px-4 w550:flex-col w550:gap-2 w550:text-center'>
+					<div className=' flex justify-between items-center px-4 w550:flex-col w550:gap-2 w550:text-center'>
 						<p className='text-primary text-sm w550:text-base'>© 2024 All rights reserved.</p>
 						<div className='flex gap-6 w550:flex-col w550:items-center'>
 							<p className='text-primary text-sm cursor-pointer'>Terms of Service</p>
