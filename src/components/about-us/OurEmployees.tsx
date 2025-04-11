@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import React, { FC } from 'react';
 
 type OurEmployeesProps = {
-	content: Content;
+	content: SmartexTeamContentType;
 };
 
 export const OurEmployees: FC<OurEmployeesProps> = ({ content }) => {

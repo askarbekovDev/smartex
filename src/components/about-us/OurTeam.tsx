@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 import { CornerSmoother } from '../../../public/icons';
 
 type OurTeamProps = {
-	content: Content;
+	content: SmartexTeamContentType;
 };
 
 export const OurTeam: FC<OurTeamProps> = ({ content }) => {

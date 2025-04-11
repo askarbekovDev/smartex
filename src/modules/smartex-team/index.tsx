@@ -10,7 +10,7 @@ import React, { FC, useState } from 'react';
 import { OurEmployees, OurTeam, SocialResponsibility } from '@/components/about-us';
 
 export const SmartexTeam: FC = () => {
-	const [content, setContent] = useState<Content>('Наша команда');
+	const [content, setContent] = useState<SmartexTeamContentType>('Наша команда');
 
 	const sectionTitle =
 		content === 'Наша команда'
@@ -37,7 +37,6 @@ export const SmartexTeam: FC = () => {
 				/>
 			</div>
 			<p className='bodyText pt-4 max-w-[558px] w-full'>{contentToAppear}</p>
-
 			<div className='pt-17 w1150:pt-10 w850:pt-6'>
 				<OurTeam content={content} />
 				<OurEmployees content={content} />

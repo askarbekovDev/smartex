@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 import { CornerSmoother } from '../../../public/icons';
 
 type SocialRespProps = {
-	content: Content;
+	content: SmartexTeamContentType;
 };
 
 export const SocialResponsibility: FC<SocialRespProps> = ({ content }) => {
