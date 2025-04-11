@@ -1,10 +1,11 @@
-import { WorkInfo } from '@/modules';
+import { HowSmartexHelps, IntroOurWork } from '@/modules';
 import React from 'react';
 
 const OurWork = () => {
 	return (
 		<>
-			<WorkInfo />
+			<IntroOurWork />
+			<HowSmartexHelps />
 		</>
 	);
 };
