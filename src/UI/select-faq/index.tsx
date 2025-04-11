@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 import { ArrowIconDescripton } from '../../../public/icons';
 import DontIcon from '../../../public/icons/dont-icon.svg';
@@ -33,10 +34,12 @@ export const SelectFaq = ({
 			return (
 				<>
 					<div
-						className={`flex justify-between break-normal whitespace-normal gap-3 ${baseClass} ${activeClass}`}
+						className={`flex bodyLarge text-primary justify-between break-normal whitespace-normal gap-3 ${baseClass} ${activeClass}`}
 						onClick={onClick}
 					>
-						<div>{title}</div>
+						<div className={clsx('my-[18px] ml-[16px]', isActive ? 'text-white' : 'text-primary')}>
+							{title}
+						</div>
 						<Image src={FaqIcon} alt='FaqIcon' />
 					</div>
 
@@ -51,7 +54,7 @@ export const SelectFaq = ({
 						  ${isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'}
 					    `}
 						>
-							<p className='text-sm text-gray-600 leading-relaxed'>{description}</p>
+							<p className='bodyText text-secondary leading-relaxed'>{description}</p>
 						</div>
 					)}
 				</>

@@ -11,9 +11,6 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 	const activeItem = smart.find((item) => item.id === activeId);
 	return (
 		<section className='w-full'>
-			<div className='mb-6'>
-				<h1 className='text-2xl font-bold text-gray-800'>Популярные вопросы</h1>
-			</div>
 			<div className='flex w-full '>
 				<div className='flex flex-col gap-4 w-full'>
 					{smart.map((item) => (
@@ -29,7 +26,7 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 					))}
 				</div>
 				<div className='w-[10px] h-full bg-red-500'></div>
-				<div className='w-full max-w-[558px] h-fit border w750:hidden border-gray-300 rounded-lg flex p-4 shadow-sm items-start gap-4'>
+				<div className='w-full max-w-[558px] h-fit border w750:hidden border-gray-300 rounded-lg flex justify-between p-4 shadow-sm items-start gap-4'>
 					{activeItem ? (
 						<p className='text-sm text-gray-600 leading-relaxed'>{activeItem?.description}</p>
 					) : (
