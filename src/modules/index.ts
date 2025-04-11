@@ -11,3 +11,5 @@ export { PinduoduoBlock } from './pinduoduo-block';
 export { PopularQuestionsBlock } from './popular-questions-block';
 export { VacancyIntro } from './vacancy-intro';
 export { ActualVacancy } from './actual-vacancy';
+export { IntroAboutUs } from './intro-about-us';
+export { WhatWeDoBlock } from './what-we-do';

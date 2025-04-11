@@ -1,21 +1,21 @@
 import { StatisticsWrapper } from '@/UI';
-import Image from 'next/image';
-import React from 'react';
+import React, { FC } from 'react';
 import { CornerSmoother, PlayIcon } from '../../../public/icons';
+import Image from 'next/image';
 import Link from 'next/link';
 
-export const IntroOurWork = () => {
+export const IntroAboutUs: FC = () => {
 	return (
 		<div className='container'>
 			<div className='w-full relative w850:hidden'>
 				<div className='absolute p-4 pl-px top-[80px] left-[-1px] rounded-tr-2xl rounded-br-2xl bg-background'>
 					<h1 className='h2 pt-1 pb-6 w1150:text-[28px]! w1150:pb-3 w1150:pt-0'>
-							Как мы работаем
+						Физический опыт компании
 					</h1>
 					<div className='flex items-center gap-6 w1150:gap-4 w1150:top-[105px]'>
-						<StatisticsWrapper title='3 дня' subTitle='Минимальный срок доставки' />
-						<StatisticsWrapper title='90%' subTitle='Быстрая доставка' />
-						<StatisticsWrapper title='24/7' subTitle='Поддержка клиентов' />
+						<StatisticsWrapper title='23' subTitle='Пункт выдачи' />
+						<StatisticsWrapper title='100 000+' subTitle='Счастливых клиентов' />
+						<StatisticsWrapper title='100 000+' subTitle='Успешных доставок' />
 					</div>
 					<div className='absolute left-px top-[-17px] w-[17px] h-[17px] rotate-270'>
 						<CornerSmoother />
@@ -81,18 +81,18 @@ export const IntroOurWork = () => {
 				</div>
 
 				<div className='grid gap-4 grid-cols-2 pt-4 b-green-400 w550:gap-3 w420:grid-cols-1 w370:gap-2'>
-					<StatisticsWrapper title='3 дня' subTitle='Минимальный срок доставки' textCenter={true} wFull={true} />
+					<StatisticsWrapper title='23' subTitle='Пункт выдачи' textCenter={true} wFull={true} />
 					<StatisticsWrapper
-						title='90%'
-						subTitle='Быстрая доставка'
+						title='100 000+'
+						subTitle='Счастливых клиентов'
 						textCenter={true}
 						wFull={true}
 					/>
 				</div>
 				<div className='flex flex-col gap-4 pt-4 w550:gap-3 w550:pt-3'>
 					<StatisticsWrapper
-						title='24/7'
-						subTitle='Поддержка клиентов'
+						title='100 000+'
+						subTitle='Успешных доставок'
 						textCenter={true}
 						wFull={true}
 					/>

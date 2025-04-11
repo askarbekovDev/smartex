@@ -6,6 +6,10 @@ const Vacancy = () => {
     <>
         <VacancyIntro/>
         <ActualVacancy/>
+        <br />
+        <br />
+        <br />
+        <br />
     </>
   )
 }
