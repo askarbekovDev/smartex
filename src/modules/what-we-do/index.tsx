@@ -9,7 +9,7 @@ import {
 import React, { FC, useState } from 'react';
 
 export const WhatWeDoBlock: FC = () => {
-	const [content, setContent] = useState<WhatWeDoBlockContent>('История компании');
+	const [content, setContent] = useState<WhatWeDoBlockContType>('История компании');
 
 	const contentToAppear =
 		content === 'История компании'
