@@ -8,11 +8,11 @@ const AboutUs: FC = () => {
 			<WhatWeDoBlock />
 			<WhySmartex />
 			<SmartexTeam />
-			<hr />
+			{/* <hr />
 			<br />
 			<br />
 			<br />
-			<br />
+			<br /> */}
 		</>
 	);
 };
