@@ -66,3 +66,31 @@ export const overseasWarehousesContent = [
 		image: '/images/container-ship.png',
 	},
 ];
+
+export const whySmartexContent = [
+	{
+		image: '/images/why-smartex-alien1.png',
+		description:
+			'Мы оперативно доставляем ваши посылки из Китая, Турции и США в Кыргызстан, соблюдая сроки и гарантируя сохранность груза.',
+	},
+	{
+		image: '/images/why-smartex-alien2.png',
+		description:
+			'Мы предлагаем конкурентоспособные цены на международную доставку, помогая вам экономить без потери качества услуг.',
+	},
+	{
+		image: '/images/why-smartex-alien3.png',
+		description:
+			'Отслеживайте посылку на каждом этапе пути. Полная прозрачность доставки позволяет вам быть уверенными в безопасности вашего груза.',
+	},
+	{
+		image: '/images/why-smartex-alien4.png',
+		description:
+			'Простой и понятный калькулятор тарифов, удобные пункты выдачи и гибкие условия доставки делают сотрудничество с нами комфортным.',
+	},
+	{
+		image: '/images/why-smartex-alien5.png',
+		description:
+			'Наша служба поддержки всегда на связи и готова ответить на любые ваши вопросы в любое время суток.',
+	},
+];
