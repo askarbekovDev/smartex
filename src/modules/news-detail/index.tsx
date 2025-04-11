@@ -9,15 +9,15 @@ export const NewsDetail = () => {
 			<div className='pt-[100px] w850:pt-[60px] w650:pt-[86px]'>
 				<div className='mt-10 flex flex-col items-center'>
 					<div className='w-full flex w950:flex-col-reverse justify-between items-center w950:items-start'>
-						<h2 className='h2 text-primary-text w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Новости SMARTEX</h2>
+						<h2 className='sectionTitle text-primary-text'>Новости SMARTEX</h2>
 					</div>
 					<div className='w-full mt-12 w950:mt-6 bg-white overflow-hidden rounded-[16px]'>
 						<div className='w-full rounded-b-[16px] h-[420px] w950:h-[380px] w650:h-[300px] relative overflow-hidden'>
 							<Image
 								src='/images/new-cart-image.jpg'
 								alt='smartex-news-image'
-                                width={1140}
-                                height={420}
+								width={1140}
+								height={420}
 								className='w-full h-full object-cover'
 							/>
 						</div>
@@ -26,7 +26,7 @@ export const NewsDetail = () => {
 							<div className='flex items-center gap-4 w550:flex-col w550:items-start'>
 								<h5 className='text-primary-text h5'>SMARTEX</h5>
 								<div className='flex items-center gap-2'>
-									<Date width='24px' height='24px'/>
+									<Date width='24px' height='24px' />
 									<p className='bodySmall text-secondary-text text-[13px] leading-[16px]'>
 										1 месяц назад
 									</p>
@@ -51,7 +51,7 @@ export const NewsDetail = () => {
 				</div>
 				<div className='mt-25 flex flex-col items-center'>
 					<div className='w-full flex w950:flex-col-reverse justify-between items-center w950:items-start'>
-						<h2 className='h2 text-primary-text w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Похожие новости</h2>
+						<h2 className='sectionTitle text-primary-text'>Похожие новости</h2>
 					</div>
 					<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
 						{[1, 2, 3].map((el, index) => (

@@ -23,9 +23,9 @@ export const WhatWeDoBlock: FC = () => {
 	return (
 		<div className='container'>
 			<div className='flex justify-between pt-[100px] w1050:pt-15 w1050:flex-col-reverse w850:pt-20'>
-				<span className='h2 w1050:pt-10 w1050:text-[32px]! w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]!'>
+				<h2 className='sectionTitle w1050:pt-10'>
 					{content}
-				</span>
+				</h2>
 				<ToggleButton
 					buttons={['История компании', 'Наша миссия', 'Зарубежные склады'] as const}
 					defaultWidth={165}
