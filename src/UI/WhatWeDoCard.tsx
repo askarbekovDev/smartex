@@ -17,10 +17,10 @@ export const WhatWeDoCard: FC<WhatWeDoCardProps> = ({ title, text, image }) => {
 			<div className='p-5 pb-3 w950:p-3 w950:pb-1 w550:p-5 w550:pb-2'>
 				<AlienCardEmoji />
 			</div>
-			<p className='bodyText px-4 w1150:text-[15px]! w950:text-[14px]! w950:px-2.5 w550:px-5 w550:text-[16px]!'>
+			<div className='bodyText px-4 w1150:text-[15px]! w950:text-[14px]! w950:px-2.5 w550:px-5 w550:text-[16px]!'>
         <p className='bodyBold pb-1'>{title}</p>
 				{text}
-			</p>
+			</div>
 			<div className='absolute bottom-0'>
 				<Image
 					className='w-full h-full object-cover'

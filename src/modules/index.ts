@@ -11,3 +11,4 @@ export { PinduoduoBlock } from './pinduoduo-block';
 export { PopularQuestionsBlock } from './popular-questions-block';
 export { IntroAboutUs } from './intro-about-us';
 export { WhatWeDoBlock } from './what-we-do';
+export { SmartexTeam } from './smartex-team';

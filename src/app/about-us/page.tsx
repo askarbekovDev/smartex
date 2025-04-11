@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IntroAboutUs, WhatWeDoBlock, WhySmartex } from '@/modules';
+import { IntroAboutUs, SmartexTeam, WhatWeDoBlock, WhySmartex } from '@/modules';
 
 const AboutUs: FC = () => {
 	return (
@@ -7,6 +7,7 @@ const AboutUs: FC = () => {
 			<IntroAboutUs />
 			<WhatWeDoBlock />
 			<WhySmartex />
+			<SmartexTeam />
 			<hr />
 			<br />
 			<br />
