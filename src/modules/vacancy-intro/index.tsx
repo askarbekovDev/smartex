@@ -1,22 +1,20 @@
 import { StatisticsWrapper } from '@/UI';
-import Image from 'next/image';
 import React from 'react';
 import { CornerSmoother } from '../../../public/icons';
+import Image from 'next/image';
 
-export const NewsIntro = () => {
+export const VacancyIntro = () => {
 	return (
 		<div className='container'>
 			<div>
-				<div className='w-full relative w850:hidden'>
+				<div className='w-full relative w650:hidden'>
 					<div className='absolute p-4 pl-px top-[80px] left-[-1px] rounded-tr-2xl rounded-br-2xl bg-background'>
 						<h1 className='h2 py-2.5 w1150:text-[28px]! w1150:py-1'>
-							Новости и обновления Smartex
+							Стань частью команды Smartex!
 						</h1>
 						<div className='flex items-center gap-6 w1150:gap-4 w1150:top-[105px]'>
-							<StatisticsWrapper title='100+' subTitle='Новых клиентов в месяц' />
-							<StatisticsWrapper title='50+' subTitle='Публикаций о Smartex' />
-							<StatisticsWrapper title='3+' subTitle='Новые услуги за этот год' />
-							<StatisticsWrapper title='98%' subTitle='Отзывов' />
+							<StatisticsWrapper title='300+' subTitle='Сотрудников в команде Smartex' />
+							<StatisticsWrapper title='24/7' subTitle='Круглосуточная поддержка' />
 						</div>
 						<div className='absolute left-px top-[-17px] w-[17px] h-[17px] rotate-270'>
 							<CornerSmoother />
@@ -28,7 +26,7 @@ export const NewsIntro = () => {
 				</div>
 				<div
 					className='h-[600px] rounded-[15px] overflow-hidden flex items-center justify-center 
-			               w1150:h-[500px] w1050:h-[460px] w850:h-[236px] w450:mt-4 w370:h-[190px]'
+                               w1150:h-[500px] w1050:h-[460px] w650:h-[236px] w450:mt-4 w370:h-[190px]'
 				>
 					<Image
 						alt='The Ship'
@@ -38,7 +36,7 @@ export const NewsIntro = () => {
 						className='h-full w-full object-cover'
 					/>
 				</div>
-				<div className='w-full relative w850:hidden'>
+				<div className='w-full relative w650:hidden'>
 					<div className='absolute bottom-[-1px] left-[-1px] pt-4 pr-4 pb-px pl-px bg-background rounded-tr-2xl'>
 						<div className='absolute right-[-17px] bottom-px w-[17px] h-[17px] rotate-270'>
 							<CornerSmoother />
@@ -52,9 +50,11 @@ export const NewsIntro = () => {
 					</div>
 				</div>
 
-				<div className='hidden w850:block pt-4'>
+				<div className='hidden w650:block pt-4'>
 					<div className='flex justify-between items-center'>
-						<h4 className='h4 w450:text-[20px]! text-primary-text'>Новости и обновления Smartex</h4>
+						<h4 className='h4 w450:text-[20px]! text-primary-text'>
+							Стань частью команды Smartex!
+						</h4>
 						<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>
 							<Image
 								alt='The Alien'
@@ -65,31 +65,20 @@ export const NewsIntro = () => {
 							/>
 						</div>
 					</div>
-
-					<div className='grid gap-4 grid-cols-2 pt-4 b-green-400 w550:gap-3 w420:grid-cols-1 w370:gap-2'>
+					<div className='hidden w650:flex mt-4 flex-col gap-4'>
 						<StatisticsWrapper
-							title='100+'
-							subTitle='Новых клиентов в месяц'
+							title='300+'
+							subTitle='Сотрудников в команде Smartex'
 							textCenter={true}
 							wFull={true}
 						/>
 						<StatisticsWrapper
-							title='50+'
-							subTitle='Публикаций о Smartex'
+							title='24/7'
+							subTitle='Круглосуточная поддержка'
 							textCenter={true}
 							wFull={true}
 						/>
-						<StatisticsWrapper
-							title='3+'
-							subTitle='Новые услуги за этот год'
-							textCenter={true}
-							wFull={true}
-						/>
-						<StatisticsWrapper title='98+' subTitle='Отзывов' textCenter={true} wFull={true} />
 					</div>
-					<div className='hidden w850:block mt-4'>
-                        <StatisticsWrapper title='3' subTitle='Новые услуги за этот год' textCenter={true} wFull={true} />
-                    </div>
 				</div>
 			</div>
 		</div>
