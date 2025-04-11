@@ -1,19 +1,27 @@
 'use client';
-
 import React, { useRef, useState } from 'react';
 import clsx from 'clsx';
 
-interface ToggleButtonProps {
-	buttons: string[];
+interface ToggleButtonProps<T, U extends readonly string[]> {
+	buttons: U;
 	defaultWidth: number;
+	setState?: React.Dispatch<React.SetStateAction<T>>;
 }
 
-export const ToggleButton = ({ buttons, defaultWidth }: ToggleButtonProps) => {
+export const ToggleButton = <T, U extends readonly string[]>({
+	buttons,
+	defaultWidth,
+	setState,
+}: ToggleButtonProps<T, U>) => {
 	const [activeIndex, setActiveIndex] = useState<number>(0);
 	const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-	const handleClickBtn = (index: number) => {
+	const handleClickBtn = (index: number, e: React.MouseEvent<HTMLButtonElement>) => {
 		setActiveIndex(index);
+		if (setState) {
+			const value = buttons[index] as T;
+			setState(value);
+		}
 	};
 
 	return (
@@ -43,7 +51,7 @@ export const ToggleButton = ({ buttons, defaultWidth }: ToggleButtonProps) => {
 							'w450:px-4 w450:py-1': buttons.length > 2,
 						}
 					)}
-					onClick={() => handleClickBtn(index)}
+					onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleClickBtn(index, e)}
 				>
 					{label}
 				</button>
