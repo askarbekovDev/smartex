@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Rubik, Lato } from 'next/font/google';
+import { Rubik, Lato, Roboto } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/layouts';
 
@@ -7,10 +7,18 @@ const rubik = Rubik({
 	variable: '--font-rubik',
 	subsets: ['latin'],
 	weight: ['300', '400', '500', '700', '900'],
+	display: 'swap',
 });
 
 const lato = Lato({
 	variable: '--font-lato',
+	subsets: ['latin'],
+	weight: ['100', '300', '400', '700', '900'],
+	display: 'swap',
+});
+
+const roboto = Roboto({
+	variable: '--font-roboto',
 	subsets: ['latin'],
 	weight: ['100', '300', '400', '700', '900'],
 });
@@ -27,7 +35,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${rubik.variable} ${lato.variable} antialiased`}>
+			<body className={`${rubik.variable} ${lato.variable} ${roboto.variable} antialiased`}>
 				<Header />
 				{children}
 			</body>
