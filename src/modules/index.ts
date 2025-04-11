@@ -1,1 +1,12 @@
+export { HowSmartexHelps } from './how-smartex-helps';
+export { IntroBlock } from './intro';
 export { FAQ } from './main-faq-modules/index';
+export { NewsBlock } from './news-block';
+export { NewsDetail } from './news-detail';
+export { NewsIntro } from './news-intro';
+export { NewsRoom } from './news-room';
+export { IntroOurWork } from './our-work-intro';
+export { PinduoduoBlock } from './pinduoduo-block';
+export { PopularQuestionsBlock } from './popular-questions-block';
+export { SearchSection } from './search-modules';
+export { WhySmartex } from './why-smartex';

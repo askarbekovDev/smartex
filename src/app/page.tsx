@@ -1,9 +1,20 @@
-import { FAQ } from '@/modules';
+import {
+	IntroBlock,
+	NewsBlock,
+	PinduoduoBlock,
+	PopularQuestionsBlock,
+	SearchSection,
+} from '@/modules';
 
 export default function Home() {
 	return (
-		<div className='container'>
-			<FAQ />
-		</div>
+		<>
+			<IntroBlock />
+			<SearchSection />
+			<PinduoduoBlock />
+			<NewsBlock />
+			<PopularQuestionsBlock />
+			<hr />
+		</>
 	);
 }

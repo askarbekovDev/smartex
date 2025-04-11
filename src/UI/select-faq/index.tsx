@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
+import { ArrowIconDescripton } from '../../../public/icons';
 import DontIcon from '../../../public/icons/dont-icon.svg';
 import FaqIcon from '../../../public/icons/faq-icon.svg';
 
@@ -21,7 +22,7 @@ export const SelectFaq = ({
 }: SelectFaqProps) => {
 	const icon = image || (variant === 'red' ? DontIcon : FaqIcon);
 	const baseClass =
-		'min-h-[56px] text-wrap break-normal whitespace-normal w-full rounded-[8px] flex items-center px-[16px] cursor-pointer transition-colors duration-200 border border-solid border-[#CAC9C9] w750:rounded-none w750:border-none w750:border-b w750:border-b-gray-300';
+		'min-h-[56px] border border-solid px-[4px] text-wrap break-normal whitespace-normal w-full rounded-[8px] flex items-center cursor-pointer transition-colors duration-200 border border-solid border-[#CAC9C9] w750:rounded-none w750:border-0 w750:border-b w750:border-b-gray-300';
 
 	const activeClass = isActive
 		? 'bg-success text-background border-success'
@@ -32,7 +33,7 @@ export const SelectFaq = ({
 			return (
 				<>
 					<div
-						className={`flex justify-between break-normal whitespace-normal gap-3 w750:border-none w750:border-b w750:border-b-gray-300 ${baseClass} ${activeClass}`}
+						className={`flex justify-between break-normal whitespace-normal gap-3 ${baseClass} ${activeClass}`}
 						onClick={onClick}
 					>
 						<div>{title}</div>
@@ -60,11 +61,14 @@ export const SelectFaq = ({
 			return (
 				<>
 					<div
-						className={`w-full w750:w-full w750:max-w-full w750:border-none w750:border-b w750:border-b-gray-300 flex flex-row-reverse justify-end gap-3 ${baseClass} rounded-[8px] border border-solid border-gray-200 ${activeClass}`}
+						className={`w-full w750:w-full w750:max-w-full  flex  justify-between gap-3 ${baseClass} rounded-[8px] border border-solid border-gray-200 ${activeClass}`}
 						onClick={onClick}
 					>
-						<div>{title}</div>
-						<Image src={DontIcon} alt='DontIcon' />
+						<div className='flex flex-row-reverse gap-2'>
+							{title}
+							<Image src={DontIcon} alt='DontIcon' />
+						</div>
+						<ArrowIconDescripton isActive={isActive} />
 					</div>
 					{isActive && (
 						<div
