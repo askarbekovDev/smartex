@@ -19,14 +19,14 @@ export const WhatWeDoBlock: FC = () => {
 	];
 	return (
 		<div className='container'>
-			<div className='flex justify-between pt-[100px] w1050:pt-15 w1050:flex-col-reverse w850:pt-20 bg-green-00'>
+			<div className='flex justify-between pt-[100px] w1050:pt-15 w1050:flex-col-reverse w850:pt-20'>
 				<span className='h2 w1050:pt-10 w1050:text-[32px]! w850:text-[28px]! w850:leading-[30px]!'>Что мы делаем?</span>
 				<ToggleButton
 					buttons={['История компании', 'Наша миссия', 'Зарубежные склады']}
 					defaultWidth={165}
 				/>
 			</div>
-			<div className='flex items-center justify-between w-full gap-6 pt-10 w850:gap-4 w750:flex-wrap w750:justify-center w750:pt-6'>
+			<div className='flex items-center justify-between w-full gap-6 pt-10 w850:gap-4 w750:flex-wrap w750:justify-center w850:pt-6'>
 				{content.map((el, idx) => (
 					<WhatWeDoCard text={el.text} image={el.image} key={idx} />
 				))}
