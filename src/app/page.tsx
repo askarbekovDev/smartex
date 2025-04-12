@@ -1,8 +1,8 @@
 import {
 	IntroSection,
-	NewsBlock,
-	PinduoduoBlock,
-	PopularQuestionsBlock,
+	NewsSection,
+	PinduoduoSection,
+	PopularQuestionsSection,
 	SearchSection,
 } from '@/modules';
 
@@ -11,9 +11,9 @@ export default function Home() {
 		<>
 			<IntroSection />
 			<SearchSection />
-			<PinduoduoBlock />
-			<NewsBlock />
-			<PopularQuestionsBlock />
+			<PinduoduoSection />
+			<NewsSection />
+			<PopularQuestionsSection />
 			<hr />
 		</>
 	);

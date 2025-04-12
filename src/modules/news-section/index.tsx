@@ -1,7 +1,7 @@
 import { NewsCart } from '@/components/news/NewsCart';
 import React from 'react';
 
-export const NewsBlock = () => {
+export const NewsSection = () => {
 	return (
 		<section className='container'>
 			<div className='pt-[140px] w1150:pt-[120px] w850:pt-[100px] w650:pt-15'>

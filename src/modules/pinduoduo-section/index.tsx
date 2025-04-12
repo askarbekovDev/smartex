@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { CornerSmoother } from '../../../public/icons';
 import Link from 'next/link';
 
-export const PinduoduoBlock: FC = () => {
+export const PinduoduoSection: FC = () => {
 	return (
 		<section className='container'>
 			<div className='pt-[140px] w1150:pt-[120px] w850:pt-[100px] w650:pt-[60px]'>

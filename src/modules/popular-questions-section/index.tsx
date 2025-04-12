@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-export const PopularQuestionsBlock: FC = () => {
+export const PopularQuestionsSection: FC = () => {
 	return (
 		<section className='container'>
 			<div className='py-[140px]'>
