@@ -1,5 +1,5 @@
 import {
-	IntroBlock,
+	IntroSection,
 	NewsBlock,
 	PinduoduoBlock,
 	PopularQuestionsBlock,
@@ -9,7 +9,7 @@ import {
 export default function Home() {
 	return (
 		<>
-			<IntroBlock />
+			<IntroSection />
 			<SearchSection />
 			<PinduoduoBlock />
 			<NewsBlock />

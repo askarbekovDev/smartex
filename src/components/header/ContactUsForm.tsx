@@ -53,7 +53,7 @@ export const ContactUsForm: FC = () => {
 	};
 
 	return (
-		<>
+		<section>
 			<Backdrop isOpen={feedbackOpen} setIsOpen={setFeedbackOpen} increaseZ={true} />
 			<div onClick={() => setFeedbackOpen(true)} className='cursor-pointer'>
 				<MailIcon />
@@ -137,6 +137,6 @@ export const ContactUsForm: FC = () => {
 					</form>
 				</div>
 			</div>
-		</>
+		</section>
 	);
 };

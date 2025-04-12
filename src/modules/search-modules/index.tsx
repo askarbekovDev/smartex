@@ -3,7 +3,7 @@ import SearchIcon from '../../../public/icons/search-icon';
 
 export const SearchSection: FC = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<h1 className='h3 pt-[100px] pb-[12px] w1150:pt-20 w950:pt-15 w650:text-[24px]! w650:leading-[26px]!'>
 				Отследить посылку
 			</h1>
@@ -32,6 +32,6 @@ export const SearchSection: FC = () => {
 					Поиск
 				</button>
 			</div>
-		</div>
+		</section>
 	);
 };

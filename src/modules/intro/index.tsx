@@ -4,9 +4,9 @@ import { CornerSmoother } from '../../../public/icons';
 import { StatisticsWrapper } from '@/UI';
 import Link from 'next/link';
 
-export const IntroBlock: FC = () => {
+export const IntroSection: FC = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='w-full relative w850:hidden'>
 				<div className='absolute top-[-1px] left-[-1px] max-w-[335px] h-[140px] w-full bg-background w1150:h-[106px]'>
 					<div className='pl-px'>
@@ -117,6 +117,6 @@ export const IntroBlock: FC = () => {
 					</Link>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

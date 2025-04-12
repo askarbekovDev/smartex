@@ -3,7 +3,7 @@ import React from 'react';
 
 export const NewsBlock = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='pt-[140px] w1150:pt-[120px] w850:pt-[100px] w650:pt-15'>
 				<h2 className='sectionTitle text-primary-text'>
 					Новости SMARTEX
@@ -14,6 +14,6 @@ export const NewsBlock = () => {
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
