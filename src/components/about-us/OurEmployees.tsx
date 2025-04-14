@@ -18,9 +18,8 @@ export const OurEmployees: FC<OurEmployeesProps> = ({ content }) => {
 				{Array(6)
 					.fill(0)
 					.map((el, idx) => (
-						<div className='w550:odd:hidden'>
+						<div className='w550:odd:hidden' key={idx}>
 							<TeamMemberCard
-								key={idx}
 								fullname={teamMember.fullname}
 								position={teamMember.position}
 								image={teamMember.image}

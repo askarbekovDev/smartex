@@ -16,6 +16,8 @@
 	--dark: #242426; /* Глубокий черный */
 	--black: #000000;
 	--white: #ffffff;
+	--success-hover: #347e37;
+	--background-hover: #00000011;
 
 	--font-lato: 'Lato', sans-serif;
 	--font-rubik: 'Rubik', sans-serif;
