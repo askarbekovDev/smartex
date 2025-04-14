@@ -8,7 +8,7 @@ export const NewsRoom = () => {
 			<div className='pt-[100px] w850:pt-[60px] w650:pt-[86px]'>
 				<div className='mt-10 flex flex-col items-center'>
 					<div className='w-full flex w950:flex-col-reverse justify-between items-center w950:items-start'>
-						<h2 className='h2 text-primary-text w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>Новости SMARTEX</h2>
+						<h2 className='sectionTitle text-primary-text'>Новости SMARTEX</h2>
 						<div className='w950:pb-10'>
 							<ToggleButton buttons={['Все', 'Последние новости']} defaultWidth={59} />
 						</div>
@@ -19,7 +19,7 @@ export const NewsRoom = () => {
 						))}
 					</div>
 					<div className='mt-10'>
-						<Pagination/>
+						<Pagination />
 					</div>
 				</div>
 			</div>
