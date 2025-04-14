@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
-import { InstagramIcon, TelegramIcon } from '../../../public/icons';
+import { InstagramIcon, TelegramIcon } from '../../../../public/icons';
 import { ContactUsForm } from './ContactUsForm';
 import clsx from 'clsx';
 

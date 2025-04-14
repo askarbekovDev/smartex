@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import React, { FC, useEffect } from 'react';
-import { CloseIconTablet } from '../../../public/icons';
+import { CloseIconTablet } from '../../../../public/icons';
 import { headerNavLinks } from '@/utils/constants';
 import { Backdrop } from '@/UI';
 

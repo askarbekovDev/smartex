@@ -7,7 +7,7 @@ import {
 	socialResponsibilityContent,
 } from '@/utils/constants';
 import React, { FC, useState } from 'react';
-import { OurEmployees, OurTeam, SocialResponsibility } from '@/components/about-us';
+import { OurEmployees, OurTeam, SocialResponsibility } from './components';
 
 export const SmartexTeam: FC = () => {
 	const [content, setContent] = useState<SmartexTeamContentType>('Наша команда');

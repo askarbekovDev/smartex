@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import clsx from 'clsx';
-import { CloseIconTablet, MailIcon } from '../../../public/icons';
+import { CloseIconTablet, MailIcon } from '../../../../public/icons';
 import { Backdrop, CustomInput } from '@/UI';
 
 const formSchema = z.object({

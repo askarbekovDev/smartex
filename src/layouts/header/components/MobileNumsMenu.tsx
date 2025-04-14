@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
-import { PhoneIcon, PhoneIconBlack } from '../../../public/icons';
+import { PhoneIcon, PhoneIconBlack } from '../../../../public/icons';
 import { headerContactPhoneNums } from '@/utils/constants';
 
 export const MobileNumsMenu: FC = () => {
