@@ -1,147 +1,18 @@
-// 'use client';
-// import { motion } from 'framer-motion';
-// import Image from 'next/image';
-// import App from '../../../public/icons/App store.svg';
-// import Call from '../../../public/icons/call.svg';
-// import CarIcon from '../../../public/icons/CarIcon.svg';
-// import Google from '../../../public/icons/Google.svg';
-// import Location from '../../../public/icons/location.svg';
-// import Road from '../../../public/icons/road.svg';
-// import SmartexLogo from '../../../public/icons/SmartexLogo.svg';
-// import SmartexText from '../../../public/icons/SmartexText.svg';
-// import Download from '../../../public/images/Download.png';
-// export const Footer = () => {
-// 	return (
-// 		<>
-// 			{/* Animated Road */}
-// 			<div className='relative w-full mx-auto h-[100px] bg-primary rounded-t-[1rem] overflow-hidden'>
-// 				<Image
-// 					src={Road}
-// 					alt='Road'
-// 					className='w-full h-full pointer-events-none'
-// 					draggable={false}
-// 					priority
-// 				/>
-// 				<motion.div
-// 					initial={{ x: '-100%' }}
-// 					animate={{ x: '100%' }}
-// 					transition={{ repeat: Infinity, duration: 8, ease: 'linear' }}
-// 					className='absolute bottom-2 left-0 w-full h-auto'
-// 				>
-// 					<Image src={CarIcon} alt='Car' className='drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]' />
-// 				</motion.div>
-// 			</div>
-
-// 			<footer className='w-full border-t  border-gray-300'>
-// 				{/* App Download Section */}
-// 				<div className='container flex w750:flex-col w750:h-full w750:items-end h-[22.5rem]'>
-// 					{/* Text Content */}
-// 					<div className=' w750:w-full flex flex-col justify-center items-start p-4 bg-white'>
-// 						<div className='h3'>
-// 							<p>
-// 								Загрузите наше приложение, <br /> чтобы{' '}
-// 								<span className='text-secondary'>отслеживать</span> <br /> Ваши заказы
-// 							</p>
-// 						</div>
-// 						<div className='flex self-start gap-4 justify-center w-fit mt-10 w750:mt-2 w750:self-start'>
-// 							<Image
-// 								src={Google}
-// 								alt='Google'
-// 								className='cursor-pointer object-contain w-[160px] w850:w-[150px] w750:w-[140px] w550:w-[140px] w450:w-[120px] w370:w-[100px]'
-// 							/>
-// 							<Image
-// 								src={App}
-// 								alt='App'
-// 								className='cursor-pointer object-contain w-[160px] w850:w-[150px] w750:w-[140px] w550:w-[140px] w450:w-[120px] w370:w-[100px]'
-// 							/>
-// 						</div>
-// 					</div>
-
-// 					{/* Background and Phone */}
-// 					<div className='bg-white w-full h-full'>
-// 						<Image src={Download} alt='Download' className='w-full h-full' />
-// 					</div>
-// 				</div>
-
-// 				{/* Contact Info */}
-// 			</footer>
-// 			<div className='w-full  bg-primary py-4 '>
-// 				<div className=' flex container  min-h-[250px] px-1 py-4 justify-center items-center'>
-// 					<div className=' px-4 flex flex-wrap w-full w750:flex-col justify-between gap-4'>
-// 						{/* Logo */}
-// 						<div className='flex flex-col gap-2 max-w-[300px]'>
-// 							<Image src={SmartexText} alt='SmartexText' />
-// 							<Image src={SmartexLogo} alt='SmartexLogo' />
-// 						</div>
-
-// 						{/* Navigation */}
-// 						<div className='flex gap-8 flex-wrap'>
-// 							<div>
-// 								<p className='bodyLarge text-white mb-2'>Инструменты</p>
-// 								<ul className='text-white space-y-1'>
-// 									<li>Калькулятор/Тарифы</li>
-// 									<li>Пункты выдачи</li>
-// 									<li>Запрещенные товары</li>
-// 									<li>Часто задаваемые вопросы</li>
-// 								</ul>
-// 							</div>
-// 							<div>
-// 								<p className='bodyLarge text-white mb-2'>О компании</p>
-// 								<ul className='text-white space-y-1'>
-// 									<li>О нас</li>
-// 									<li>Новости и события</li>
-// 									<li>Вакансии</li>
-// 								</ul>
-// 							</div>
-// 							<div>
-// 								<p className='bodyLarge text-white mb-2'>Контакты</p>
-// 								<ul className='text-white space-y-1'>
-// 									<li className='flex items-center gap-2'>
-// 										<Image src={Call} alt='call' /> 0550 550 550
-// 									</li>
-// 									<li className='flex items-center gap-2'>
-// 										<Image src={Call} alt='call' /> 0550 550 550
-// 									</li>
-// 									<li className='flex items-center gap-2'>
-// 										<Image src={Call} alt='call' /> 0550 550 550
-// 									</li>
-// 									<li className='flex items-center gap-2'>
-// 										<Image src={Location} alt='Location' /> г. Бишкек, ул. Шопокова 123
-// 									</li>
-// 								</ul>
-// 							</div>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 			{/* sub_footer */}
-// 			<div className='w-full bg-secondary flex items-center py-4'>
-// 				<div className='container py-4 '>
-// 					<div className=' flex justify-between items-center px-4 w550:flex-col w550:gap-2 w550:text-center'>
-// 						<p className='text-primary text-sm w550:text-base'>© 2024 All rights reserved.</p>
-// 						<div className='flex gap-6 w550:flex-col w550:items-center'>
-// 							<p className='text-primary text-sm cursor-pointer'>Terms of Service</p>
-// 							<p className='text-primary text-sm cursor-pointer'>Privacy Policy</p>
-// 							<p className='text-primary text-sm cursor-pointer'>Cookies</p>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</>
-// 	);
-// };
-
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import AppStore from '../../../public/icons/App store.svg';
-import Left from '../../../public/icons/ArrowLeftIcon.svg';
-import Right from '../../../public/icons/ArrowRightIcon.svg';
-import CarIcon from '../../../public/icons/CarIcon.svg';
-import GoogleMarket from '../../../public/icons/Google.svg';
-import Phone from '../../../public/icons/IphoneIcon.png';
+import AppStore from '../../../public/icons/app-store.svg';
+import Left from '../../../public/icons/arrow-left-icon.svg';
+import Right from '../../../public/icons/arrow-right-icon.svg';
+import Call from '../../../public/icons/call.svg';
+import CarIcon from '../../../public/icons/car-icon.svg';
+import GoogleMarket from '../../../public/icons/google.svg';
+import Phone from '../../../public/icons/iphone-icon.png';
+import Location from '../../../public/icons/location.svg';
 import Road from '../../../public/icons/road.svg';
+import SmartexLogo from '../../../public/icons/smartex-logo.svg';
+import SmartexText from '../../../public/icons/smartex-text.svg';
 import Green from '../../../public/images/bg-fon-green.png';
 import White from '../../../public/images/bg-fon-white.png';
 
@@ -222,7 +93,7 @@ export const Footer = () => {
 			</footer>
 			{/*  */}
 			<div className='w1440:hidden hidden__block w650:w-full w650:h-[360px] w650:mt-5 w650:flex w650:flex-col w650:gap-2'>
-				<div className='flex flex-col container gap-4 '>
+				<div className='flex flex-col container gap-6 '>
 					<p className='h4 text-primary'>
 						Загрузите наше приложение, <br />
 						чтобы
@@ -238,7 +109,7 @@ export const Footer = () => {
 					</div>
 				</div>
 				{/*  */}
-				<div className='bg-white relative w-full h-[360px] w850:h-[330px]  w650:h-[250px]'>
+				<div className='bg-white relative mt-4 w-full h-[360px] w850:h-[330px]  w650:h-[250px]'>
 					<Image
 						src={White}
 						alt='white'
@@ -268,7 +139,56 @@ export const Footer = () => {
 				{/*  */}
 			</div>
 			{/*  */}
-			<div className='w-full bg-secondary flex items-center py-6  w650:mt-[68px] w420:mt-[68px]'>
+			<div className='w-full w650:mt-20  w370:mt-24 bg-primary py-6 '>
+				<div className=' flex container min-h-[250px] px-1 py-4 justify-center items-center'>
+					<div className='px-4 flex flex-wrap w-full w750:flex-col justify-between gap-4'>
+						{/* Logo */}
+						<div className='flex flex-col gap-2 max-w-[300px] w420:pt-4'>
+							<Image src={SmartexText} alt='SmartexText' />
+							<Image src={SmartexLogo} alt='SmartexLogo' />
+						</div>
+						{/* Navigation */}
+						<div className='flex gap-8 flex-wrap'>
+							<div>
+								<p className='h6 text-white mb-2'>Инструменты</p>
+								<ul className='text-white space-y-1'>
+									<li>Калькулятор/Тарифы</li>
+									<li>Пункты выдачи</li>
+									<li>Запрещенные товары</li>
+									<li>Часто задаваемые вопросы</li>
+								</ul>
+							</div>
+							<div>
+								<p className='h6 text-white mb-2'>О компании</p>
+								<ul className='text-white space-y-1'>
+									<li>О нас</li>
+									<li>Новости и события</li>
+									<li>Вакансии</li>
+								</ul>
+							</div>
+							<div>
+								<p className='h6 text-white mb-2'>Контакты</p>
+								<ul className='text-white space-y-1 '>
+									<li className='flex items-center gap-2'>
+										<Image src={Call} alt='call' /> 0550 550 550
+									</li>
+									<li className='flex items-center gap-2'>
+										<Image src={Call} alt='call' /> 0550 550 550
+									</li>
+									<li className='flex items-center gap-2'>
+										<Image src={Call} alt='call' /> 0550 550 550
+									</li>
+									<li className='flex items-center gap-2'>
+										<Image src={Location} alt='Location' /> г. Бишкек, ул. Шопокова 123
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/*  */}
+			<div className='w-full bg-secondary flex items-center py-4'>
 				<div className='container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center text-primary text-sm gap-2'>
 					<p>© 2024 All rights reserved.</p>
 					<div className='flex gap-6'>
