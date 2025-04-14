@@ -50,6 +50,14 @@ body {
 		padding: 0 16px;
 	}
 }
+.hidden__block {
+	display: none;
+
+	@media (max-width: 650px) {
+		display: block;
+	}
+}
+
 
 .h1 {
 	font-family: var(--font-rubik);
