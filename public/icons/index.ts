@@ -1,3 +1,4 @@
+export { AlienCardEmoji } from './alien-card-emoji';
 export { ArrowIconDescripton } from './arrow-icon-descripton';
 export { BurgerMobile } from './burger-mobile';
 export { BurgerTablet } from './burger-tablet';
@@ -9,4 +10,5 @@ export { InstagramIcon } from './instagram-icon';
 export { MailIcon } from './mail-icon';
 export { PhoneIcon } from './phone-icon';
 export { PhoneIconBlack } from './phone-icon-black';
+export { PlayIcon } from './play-icon';
 export { TelegramIcon } from './telegram-icon';

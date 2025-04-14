@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 
 export const NavLinks: FC = () => {
 	return (
-		<div className='flex items-center gap-5 uiNavLink w1350:gap-3 w1150:hidden'>
+		<nav className='flex items-center gap-5 uiNavLink w1350:gap-3 w1150:hidden'>
 			{headerNavLinks.map((navLink, idx) => (
 				<Link
 					className='hover:text-secondary hover:underline underline-offset-4 decoration-[1px]'
@@ -22,6 +22,6 @@ export const NavLinks: FC = () => {
 					Регистрация
 				</Link>
 			</span>
-		</div>
+		</nav>
 	);
 };

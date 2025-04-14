@@ -11,7 +11,7 @@ export const PinduoduoBlock: FC = () => {
 				<div className='w-full relative w650:hidden'>
 					<div className='absolute p-4 pl-px top-[80px] left-[-1px] rounded-tr-2xl rounded-br-2xl 
                           bg-background w850:p-3 w750:top-[60px]'>
-          <h1 className='h2 py-2.5 w1150:text-[28px]! w1150:py-1 w750:py-0'>Блок для Пиндоудо</h1>
+          <h1 className='sectionTitle py-2.5 w1150:py-1 w750:py-0'>Блок для Пиндоудо</h1>
 
 						<div className='absolute left-px top-[-17px] w-[17px] h-[17px] rotate-270'>
 							<CornerSmoother />
