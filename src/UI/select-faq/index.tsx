@@ -8,7 +8,7 @@ interface SelectFaqProps {
 	title?: string;
 	variant?: 'green' | 'red' | 'orange';
 	image?: StaticImageData;
-	isActive?: boolean;
+	isActive: boolean;
 	onClick?: () => void;
 	description?: string;
 }
@@ -17,7 +17,7 @@ export const SelectFaq = ({
 	title = 'Заголовок',
 	image,
 	variant = 'green',
-	isActive = false,
+	isActive,
 	onClick,
 	description,
 }: SelectFaqProps) => {
@@ -45,16 +45,12 @@ export const SelectFaq = ({
 
 					{isActive && (
 						<div
-							className={`
-						  w750:block hidden
-						  overflow-hidden
-						  transition-[max-height,opacity]
-						  duration-700
-						  ease-in-out
-						  ${isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'}
-					    `}
+							className={clsx(
+								'hidden w750:block transition-[max-height,opacity] duration-700 ease-in-out',
+								isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+							)}
 						>
-							<p className='bodyText text-secondary leading-relaxed'>{description}</p>
+							<p className='bodyText  leading-relaxed'>{description}</p>
 						</div>
 					)}
 				</>
@@ -75,14 +71,10 @@ export const SelectFaq = ({
 					</div>
 					{isActive && (
 						<div
-							className={`
-                    w750:block hidden
-                    overflow-hidden
-                    transition-[max-height,opacity]
-                    duration-700
-                    ease-in-out
-                    ${isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'}
-                  `}
+							className={clsx(
+								'w750:block hidden transition-[max-height,opacity] duration-700 ease-in-out',
+								isActive ? 'h-[100px] block' : 'hidden'
+							)}
 						>
 							<p className='text-sm text-gray-600 leading-relaxed'>{description}</p>
 						</div>

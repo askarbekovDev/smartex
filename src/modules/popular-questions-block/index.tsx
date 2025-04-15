@@ -7,7 +7,7 @@ export const PopularQuestionsBlock: FC = () => {
 			<div className='py-[140px]'>
 				<h2 className='sectionTitle'>Популярные вопросы</h2>
 				<div className='min-h-[400px] w-full mt-10'>
-					<FAQ variant='green' />
+					<FAQ variant='red' />
 				</div>
 			</div>
 		</div>
