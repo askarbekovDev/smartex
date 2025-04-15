@@ -33,9 +33,7 @@ export const HowSmartexHelps = () => {
 		<div className='container'>
 			<div className='relative pt-[100px] w850:pt-[60px] w650:pt-[86px]'>
 				<div className='max-w-1/2 w1050:max-w-full'>
-					<h2 className='h2 text-primary-text w850:text-[28px]! w850:leading-[30px]! w550:text-[24px]! w550:leading-[26px]!'>
-						Как SMARTEX помогает своим клиентам?
-					</h2>
+					<h2 className='sectionTitle text-primary-text'>Как SMARTEX помогает своим клиентам?</h2>
 					<p className='bodyText text-secondary-text mt-3'>
 						Наш сервис позволяет вам быстро и надежно доставлять посылки из США, Китая и Турции
 						прямо в Кыргызстан. Мы делаем покупки за границей удобными и доступными для вас!

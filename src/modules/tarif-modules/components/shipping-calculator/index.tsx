@@ -17,10 +17,6 @@ export const ShippingCalculator = () => {
 			>
 				<div>
 					<p className={clsx('mb-[24px]')}>Выберите страну отправления</p>
-					{/* <CustomInput
-						placeholder='0 сом'
-						className='h-[72px] w550:h-[52px] w-full border border-solid border-border rounded-[16px] p-4 outline-0 bg-background w550:bodySmall w550:bg-white'
-					/> */}
 					<ShippingSelector />
 				</div>
 				<div className='flex gap-4 mt-4'>

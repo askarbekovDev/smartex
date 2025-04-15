@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import Korobka from '../../../../../public/images/korobka.png';
+
 export const WeightCalculation = () => {
 	return (
 		<section className='w-full flex gap-6 w650:flex-col mt-[40px]'>

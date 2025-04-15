@@ -1,9 +1,9 @@
 import {
-	IntroBlock,
-	NewsBlock,
-	PinduoduoBlock,
-	PopularQuestionsBlock,
-	SearchSection,
+  IntroBlock,
+  NewsBlock,
+  PinduoduoBlock,
+  PopularQuestionsBlock,
+  SearchSection,
 } from '@/modules';
 
 export default function Home() {
