@@ -38,7 +38,8 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 					className={clsx(
 						'flex flex-col gap-4 w-full max-h-[500px]',
 						variant !== 'green' && 'overflow-y-auto ',
-						' hide-native-scrollbar '
+						' hide-native-scrollbar ',
+						'w750:overflow-hidden'
 					)}
 				>
 					{smart.map((item) => {
