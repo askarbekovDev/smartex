@@ -2,7 +2,7 @@ import { Pagination } from '@/UI';
 import clsx from 'clsx';
 import Image from 'next/image';
 import React, { FC } from 'react';
-import { CornerSmoother } from '../../../public/icons';
+import { CornerSmoother } from '../../../../public/icons';
 
 type SocialRespProps = {
 	content: SmartexTeamContentType;
