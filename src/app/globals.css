@@ -197,3 +197,12 @@ body {
 	line-height: 14px;
 	letter-spacing: 0px;
 }
+
+.hide-native-scrollbar {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.hide-native-scrollbar::-webkit-scrollbar {
+	display: none;
+}
