@@ -4,13 +4,13 @@ import { CornerSmoother } from '../../../public/icons';
 import { StatisticsWrapper } from '@/UI';
 import Link from 'next/link';
 
-export const IntroBlock: FC = () => {
+export const IntroSection: FC = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='w-full relative w850:hidden'>
 				<div className='absolute top-[-1px] left-[-1px] max-w-[335px] h-[140px] w-full bg-background w1150:h-[106px]'>
 					<div className='pl-px'>
-						<h6 className='h6 pt-10 pb-3 text-secondary-text w1150:pt-6'>
+						<h6 className='h6 pt-10 pb-3 text-secondary_text w1150:pt-6'>
 							Сервис доставки посылок
 						</h6>
 						<h1 className='h1 text-secondary'>SMARTEX</h1>
@@ -62,7 +62,7 @@ export const IntroBlock: FC = () => {
 					<Link
 						href='/'
 						className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white 
-						w1150:w-[173px] w1150:rounded-[14px]'
+						hover:bg-success_hover transition-all duration-200 w1150:w-[173px] w1150:rounded-[14px]'
 					>
 						Калькулятор
 					</Link>
@@ -78,7 +78,7 @@ export const IntroBlock: FC = () => {
 			<div className='hidden w850:block pt-4'>
 				<div className='flex justify-between'>
 					<div>
-						<h6 className='bodyText text-[18px]! pb-3 text-primary-text w550:text-[16px]!'>
+						<h6 className='bodyText text-[18px]! pb-3 text-primary_text w550:text-[16px]!'>
 							Сервис доставки посылок
 						</h6>
 						<h1 className='h4 text-secondary text-[30px]! w550:text-[24px]!'>SMARTEX</h1>
@@ -110,13 +110,13 @@ export const IntroBlock: FC = () => {
 					/>
 					<Link
 						href='/'
-						className='flex items-center justify-center min-w-full h-[76px] rounded-2xl bg-success uiBtnText text-white 
-						w1150:w-[173px] w1150:rounded-[10px] w550:h-16 w550:w-full w420:h-11 w420:rounded-lg'
+						className='flex items-center justify-center min-w-full h-[76px] rounded-2xl bg-success uiBtnText text-white hover:bg-success_hover
+						transition-all duration-200 w1150:w-[173px] w1150:rounded-[10px] w550:h-16 w550:w-full w420:h-11 w420:rounded-lg'
 					>
 						Калькулятор
 					</Link>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

@@ -29,9 +29,9 @@ export default {
 			colors: {
 				background: 'var(--background)', // Светло-серый (фон)
 				primary: 'var(--primary)', // Темно-синий (основной цвет)
-				primaryText: 'var(--primary-text)', // Темно-серый (текст на основном фоне)
+				primary_text: 'var(--primary-text)', // Темно-серый (текст на основном фоне)
 				secondary: 'var(--secondary)', // Оранжевый (второстепенный цвет)
-				secondaryText: 'var(--secondary-text)', // Серый (текст на второстепенном фоне)
+				secondary_text: 'var(--secondary-text)', // Серый (текст на второстепенном фоне)
 				border: 'var(--border)', // Серый (границы, разделители)
 				icons: 'var(--icons)', // Серый (цвет иконок)
 				success: 'var(--success)', // Зеленый (успешно)
@@ -41,6 +41,12 @@ export default {
 				dark: 'var(--dark)', // Глубокий черный
 				black: 'var(--black)', // #000000
 				white: 'var(--white)', // #ffffff
+				success_hover: 'var(--success-hover)', // hover color over 'success'
+				background_hover: 'var(--background-hover)', // hover color over 'background'
+				primary_hover: 'var(--primary-hover)', // hover color over 'background'
+				info_hover: 'var(--info-hover)', // hover color over 'info'
+				white_hover: 'var(--white-hover)', // hover color over 'white'
+				secondary_hover: 'var(--secondary-hover)', // hover color over 'secondary'
 			},
 			fontFamily: {
 				rubik: 'var(--font-rubik)',

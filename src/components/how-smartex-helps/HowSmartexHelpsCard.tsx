@@ -19,8 +19,8 @@ export const HowSmartexHelpsCard = ({ el, index }: HowSmartexHelpsCardProps) => 
 				<div className='absolute w-full w1050:w-full border-[1px] border-border border-dashed -bottom-[60px] w650:-bottom-[55px] left-1/2 right-1/2 -translate-y-1/2 -translate-x-1/2'></div>
 			</div>
 			<div className='w-full flex flex-col flex-1 min-h-[118px] mt-[113px] w1050:mt-[81px] border-border border-[1px] rounded-[16px] text-center px-5 py-6'>
-				<h6 className='h6 text-primary-text w650:text-secondary'>{el.title}</h6>
-				<p className='bodyText text-secondary-text mt-3 flex-grow'>{el.description}</p>{' '}
+				<h6 className='h6 text-primary_text w650:text-secondary'>{el.title}</h6>
+				<p className='bodyText text-secondary_text mt-3 flex-grow'>{el.description}</p>{' '}
 			</div>
 		</div>
 	);

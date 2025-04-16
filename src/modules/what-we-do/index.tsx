@@ -1,6 +1,7 @@
 'use client';
 
-import { ToggleButton, WhatWeDoCard } from '@/UI';
+import { WhatWeDoCard } from '@/components';
+import { ToggleButton } from '@/UI';
 import {
 	companyHystoryContent,
 	ourMissionContent,
@@ -8,10 +9,8 @@ import {
 } from '@/utils/constants';
 import React, { FC, useState } from 'react';
 
-type Content = 'История компании' | 'Наша миссия' | 'Зарубежные склады';
-
 export const WhatWeDoBlock: FC = () => {
-	const [content, setContent] = useState<Content>('История компании');
+	const [content, setContent] = useState<WhatWeDoBlockContType>('История компании');
 
 	const contentToAppear =
 		content === 'История компании'
@@ -23,9 +22,7 @@ export const WhatWeDoBlock: FC = () => {
 	return (
 		<div className='container'>
 			<div className='flex justify-between pt-[100px] w1050:pt-15 w1050:flex-col-reverse w850:pt-20'>
-				<h2 className='sectionTitle w1050:pt-10'>
-					{content}
-				</h2>
+				<h2 className='sectionTitle w1050:pt-10'>{content}</h2>
 				<ToggleButton
 					buttons={['История компании', 'Наша миссия', 'Зарубежные склады'] as const}
 					defaultWidth={165}

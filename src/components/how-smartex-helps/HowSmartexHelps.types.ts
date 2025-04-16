@@ -1,10 +1,10 @@
-export interface IElement {
+export type IElement = {
     image: string;
     title: string;
     description: string;
 }
 
-export interface HowSmartexHelpsCardProps {
+export type HowSmartexHelpsCardProps = {
     index: number;
     el: IElement;
 }
