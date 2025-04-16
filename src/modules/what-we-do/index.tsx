@@ -1,6 +1,7 @@
 'use client';
 
-import { ToggleButton, WhatWeDoCard } from '@/UI';
+import { WhatWeDoCard } from '@/components';
+import { ToggleButton } from '@/UI';
 import {
 	companyHystoryContent,
 	ourMissionContent,

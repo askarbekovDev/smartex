@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface DateProps {
+type DateProps = {
 	width: string;
 	height: string;
 }

@@ -1,8 +1,8 @@
-export interface IElement {
+export type IElement = {
 	image: string;
 	description: string;
 }
 
-export interface WhySmartexCardProps {
+export type WhySmartexCardProps = {
 	el: IElement;
 }

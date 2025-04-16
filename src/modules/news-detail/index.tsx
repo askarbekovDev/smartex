@@ -1,7 +1,7 @@
-import { NewsCart } from '@/components/news/NewsCart';
 import Image from 'next/image';
 import React from 'react';
 import { Date } from '../../../public/icons';
+import { NewsCard } from '@/components';
 
 export const NewsDetail = () => {
 	return (
@@ -55,7 +55,7 @@ export const NewsDetail = () => {
 					</div>
 					<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
 						{[1, 2, 3].map((el, index) => (
-							<NewsCart key={index} idx={index} />
+							<NewsCard key={index} idx={index} />
 						))}
 					</div>
 				</div>

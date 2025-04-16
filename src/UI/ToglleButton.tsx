@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react';
 import clsx from 'clsx';
 
-interface ToggleButtonProps<T, U extends readonly string[]> {
+type ToggleButtonProps<T, U extends readonly string[]> = {
 	buttons: U;
 	defaultWidth: number;
 	setState: React.Dispatch<React.SetStateAction<T>>;

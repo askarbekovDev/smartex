@@ -1,4 +1,4 @@
-import { NewsCart } from '@/components/news/NewsCart';
+import { NewsCard } from '@/components';
 import React from 'react';
 
 export const NewsSection = () => {
@@ -10,7 +10,7 @@ export const NewsSection = () => {
 				</h2>
 				<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
 					{[1, 2, 3].map((el, index) => (
-						<NewsCart key={index} idx={index} />
+						<NewsCard key={index} idx={index} />
 					))}
 				</div>
 			</div>
