@@ -129,8 +129,8 @@ export const ContactUsForm: FC = () => {
 
 						<button
 							type='submit'
-							className='w-full uiBtnText text-secondary-text border-2 border-border p-5 rounded-2xl bg-background 
-							           w750:rounded-xl w450:rounded-md w550:bg-white w450:bg-primary w450:border-0 w450:text-background'
+							className='w-full uiBtnText text-secondary-text border-2 border-border p-5 rounded-2xl bg-background hover:bg-background_hover transition-all duration-200
+							w750:rounded-xl w450:rounded-md w550:bg-white w550:hover:bg-white_hover w450:bg-primary w450:border-0 w450:text-background w450:hover:bg-primary_hover'
 						>
 							ОТПРАВИТЬ СООБЩЕНИЕ
 						</button>
