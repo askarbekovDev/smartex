@@ -68,7 +68,7 @@ export const IntroAboutUs: FC = () => {
 
 			<div className='hidden w850:block pt-4'>
 				<div className='flex justify-between items-center gap-2'>
-					<h4 className='h4 text-primary-text'>Прозрачные тарифы</h4>
+					<h4 className='h4 text-primary_text'>Прозрачные тарифы</h4>
 					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>
 						<Image
 							alt='The Alien'

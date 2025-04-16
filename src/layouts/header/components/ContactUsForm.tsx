@@ -120,7 +120,7 @@ export const ContactUsForm: FC = () => {
 						</span>
 
 						<textarea
-							className='w-full py-4 px-5 bodyText placeholder:text-secondary-text text-primary-text 
+							className='w-full py-4 px-5 bodyText placeholder:text-secondary-text text-primary_text 
 							           border-1 border-border rounded-lg outline-0 bg-background resize-none w550:bg-white'
 							placeholder='*Напишите ваше сообщение...'
 							rows={7}

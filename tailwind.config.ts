@@ -29,7 +29,7 @@ export default {
 			colors: {
 				background: 'var(--background)', // Светло-серый (фон)
 				primary: 'var(--primary)', // Темно-синий (основной цвет)
-				primaryText: 'var(--primary-text)', // Темно-серый (текст на основном фоне)
+				primary_text: 'var(--primary-text)', // Темно-серый (текст на основном фоне)
 				secondary: 'var(--secondary)', // Оранжевый (второстепенный цвет)
 				secondaryText: 'var(--secondary-text)', // Серый (текст на второстепенном фоне)
 				border: 'var(--border)', // Серый (границы, разделители)

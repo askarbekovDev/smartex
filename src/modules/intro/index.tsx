@@ -78,7 +78,7 @@ export const IntroSection: FC = () => {
 			<div className='hidden w850:block pt-4'>
 				<div className='flex justify-between'>
 					<div>
-						<h6 className='bodyText text-[18px]! pb-3 text-primary-text w550:text-[16px]!'>
+						<h6 className='bodyText text-[18px]! pb-3 text-primary_text w550:text-[16px]!'>
 							Сервис доставки посылок
 						</h6>
 						<h1 className='h4 text-secondary text-[30px]! w550:text-[24px]!'>SMARTEX</h1>
