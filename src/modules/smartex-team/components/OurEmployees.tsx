@@ -1,4 +1,4 @@
-import { TeamMemberCard } from '@/UI';
+import { TeamMemberCard } from '@/components';
 import clsx from 'clsx';
 import React, { FC } from 'react';
 

@@ -4,7 +4,7 @@ import { ArrowIconDescripton } from '../../../public/icons';
 import DontIcon from '../../../public/icons/dont-icon.svg';
 import FaqIcon from '../../../public/icons/faq-icon.svg';
 
-interface SelectFaqProps {
+type SelectFaqProps = {
 	title?: string;
 	variant?: 'green' | 'red' | 'orange';
 	image?: StaticImageData;

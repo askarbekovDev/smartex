@@ -1,13 +1,13 @@
 'use client';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { Date } from '../../../public/icons';
+import { Date } from '../../public/icons';
 
-interface NewsCartProps {
+type NewsCardProps = {
 	idx: number;
 }
 
-export const NewsCart = ({ idx }: NewsCartProps) => {
+export const NewsCard = ({ idx }: NewsCardProps) => {
 	const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
 	return (
