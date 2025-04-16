@@ -7,7 +7,7 @@ export const SearchSection: FC = () => {
 			<h1 className='h3 pt-[100px] pb-[12px] w1150:pt-20 w950:pt-15 w650:text-[24px]! w650:leading-[26px]!'>
 				Отследить посылку
 			</h1>
-			<p className='bodyLarge text-secondary-text w550:text-[16px]!'>
+			<p className='bodyLarge text-secondary_text w550:text-[16px]!'>
 				Введите трекинг номер и отслеживайте процесс доставки.
 			</p>
 
@@ -21,7 +21,7 @@ export const SearchSection: FC = () => {
 					</div>
 					<input
 						type='text'
-						className='w-full h-full outline-0 placeholder:bodySmall placeholder:text-secondary-text'
+						className='w-full h-full outline-0 placeholder:bodySmall placeholder:text-secondary_text'
 						placeholder='Введите ваш трекинг код'
 					/>
 				</div>

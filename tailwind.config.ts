@@ -31,7 +31,7 @@ export default {
 				primary: 'var(--primary)', // Темно-синий (основной цвет)
 				primary_text: 'var(--primary-text)', // Темно-серый (текст на основном фоне)
 				secondary: 'var(--secondary)', // Оранжевый (второстепенный цвет)
-				secondaryText: 'var(--secondary-text)', // Серый (текст на второстепенном фоне)
+				secondary_text: 'var(--secondary-text)', // Серый (текст на второстепенном фоне)
 				border: 'var(--border)', // Серый (границы, разделители)
 				icons: 'var(--icons)', // Серый (цвет иконок)
 				success: 'var(--success)', // Зеленый (успешно)

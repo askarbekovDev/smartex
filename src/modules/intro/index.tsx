@@ -10,7 +10,7 @@ export const IntroSection: FC = () => {
 			<div className='w-full relative w850:hidden'>
 				<div className='absolute top-[-1px] left-[-1px] max-w-[335px] h-[140px] w-full bg-background w1150:h-[106px]'>
 					<div className='pl-px'>
-						<h6 className='h6 pt-10 pb-3 text-secondary-text w1150:pt-6'>
+						<h6 className='h6 pt-10 pb-3 text-secondary_text w1150:pt-6'>
 							Сервис доставки посылок
 						</h6>
 						<h1 className='h1 text-secondary'>SMARTEX</h1>

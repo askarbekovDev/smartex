@@ -75,7 +75,7 @@ export const ContactUsForm: FC = () => {
 						{ 'pointer-events-none': !feedbackOpen }
 					)}
 				>
-					<h4 className='h4 text-secondary-text'>Свяжитесь с нами</h4>
+					<h4 className='h4 text-secondary_text'>Свяжитесь с нами</h4>
 					<div
 						onClick={() => setFeedbackOpen(false)}
 						className='absolute top-5 right-8 cursor-pointer w550:right-6 w450:right-4 w370:hidden'
@@ -120,7 +120,7 @@ export const ContactUsForm: FC = () => {
 						</span>
 
 						<textarea
-							className='w-full py-4 px-5 bodyText placeholder:text-secondary-text text-primary_text 
+							className='w-full py-4 px-5 bodyText placeholder:text-secondary_text text-primary_text 
 							           border-1 border-border rounded-lg outline-0 bg-background resize-none w550:bg-white'
 							placeholder='*Напишите ваше сообщение...'
 							rows={7}
@@ -129,7 +129,7 @@ export const ContactUsForm: FC = () => {
 
 						<button
 							type='submit'
-							className='w-full uiBtnText text-secondary-text border-2 border-border p-5 rounded-2xl bg-background hover:bg-background_hover transition-all duration-200
+							className='w-full uiBtnText text-secondary_text border-2 border-border p-5 rounded-2xl bg-background hover:bg-background_hover transition-all duration-200
 							w750:rounded-xl w450:rounded-md w550:bg-white w550:hover:bg-white_hover w450:bg-primary w450:border-0 w450:text-background w450:hover:bg-primary_hover'
 						>
 							ОТПРАВИТЬ СООБЩЕНИЕ

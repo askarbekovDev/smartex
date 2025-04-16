@@ -23,7 +23,7 @@ export const StatisticsWrapper: FC<StatisticsProps> = ({ title, subTitle, textCe
 			>
 				{title}
 			</h2>
-			<h4 className='bodyLarge text-secondary-text w1150:text-[16px]!'>{subTitle}</h4>
+			<h4 className='bodyLarge text-secondary_text w1150:text-[16px]!'>{subTitle}</h4>
 		</div>
 	);
 };

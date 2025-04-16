@@ -27,13 +27,13 @@ export const NewsDetail = () => {
 								<h5 className='text-primary_text h5'>SMARTEX</h5>
 								<div className='flex items-center gap-2'>
 									<Date width='24px' height='24px' />
-									<p className='bodySmall text-secondary-text text-[13px] leading-[16px]'>
+									<p className='bodySmall text-secondary_text text-[13px] leading-[16px]'>
 										1 месяц назад
 									</p>
 								</div>
 							</div>
 							<h6 className='h6 text-primary_text'>Новости новости новости?</h6>
-							<p className='bodyText text-secondary-text'>
+							<p className='bodyText text-secondary_text'>
 								Наш сервис позволяет вам быстро и надежно доставлять посылки из США, Китай и из
 								Турции прямо в Кыргызстан.Step into a visual journey that encapsulates the essence
 								of my lens. Each photograph in this portfolio is a narrative, a frozen moment in
