@@ -46,6 +46,7 @@ export default {
 				primary_hover: 'var(--primary-hover)', // hover color over 'background'
 				info_hover: 'var(--info-hover)', // hover color over 'info'
 				white_hover: 'var(--white-hover)', // hover color over 'white'
+				secondary_hover: 'var(--secondary-hover)', // hover color over 'secondary'
 			},
 			fontFamily: {
 				rubik: 'var(--font-rubik)',
