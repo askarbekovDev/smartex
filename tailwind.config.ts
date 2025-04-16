@@ -41,6 +41,11 @@ export default {
 				dark: 'var(--dark)', // Глубокий черный
 				black: 'var(--black)', // #000000
 				white: 'var(--white)', // #ffffff
+				success_hover: 'var(--success-hover)', // hover color over 'success'
+				background_hover: 'var(--background-hover)', // hover color over 'background'
+				primary_hover: 'var(--primary-hover)', // hover color over 'background'
+				info_hover: 'var(--info-hover)', // hover color over 'info'
+				white_hover: 'var(--white-hover)', // hover color over 'white'
 			},
 			fontFamily: {
 				rubik: 'var(--font-rubik)',

@@ -26,8 +26,8 @@ export const SearchSection: FC = () => {
 					/>
 				</div>
 				<button
-					className='uiBtnText bg-primary cursor-pointer text-white w-[267px] h-15 rounded-2xl 
-				       				     w950:h-12.5 w750:rounded-[12px] w550:w-full w550:h-11 w550:rounded-lg'
+					className='uiBtnText bg-primary hover:bg-primary_hover transition-all duration-200 cursor-pointer text-white w-[267px] h-15 rounded-2xl 
+				  w950:h-12.5 w750:rounded-[12px] w550:w-full w550:h-11 w550:rounded-lg '
 				>
 					Поиск
 				</button>
