@@ -1,6 +1,17 @@
+'use client';
+
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { IVacancy } from '@/components/actual-vacancy/ActualVacancy.types';
 import { ActualVacancyCard } from '@/components/actual-vacancy/ActualVacancyCard';
-import React from 'react';
+
+const VacancyModalForm = dynamic(() =>
+	import('@/components/actual-vacancy/VacancyModalForm').then((mod) => mod.VacancyModalForm),
+	{ 
+		ssr: false, 
+		loading: () => <p>Загрузка модального окна...</p>,
+	 }
+);
 
 const vacancies: IVacancy[] = [
 	{
@@ -54,6 +65,9 @@ const vacancies: IVacancy[] = [
 ];
 
 export const ActualVacancy = () => {
+	const [feedbackOpen, setFeedbackOpen] = useState<boolean>(false);
+	const [vacancyTitle, setVacancyTitle] = useState<string>('');
+
 	return (
 		<div className='container'>
 			<div className='relative pt-[100px] w850:pt-[60px] w650:pt-[86px]'>
@@ -61,10 +75,22 @@ export const ActualVacancy = () => {
 					<h2 className='sectionTitle'>Вакансии</h2>
 					<div className='mt-11 grid grid-cols-3 w1050:grid-cols-2 w750:grid-cols-1 gap-6'>
 						{vacancies.map((vacancy, idx) => (
-							<ActualVacancyCard key={idx} vacancy={vacancy} />
+							<ActualVacancyCard
+								key={idx}
+								vacancy={vacancy}
+								setFeedbackOpen={setFeedbackOpen}
+								setVacancyTitle={setVacancyTitle}
+							/>
 						))}
 					</div>
 				</div>
+				{feedbackOpen && (
+					<VacancyModalForm
+						title={vacancyTitle}
+						feedbackOpen={feedbackOpen}
+						setFeedbackOpen={setFeedbackOpen}
+					/>
+				)}
 			</div>
 		</div>
 	);
