@@ -70,7 +70,7 @@ export const IntroOurWork = () => {
 				<div className='hidden w850:block pt-4'>
 					<div className='flex justify-between items-center'>
 						<h4 className='h4 w450:text-[20px]! text-primary_text'>Новости и обновления Smartex</h4>
-						<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>
+						<div className='p-2 border-1 border-border rounded-[60px]  shrink-0'>
 							<Image
 								alt='The Alien'
 								src='/images/alien-like.svg'
