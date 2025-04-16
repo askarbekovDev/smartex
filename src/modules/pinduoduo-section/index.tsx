@@ -42,8 +42,8 @@ export const PinduoduoSection: FC = () => {
 					>
 						<Link
 							href='#'
-							className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white 
-					  	w1150:w-[173px] w1150:rounded-[14px] w950:h-12.5 w650:h-10 w650:rounded-[14px]'
+							className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white hover:bg-success_hover 
+							transition-all duration-200 w1150:w-[173px] w1150:rounded-[14px] w950:h-12.5 w650:h-10 w650:rounded-[14px]'
 						>
 							Смотреть больше
 						</Link>

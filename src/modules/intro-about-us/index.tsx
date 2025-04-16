@@ -53,7 +53,7 @@ export const IntroAboutUs: FC = () => {
 					<Link
 						href='/'
 						className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white 
-						w1150:w-[173px] w1150:rounded-[14px]'
+						hover:bg-success_hover transition-all duration-200 w1150:w-[173px] w1150:rounded-[14px]'
 					>
 						<span className='pr-5 w1150:pr-3'>Смотреть</span> <PlayIcon />
 					</Link>

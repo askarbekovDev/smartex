@@ -62,7 +62,7 @@ export const IntroSection: FC = () => {
 					<Link
 						href='/'
 						className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white 
-						w1150:w-[173px] w1150:rounded-[14px]'
+						hover:bg-success_hover transition-all duration-200 w1150:w-[173px] w1150:rounded-[14px]'
 					>
 						Калькулятор
 					</Link>
@@ -110,8 +110,8 @@ export const IntroSection: FC = () => {
 					/>
 					<Link
 						href='/'
-						className='flex items-center justify-center min-w-full h-[76px] rounded-2xl bg-success uiBtnText text-white 
-						w1150:w-[173px] w1150:rounded-[10px] w550:h-16 w550:w-full w420:h-11 w420:rounded-lg'
+						className='flex items-center justify-center min-w-full h-[76px] rounded-2xl bg-success uiBtnText text-white hover:bg-success_hover
+						transition-all duration-200 w1150:w-[173px] w1150:rounded-[10px] w550:h-16 w550:w-full w420:h-11 w420:rounded-lg'
 					>
 						Калькулятор
 					</Link>
