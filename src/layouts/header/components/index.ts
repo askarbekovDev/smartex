@@ -5,3 +5,4 @@ export { HeaderDesktop } from './HeaderDesktop';
 export { MobileNumsMenu } from './MobileNumsMenu';
 export { SocialMediaLinks } from './SocialMediaLinks';
 export { DropDownMenu } from './DropDownMenu';
+export { HeaderMobile } from './HeaderMobile';

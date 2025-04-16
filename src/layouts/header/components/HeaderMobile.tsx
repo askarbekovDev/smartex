@@ -2,10 +2,10 @@
 
 import clsx from 'clsx';
 import React, { FC, useState } from 'react';
-import { BurgerMobile, CloseIconMobile } from '../../../public/icons';
 import Link from 'next/link';
 import Image from 'next/image';
-import { DropDownMenu, MobileNumsMenu, SocialMediaLinks } from '../header/index';
+import { DropDownMenu, MobileNumsMenu, SocialMediaLinks } from '@/layouts/header/components';
+import { BurgerMobile, CloseIconMobile } from '../../../../public/icons';
 
 export const HeaderMobile: FC = () => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(false);

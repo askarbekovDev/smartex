@@ -53,7 +53,7 @@ export const IntroAboutUs: FC = () => {
 					<Link
 						href='/'
 						className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white 
-						w1150:w-[173px] w1150:rounded-[14px]'
+						hover:bg-success_hover transition-all duration-200 w1150:w-[173px] w1150:rounded-[14px]'
 					>
 						<span className='pr-5 w1150:pr-3'>Смотреть</span> <PlayIcon />
 					</Link>
@@ -68,7 +68,7 @@ export const IntroAboutUs: FC = () => {
 
 			<div className='hidden w850:block pt-4'>
 				<div className='flex justify-between items-center gap-2'>
-					<h4 className='h4 text-primary-text'>Прозрачные тарифы</h4>
+					<h4 className='h4 text-primary_text'>Прозрачные тарифы</h4>
 					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>
 						<Image
 							alt='The Alien'

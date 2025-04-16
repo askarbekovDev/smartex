@@ -1,11 +1,11 @@
 import { NewsCart } from '@/components/news/NewsCart';
 import React from 'react';
 
-export const NewsBlock = () => {
+export const NewsSection = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='pt-[140px] w1150:pt-[120px] w850:pt-[100px] w650:pt-15'>
-				<h2 className='sectionTitle text-primary-text'>
+				<h2 className='sectionTitle text-primary_text'>
 					Новости SMARTEX
 				</h2>
 				<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
@@ -14,6 +14,6 @@ export const NewsBlock = () => {
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

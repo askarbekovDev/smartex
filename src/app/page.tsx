@@ -1,20 +1,19 @@
 import {
-  IntroBlock,
-  NewsBlock,
-  PinduoduoBlock,
-  PopularQuestionsBlock,
-  SearchSection,
+	IntroSection,
+	NewsSection,
+	PinduoduoSection,
+	PopularQuestionsSection,
+	SearchSection,
 } from '@/modules';
 
 export default function Home() {
 	return (
 		<>
-			<IntroBlock />
+			<IntroSection />
 			<SearchSection />
-			<PinduoduoBlock />
-			<NewsBlock />
-			<PopularQuestionsBlock />
-			<hr />
+			<PinduoduoSection />
+			<NewsSection />
+			<PopularQuestionsSection />
 		</>
 	);
 }

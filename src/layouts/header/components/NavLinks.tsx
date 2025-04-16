@@ -15,10 +15,10 @@ export const NavLinks: FC = () => {
 				</Link>
 			))}
 			<span className='flex gap-5 uiBtnText w1350:gap-3'>
-				<Link className='text-white px-4 py-2 rounded-2xl bg-success' href='#'>
+				<Link className='text-white px-4 py-2 rounded-2xl bg-success hover:bg-success_hover transition-all duration-200' href='#'>
 					Войти
 				</Link>
-				<Link className='px-4 py-2 rounded-2xl border-[1px] border-success' href='#'>
+				<Link className='px-4 py-2 rounded-2xl border-[1px] bg-background border-success hover:bg-background_hover transition-all duration-200' href='#'>
 					Регистрация
 				</Link>
 			</span>

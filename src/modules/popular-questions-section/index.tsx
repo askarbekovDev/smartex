@@ -1,15 +1,15 @@
 import { FC } from 'react';
 import { FAQ } from '../main-faq-modules';
 
-export const PopularQuestionsBlock: FC = () => {
+export const PopularQuestionsSection: FC = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='py-[140px]'>
 				<h2 className='sectionTitle'>Популярные вопросы</h2>
 				<div className='min-h-[400px] w-full mt-10'>
 					<FAQ variant='red' />
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

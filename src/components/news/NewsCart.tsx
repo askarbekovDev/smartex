@@ -28,9 +28,9 @@ export const NewsCart = ({ idx }: NewsCartProps) => {
 				<h5 className='text-secondary h5 w550:text-[18px]!'>SMARTEX</h5>
 				<div className='flex items-center gap-2'>
 					<Date width='24px' height='24px'/>
-					<p className='bodySmall text-secondary-text text-[13px] leading-[16px]'>1 месяц назад</p>
+					<p className='bodySmall text-secondary_text text-[13px] leading-[16px]'>1 месяц назад</p>
 				</div>
-				<p className={`bodyText text-secondary-text ${isExpanded ? "" : "line-clamp-2"}`}>
+				<p className={`bodyText text-secondary_text ${isExpanded ? "" : "line-clamp-2"}`}>
 					Вы можете производить оплату с личного кабинета с помощью Mbank и ELQR :Оплата по QR-коду
 					и Mbank через личный
 				</p>

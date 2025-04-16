@@ -5,7 +5,7 @@ import clsx from 'clsx';
 interface ToggleButtonProps<T, U extends readonly string[]> {
 	buttons: U;
 	defaultWidth: number;
-	setState?: React.Dispatch<React.SetStateAction<T>>;
+	setState: React.Dispatch<React.SetStateAction<T>>;
 }
 
 export const ToggleButton = <T, U extends readonly string[]>({

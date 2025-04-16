@@ -16,6 +16,12 @@
 	--dark: #242426; /* Глубокий черный */
 	--black: #000000;
 	--white: #ffffff;
+	--success-hover: #347e37; /* hover color over var(--success) */
+	--background-hover: #00000011; /* hover color over var(--background) */
+	--primary-hover: #071668e7; /* hover color over var(--primary) */
+	--info-hover: #0b559f; /* hover color over var(--info) */
+	--white-hover: #d3d3d334; /* hover color over var(--white) */
+	--secondary-hover: #ff9500ca; /* hover color over var(--secondary) */
 
 	--font-lato: 'Lato', sans-serif;
 	--font-rubik: 'Rubik', sans-serif;
