@@ -1,6 +1,5 @@
 export { NewsSection } from './news-section';
 export { NewsDetail } from './news-detail';
-export { NewsRoom } from './news-room';
 export { NewsIntro } from './news-intro';
 export { IntroSection } from './intro';
 export { SearchSection } from './search-section';
@@ -12,3 +11,4 @@ export { PopularQuestionsSection } from './popular-questions-section';
 export { IntroAboutUs } from './intro-about-us';
 export { WhatWeDoBlock } from './what-we-do';
 export { SmartexTeam } from './smartex-team';
+export { NewsRoom } from './news-room';
