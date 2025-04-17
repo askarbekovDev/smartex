@@ -2,9 +2,9 @@ import { WhySmartexCard } from '@/components/why-smartex/why-smartext-card';
 import { whySmartexContent } from '@/utils/constants';
 import React from 'react';
 
-export const WhySmartex = () => {
+export const WhySmartexSection = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='relative pt-[100px] w850:pt-[60px] w650:pt-[86px]'>
 				<div className='max-w-1/2 w1050:max-w-full'>
 					<h2 className='sectionTitle text-primary_text'>Почему Smartex?</h2>
@@ -15,6 +15,6 @@ export const WhySmartex = () => {
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

@@ -6,7 +6,7 @@ export const headerNavLinks = [
 	{ title: 'Тарифы', href: '#' },
 	{ title: 'О компании', href: '/about-us' },
 	{ title: 'Магазины', href: '#' },
-	{ title: 'Пункт выдачи', href: '#' },
+	{ title: 'Пункт выдачи', href: '/pickup-points' },
 ];
 
 export const headerContactPhoneNums = [
