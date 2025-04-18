@@ -6,7 +6,7 @@ import { FC, useEffect, useRef } from 'react';
 type YandexMapProps = {
 	coordinatesArr: [number, number][];
 	center: [number, number];
-	zoom: number | null;
+	zoom: number;
 };
 
 export const YandexMap: FC<YandexMapProps> = ({ coordinatesArr, center, zoom }) => {
@@ -23,7 +23,7 @@ export const YandexMap: FC<YandexMapProps> = ({ coordinatesArr, center, zoom }) 
 
 	useEffect(() => {
 		if (mapRef.current) {
-			mapRef.current.setZoom(zoom ?? 12);
+			mapRef.current.setZoom(zoom);
 		}
 	}, [zoom]);
 

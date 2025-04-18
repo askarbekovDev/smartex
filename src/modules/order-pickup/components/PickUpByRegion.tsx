@@ -9,7 +9,7 @@ export const PickUpByRegion: FC = () => {
 	const [pickUpRegion, setPickUpRegion] = useState<RegionsType | null>(null);
 	const [menuOpen, setMenuOpen] = useState<boolean>(true);
 	const [mapPinLocate, setMapPinLocate] = useState<[number, number]>([42.875593, 74.592535]);
-	const [zoom, setZoom] = useState<number | null>(null);
+	const [zoom, setZoom] = useState<number>(12);
 	type RegionsType = (typeof regions)[number]['region'];
 
 	const regions = [
