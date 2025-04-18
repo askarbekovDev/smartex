@@ -28,7 +28,7 @@ export const PickUpByRegion: FC = () => {
 
 	return (
 		<section className='flex gap-6 w-full h-[650px] relative'>
-			<section className='h-full w-[350px] p-4 shrink-0 overflow-hidden'>
+			<section className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white'>
 				<div className='cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
 					<div className='flex w-full h-10'>
 						<div className='flex items-center pl-4 w-full h-full bg-primary rounded-tl-lg bodyLarge text-white'>
@@ -50,14 +50,13 @@ export const PickUpByRegion: FC = () => {
 				>
 					<div className={clsx('w-full pt-3')}>
 						{regions.map((region, idx) => (
-							<>
+							<div key={idx}>
 								<div
 									onClick={() =>
 										setPickUpRegion((prev) =>
 											prev === null || prev !== region.region ? region.region : null
 										)
 									}
-									key={idx}
 									className='flex items-center justify-between w-full h-10 bodyLarge px-4 
                   border-b-1 border-border cursor-pointer transition-all duration-100 hover:text-secondary'
 								>
@@ -76,9 +75,13 @@ export const PickUpByRegion: FC = () => {
 									{region.pickUpPoints.map((point, id) => (
 										<div
 											key={id}
-											className={clsx(`flex items-center w-full bodyLarge text-secondary_text px-4 border-b-1 border-border
+											className={clsx(
+												`flex items-center w-full bodyLarge text-secondary_text px-4 border-b-1 border-border
                       transition-all duration-100 cursor-pointer hover:text-secondary`,
-												{ 'h-0 opacity-0 pointer-events-none duration-300': pickUpRegion !== region.region },
+												{
+													'h-0 opacity-0 pointer-events-none duration-300':
+														pickUpRegion !== region.region,
+												},
 												{ 'h-10 pointer-events-auto duration-300': pickUpRegion === region.region }
 											)}
 										>
@@ -86,13 +89,15 @@ export const PickUpByRegion: FC = () => {
 										</div>
 									))}
 								</div>
-							</>
+							</div>
 						))}
 					</div>
 				</div>
 			</section>
 
-			<YandexMap coordinates={[42.8746, 74.6122]} />
+			<div className='flex w-full h-full'>
+				<YandexMap coordinates={[42.8746, 74.6122]} />
+			</div>
 		</section>
 	);
 };
