@@ -27,7 +27,7 @@ export const SmartexTeam: FC = () => {
 			: socialResponsibilityContent;
 
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='flex justify-between pt-[100px] w1050:pt-15 w1050:flex-col-reverse w850:pt-20'>
 				<h2 className='sectionTitle pr-2 whitespace-pre-line w1050:pt-10'>{sectionTitle}</h2>
 				<ToggleButton
@@ -42,6 +42,6 @@ export const SmartexTeam: FC = () => {
 				<OurEmployees content={content} />
 				<SocialResponsibility content={content} />
 			</div>
-		</div>
+		</section>
 	);
 };

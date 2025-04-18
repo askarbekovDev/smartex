@@ -9,7 +9,7 @@ import {
 } from '@/utils/constants';
 import React, { FC, useState } from 'react';
 
-export const WhatWeDoBlock: FC = () => {
+export const CompanyStorySection: FC = () => {
 	const [content, setContent] = useState<WhatWeDoBlockContType>('История компании');
 
 	const contentToAppear =
@@ -20,7 +20,7 @@ export const WhatWeDoBlock: FC = () => {
 			: overseasWarehousesContent;
 
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='flex justify-between pt-[100px] w1050:pt-15 w1050:flex-col-reverse w850:pt-20'>
 				<h2 className='sectionTitle w1050:pt-10'>{content}</h2>
 				<ToggleButton
@@ -34,6 +34,6 @@ export const WhatWeDoBlock: FC = () => {
 					<WhatWeDoCard title={el.title} text={el.text} image={el.image} key={idx} />
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };

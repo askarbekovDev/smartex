@@ -10,7 +10,7 @@ type OurTeamProps = {
 
 export const OurTeam: FC<OurTeamProps> = ({ content }) => {
 	return (
-		<div className={clsx({ hidden: content !== 'Наша команда' })}>
+		<section className={clsx({ hidden: content !== 'Наша команда' })}>
 			<div
 				className='h-[700px] rounded-[15px] overflow-hidden flex items-center justify-center w1050:h-[550px] w950:h-[500px] 
               w850:h-[440px] w750:h-[380px] w650:h-[330px] w550:h-[290px] w450:h-[260px] w370:h-[240px]'
@@ -37,6 +37,6 @@ export const OurTeam: FC<OurTeamProps> = ({ content }) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

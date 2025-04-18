@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export const IntroAboutUs: FC = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='w-full relative w850:hidden'>
 				<div className='absolute p-4 pl-px top-[80px] left-[-1px] rounded-tr-2xl rounded-br-2xl bg-background'>
 					<h1 className='h2 pt-1 pb-6 w1150:text-[28px]! w1150:pb-3 w1150:pt-0'>
@@ -108,6 +108,6 @@ export const IntroAboutUs: FC = () => {
 					</Link>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
