@@ -8,27 +8,79 @@ import clsx from 'clsx';
 export const PickUpByRegion: FC = () => {
 	const [pickUpRegion, setPickUpRegion] = useState<RegionsType | null>(null);
 	const [menuOpen, setMenuOpen] = useState<boolean>(true);
-
+	const [mapPinLocate, setMapPinLocate] = useState<[number, number]>([42.875593, 74.592535]);
+	const [zoom, setZoom] = useState<number | null>(null);
 	type RegionsType = (typeof regions)[number]['region'];
 
 	const regions = [
-		{ region: 'Бишкек', pickUpPoints: ['Ул. Московская 123', 'Ул. Киевская 123'] },
-		{ region: 'Баткен', pickUpPoints: ['Ул. Московская 123', 'Ул. Киевская 123'] },
-		{ region: 'Жалал - Абад', pickUpPoints: ['Ул. Московская 123', 'Ул. Киевская 123'] },
-		{ region: 'Иссык - Куль', pickUpPoints: ['Ул. Московская 123', 'Ул. Киевская 123'] },
-		{ region: 'Нарын', pickUpPoints: ['Ул. Московская 123', 'Ул. Киевская 123'] },
-		{ region: 'Ош', pickUpPoints: ['Ул. Московская 123', 'Ул. Киевская 123'] },
-		{ region: 'Талас', pickUpPoints: ['Ул. Московская 123', 'Ул. Киевская 123'] },
-		{ region: 'Чуй', pickUpPoints: ['Ул. Московская 123', 'Ул. Киевская 123'] },
+		{
+			region: 'Бишкек',
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
+		},
+		{
+			region: 'Баткен',
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
+		},
+		{
+			region: 'Жалал - Абад',
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
+		},
+		{
+			region: 'Иссык - Куль',
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
+		},
+		{
+			region: 'Нарын',
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
+		},
+		{
+			region: 'Ош',
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
+		},
+		{
+			region: 'Талас',
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
+		},
+		{
+			region: 'Чуй',
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
+		},
 		{
 			region: 'Образец',
-			pickUpPoints: ['Образец', 'Образец', 'Образец', 'Образец', 'Образец', 'Образец', 'Образец'],
+			pickUpPoints: [
+				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+			],
 		},
 	] as const;
 
 	return (
 		<section className='flex gap-6 w-full h-[650px] relative'>
-			<section className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white'>
+			<section className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white rounded-l-2xl'>
 				<div className='cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
 					<div className='flex w-full h-10'>
 						<div className='flex items-center pl-4 w-full h-full bg-primary rounded-tl-lg bodyLarge text-white'>
@@ -74,6 +126,10 @@ export const PickUpByRegion: FC = () => {
 								<div>
 									{region.pickUpPoints.map((point, id) => (
 										<div
+											onClick={() => {
+												setMapPinLocate([...point.coordinates]);
+												setZoom(15);
+											}}
 											key={id}
 											className={clsx(
 												`flex items-center w-full bodyLarge text-secondary_text px-4 border-b-1 border-border
@@ -85,7 +141,7 @@ export const PickUpByRegion: FC = () => {
 												{ 'h-10 pointer-events-auto duration-300': pickUpRegion === region.region }
 											)}
 										>
-											{point}
+											{point.adress}
 										</div>
 									))}
 								</div>
@@ -95,8 +151,15 @@ export const PickUpByRegion: FC = () => {
 				</div>
 			</section>
 
-			<div className='flex w-full h-full'>
-				<YandexMap coordinates={[42.8746, 74.6122]} />
+			<div className='flex w-full h-full rounded-r-2xl overflow-hidden'>
+				<YandexMap
+					coordinatesArr={[
+						[42.846284, 74.585663],
+						[42.875593, 74.592535],
+					]}
+					center={mapPinLocate}
+          zoom={zoom}
+				/>
 			</div>
 		</section>
 	);

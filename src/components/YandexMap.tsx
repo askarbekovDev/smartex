@@ -1,30 +1,57 @@
 'use client';
 
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 
 type YandexMapProps = {
-	coordinates: [number, number];
+	coordinatesArr: [number, number][];
+	center: [number, number];
+	zoom: number | null;
 };
 
-export const YandexMap: FC<YandexMapProps> = ({ coordinates }) => {
+export const YandexMap: FC<YandexMapProps> = ({ coordinatesArr, center, zoom }) => {
+	const mapRef = useRef<ymaps.Map | null>(null);
+
+	useEffect(() => {
+		if (mapRef.current) {
+			mapRef.current.panTo(center, {
+				delay: 0,
+				flying: true,
+			});
+		}
+	}, [center]);
+
+	useEffect(() => {
+		if (mapRef.current) {
+			mapRef.current.setZoom(zoom ?? 12);
+		}
+	}, [zoom]);
+
 	return (
 		<YMaps>
 			<Map
-				defaultState={{ center: coordinates, zoom: 15 }}
-				state={{ center: coordinates, zoom: 15 }}
+				defaultState={{ center, zoom: zoom ?? 12 }}
+				instanceRef={(ref) => {
+					if (ref) mapRef.current = ref;
+				}}
 				width='100%'
 				height='100%'
+				options={{
+					suppressMapOpenBlock: true,
+				}}
 			>
-				<Placemark
-					geometry={coordinates}
-					options={{
-						iconLayout: 'default#image',
-						iconImageHref: '/icons/map-pin-custom.svg',
-						iconImageSize: [42, 49],
-						iconImageOffset: [-21, -49], // чтобы остриё было в центре
-					}}
-				/>
+				{coordinatesArr.map((coordinate, idx) => (
+					<Placemark
+						key={idx}
+						geometry={coordinate}
+						options={{
+							iconLayout: 'default#image',
+							iconImageHref: '/icons/map-pin-custom.svg',
+							iconImageSize: [42, 49],
+							iconImageOffset: [-21, -49],
+						}}
+					/>
+				))}
 			</Map>
 		</YMaps>
 	);
