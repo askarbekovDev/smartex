@@ -9,8 +9,7 @@ export interface IVacancy {
 
 export interface IVacancyCardProps {
 	vacancy: IVacancy;
-    setFeedbackOpen: React.Dispatch<React.SetStateAction<boolean>>;
-	setVacancyTitle: React.Dispatch<React.SetStateAction<string>>;
+	handleOpenModal: (title: string) => Promise<void>
 }
 
 export interface IVacancyFormProps {

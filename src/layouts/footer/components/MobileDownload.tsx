@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import AppStore from '../../../public/icons/app-store.svg';
-import Left from '../../../public/icons/arrow-left-icon.svg';
-import Right from '../../../public/icons/arrow-right-icon.svg';
-import GoogleMarket from '../../../public/icons/google.svg';
-import Phone from '../../../public/icons/iphone-icon.png';
-import Green from '../../../public/images/bg-fon-green.png';
-import White from '../../../public/images/bg-fon-white.png';
+import AppStore from '../../../../public/icons/app-store.svg';
+import Left from '../../../../public/icons/arrow-left-icon.svg';
+import Right from '../../../../public/icons/arrow-right-icon.svg';
+import GoogleMarket from '../../../../public/icons/google.svg';
+import Phone from '../../../../public/icons/iphone-icon.png';
+import Green from '../../../../public/images/bg-fon-green.png';
+import White from '../../../../public/images/bg-fon-white.png';
 
 export const MobileDownload = () => {
 	return (

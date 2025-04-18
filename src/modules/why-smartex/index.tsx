@@ -1,4 +1,4 @@
-import { WhySmartexCard } from '@/components/why-smartex/WhySmartextCard';
+import { WhySmartexCard } from '@/modules/why-smartex/components/WhySmartextCard';
 import { whySmartexContent } from '@/utils/constants';
 import React from 'react';
 

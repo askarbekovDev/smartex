@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import CarIcon from '../../../public/icons/car-icon.svg';
-import Road from '../../../public/icons/road.svg';
+import CarIcon from '../../../../public/icons/car-icon.svg';
+import Road from '../../../../public/icons/road.svg';
 
 export const AnimationRoad = () => {
 	return (

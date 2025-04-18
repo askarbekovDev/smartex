@@ -1,15 +1,10 @@
 import React from 'react';
-import { IVacancyCardProps } from './ActualVacancy.types';
+import { IVacancyCardProps } from '../actual-vacancy.types';
 
 export const ActualVacancyCard = ({
 	vacancy,
-	setFeedbackOpen,
-	setVacancyTitle,
+	handleOpenModal
 }: IVacancyCardProps) => {
-	const handleRespond = (title: string) => {
-		setVacancyTitle(title);
-		setFeedbackOpen(true);
-	};
 
 	return (
 		<div className='w-full border border-border rounded-[16px] pt-[20px] pb-[22px] px-[16px] flex flex-col h-full'>
@@ -43,7 +38,7 @@ export const ActualVacancyCard = ({
 			</div>
 			<div className='mt-auto w-full flex justify-end items-center'>
 				<button
-					onClick={() => handleRespond(vacancy.title)}
+					onClick={() => handleOpenModal(vacancy.title)}
 					className='text-info bodyText underline underline-offset-4 mt-4 cursor-pointer'
 				>
 					Откликнуться

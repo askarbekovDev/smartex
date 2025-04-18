@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import SmartexLogo from '../../../public/icons/smartex-logo.svg';
-import SmartexText from '../../../public/icons/smartex-text.svg';
-import { Call, Location } from '../../../public/icons';
+import SmartexLogo from '../../../../public/icons/smartex-logo.svg';
+import SmartexText from '../../../../public/icons/smartex-text.svg';
+import { Call, Location } from '../../../../public/icons';
 import { FooterNav } from './FooterNav';
 
 export const footerLinks = [
@@ -35,7 +35,6 @@ export const FooterLinks = () => {
 		<div className='w-full w650:mt-20  w370:mt-24 bg-primary py-6 '>
 			<div className=' flex container min-h-[250px] px-1 py-4 justify-center items-center'>
 				<div className='px-4 flex flex-wrap w-full w750:flex-col justify-between gap-4'>
-					{/* Logo */}
 					<div className='flex flex-col gap-2 max-w-[300px] w420:pt-4'>
 						<Image src={SmartexText} alt='SmartexText' />
 						<Image src={SmartexLogo} alt='SmartexLogo' />
