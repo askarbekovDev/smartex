@@ -1,0 +1,1 @@
+export { PickUpByRegion } from './PickUpByRegion';

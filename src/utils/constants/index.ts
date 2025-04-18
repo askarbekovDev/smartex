@@ -1,5 +1,3 @@
-import { title } from 'process';
-
 export const headerNavLinks = [
 	{ title: 'Главная', href: '/' },
 	{ title: 'Как это работает', href: '#' },
