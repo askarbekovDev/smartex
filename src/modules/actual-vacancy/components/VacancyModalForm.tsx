@@ -53,7 +53,7 @@ export const VacancyModalForm = ({ title, feedbackOpen, setFeedbackOpen }: IVaca
 					{ 'pointer-events-none': !feedbackOpen }
 				)}
 			>
-				<h4 className='h4 text-secondary-text'>{title}</h4>
+				<h4 className='h4 text-secondary_text'>{title}</h4>
 				<div
 					onClick={() => setFeedbackOpen(false)}
 					className='absolute top-5 right-8 cursor-pointer w550:right-6 w450:right-4 w370:hidden'
@@ -98,7 +98,7 @@ export const VacancyModalForm = ({ title, feedbackOpen, setFeedbackOpen }: IVaca
 					</span>
 
 					<textarea
-						className='w-full py-4 px-5 bodyText placeholder:text-secondary-text text-primary-text 
+						className='w-full py-4 px-5 bodyText placeholder:text-secondary_text text-primary-text 
                                            border-1 border-border rounded-lg outline-0 bg-background resize-none w550:bg-white'
 						placeholder='Написать о себе'
 						rows={7}
@@ -117,7 +117,7 @@ export const VacancyModalForm = ({ title, feedbackOpen, setFeedbackOpen }: IVaca
 
 					<button
 						type='submit'
-						className='w-full uiBtnText text-secondary-text border-2 border-border p-5 rounded-2xl bg-background 
+						className='w-full uiBtnText text-secondarytext border-2 border-border p-5 rounded-2xl bg-background 
                                            w750:rounded-xl w450:rounded-md w550:bg-white w450:bg-primary w450:border-0 w450:text-background'
 					>
 						ОТПРАВИТЬ СООБЩЕНИЕ
