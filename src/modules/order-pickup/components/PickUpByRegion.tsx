@@ -33,7 +33,7 @@ export const PickUpByRegion: FC = () => {
 					</div>
 					<div
 						className={clsx(
-							'absolute z-10 w1050:left-89 w1050:top-1',
+							'absolute z-10 w1050:left-84 w1050:top-1',
 							{ 'pointer-events-auto': menuData },
 							{ 'pointer-events-none': !menuData }
 						)}

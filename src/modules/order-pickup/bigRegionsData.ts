@@ -3,7 +3,7 @@ export const regions = [
     region: 'Бишкек',
     regionCenter: [42.875969, 74.603701],
     pickUpPoints: [
-      { adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
+      { adress: 'ул. Киевская 123', coordinates: [42.875593, 74.592535] },
       { adress: 'пр. Чынгыза Айтматова 43', coordinates: [42.846284, 74.585663] },
     ],
   },
