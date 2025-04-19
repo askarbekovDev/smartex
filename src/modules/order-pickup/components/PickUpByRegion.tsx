@@ -9,7 +9,7 @@ import { PickUpPointMenu, RegionsMenu, RegionsMenuMobile } from './index';
 export const PickUpByRegion: FC = () => {
 	const [menuData, setMenuData] = useState<string>('');
 	const [center, setCenter] = useState<{ center: [number, number]; zoom: number }>({
-		center: [42.875593, 74.592535],
+		center: [42.875593, 74.582535],
 		zoom: 12,
 	});
 
@@ -47,7 +47,7 @@ export const PickUpByRegion: FC = () => {
 				</div>
 				<YandexMap
 					coordinatesArr={coordinatesArr}
-					center={menuData ? [center.center[0], center.center[1] - 0.0025] : center.center}
+					center={[center.center[0], center.center[1] - 0.003]}
 					zoom={menuData ? 17 : center.zoom}
 				/>
 			</div>
