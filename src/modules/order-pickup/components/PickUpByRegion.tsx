@@ -22,18 +22,19 @@ export const PickUpByRegion: FC = () => {
 	});
 
 	return (
-		<section className='flex gap-6 w-full h-[650px] relative'>
-			<div className='w1050:hidden'>
+		<section className='flex gap-6 w-full h-[650px] relative w750:flex-col w750:h-fit'>
+      <div className='w-full h-0 relative hidden w750:block'></div>
+			<div className='block w1050:hidden'>
 				<RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={true} />
 			</div>
 			<div className='flex w-full h-full rounded-r-2xl overflow-hidden w1050:rounded-2xl'>
 				<div className='relative w-0 h-full'>
-					<div className='hidden w1050:block absolute z-10 left-1 top-1'>
+					<div className='hidden w1050:block absolute z-10 left-1 top-1 w750:hidden'>
 						<RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={false} />
 					</div>
 					<div
 						className={clsx(
-							'absolute z-10 w1050:left-84 w1050:top-1',
+							'absolute z-10 w1050:left-84 w1050:top-1 w950:left-76.5 w850:left-71.5',
 							{ 'pointer-events-auto': menuData },
 							{ 'pointer-events-none': !menuData }
 						)}
@@ -43,7 +44,7 @@ export const PickUpByRegion: FC = () => {
 				</div>
 				<YandexMap
 					coordinatesArr={coordinatesArr}
-					center={menuData ? [center.center[0], center.center[1] - 0.0008] : center.center}
+					center={menuData ? [center.center[0], center.center[1] - 0.0015] : center.center}
 					zoom={menuData ? 18 : center.zoom}
 				/>
 			</div>

@@ -20,19 +20,19 @@ export const RegionsMenu: FC<RegionsMenuProps> = ({ isMenuOpen, setCenter, setMe
 	const [regionSelect, setRegionSelect] = useState<RegionsType | null>(null);
 	return (
 		<section
-			className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white rounded-l-2xl 
-    w1050:h-fit w1050:rounded-2xl w1050:bg-background w1050:shadow-xl w1150:w-[330px]'
+			className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white rounded-l-2xl truncate
+      w1050:h-fit w1050:rounded-2xl w1050:bg-background w1050:shadow-xl w1150:w-[330px] w950:w-[300px] w850:w-[280px]'
 		>
 			<div className='cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
 				<div className='flex w-full h-10'>
 					<div
 						className={clsx(
-							'flex items-center pl-4 w-full h-full bg-primary rounded-tl-lg bodyLarge text-white',
+							'flex items-center pl-4 w-full h-full bg-primary rounded-tl-lg bodyLarge text-white overflow-hidden',
 							{ 'rounded-bl-0': menuOpen },
 							{ 'rounded-bl-lg': !menuOpen }
 						)}
 					>
-						Пункты выдачи по областям
+						<span className='w-full truncate'>Пункты выдачи по областям</span>
 					</div>
 					<div
 						className={clsx(
