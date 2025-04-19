@@ -4,20 +4,44 @@ import clsx from 'clsx';
 import { RegionsType } from '../types';
 import { regions } from '../bigRegionsData';
 
-type RegionsMenuProps = {};
+type RegionsMenuProps = {
+	isMenuOpen: boolean;
+	setCenter: React.Dispatch<
+		React.SetStateAction<{
+			center: [number, number];
+			zoom: number;
+		}>
+	>;
+	setMenuData: React.Dispatch<React.SetStateAction<string>>;
+};
 
-export const RegionsMenu: FC = () => {
-	const [menuOpen, setMenuOpen] = useState<boolean>(true);
+export const RegionsMenu: FC<RegionsMenuProps> = ({ isMenuOpen, setCenter, setMenuData }) => {
+	const [menuOpen, setMenuOpen] = useState<boolean>(isMenuOpen);
 	const [regionSelect, setRegionSelect] = useState<RegionsType | null>(null);
 	return (
-		<section className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white rounded-l-2xl'>
+		<section
+			className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white rounded-l-2xl 
+    w1050:h-fit w1050:rounded-2xl w1050:bg-background w1050:shadow-xl w1150:w-[330px]'
+		>
 			<div className='cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
 				<div className='flex w-full h-10'>
-					<div className='flex items-center pl-4 w-full h-full bg-primary rounded-tl-lg bodyLarge text-white'>
+					<div
+						className={clsx(
+							'flex items-center pl-4 w-full h-full bg-primary rounded-tl-lg bodyLarge text-white',
+							{ 'rounded-bl-0': menuOpen },
+							{ 'rounded-bl-lg': !menuOpen }
+						)}
+					>
 						Пункты выдачи по областям
 					</div>
-					<div className='flex items-center justify-center  w-10 h-full border-[0.5px] border-primary rounded-tr-lg'>
-						<div className={clsx('transition-all duration-300', { 'rotate-180': menuOpen })}>
+					<div
+						className={clsx(
+							'flex items-center justify-center w-10 h-full border-[0.5px] border-primary rounded-tr-lg',
+							{ 'rounded-br-0': menuOpen },
+							{ 'rounded-br-lg': !menuOpen }
+						)}
+					>
+						<div className={clsx('transition-all duration-300', { 'rotate-180 ': menuOpen })}>
 							<ArrowDropDown />
 						</div>
 					</div>
@@ -26,11 +50,13 @@ export const RegionsMenu: FC = () => {
 			<div
 				className={clsx(
 					'overflow-y-scroll transition-all duration-300',
-					{ 'h-full pb-10 pointer-events-auto': menuOpen },
-					{ 'opacity-0 -translate-y-20 pointer-events-none': !menuOpen }
+					{ 'h-full pointer-events-auto': menuOpen },
+					{ 'h-0 opacity-0 -translate-y-10 pointer-events-none': !menuOpen }
 				)}
 			>
-				<div className={clsx('w-full pt-3')}>
+				<div
+					className={clsx('w-full pt-3 bg-white w1050:border-1 w1050:border-border rounded-b-lg')}
+				>
 					{regions.map((region, idx) => (
 						<div key={idx}>
 							<div

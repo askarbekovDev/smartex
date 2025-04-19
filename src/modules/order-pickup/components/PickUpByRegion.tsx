@@ -4,6 +4,8 @@ import { YandexMap } from '@/components';
 import React, { FC, useState } from 'react';
 import { PickUpPointMenu } from './PickUpPointMenu';
 import { regions } from '../bigRegionsData';
+import { RegionsMenu } from './RegionsMenu';
+import clsx from 'clsx';
 
 export const PickUpByRegion: FC = () => {
 	const [menuData, setMenuData] = useState<string>('');
@@ -21,14 +23,28 @@ export const PickUpByRegion: FC = () => {
 
 	return (
 		<section className='flex gap-6 w-full h-[650px] relative'>
-			<div className='flex w-full h-full rounded-r-2xl overflow-hidden'>
+			<div className='w1050:hidden'>
+				<RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={true} />
+			</div>
+			<div className='flex w-full h-full rounded-r-2xl overflow-hidden w1050:rounded-2xl'>
 				<div className='relative w-0 h-full'>
-					<PickUpPointMenu menuData={menuData} setMenu={setMenuData} />
+					<div className='hidden w1050:block absolute z-10 left-1 top-1'>
+						<RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={false} />
+					</div>
+					<div
+						className={clsx(
+							'absolute z-10 w1050:left-89 w1050:top-1',
+							{ 'pointer-events-auto': menuData },
+							{ 'pointer-events-none': !menuData }
+						)}
+					>
+						<PickUpPointMenu menuData={menuData} setMenu={setMenuData} />
+					</div>
 				</div>
 				<YandexMap
 					coordinatesArr={coordinatesArr}
-					center={menuData ? [center.center[0], center.center[1] - 0.0067] : center.center}
-					zoom={center.zoom}
+					center={menuData ? [center.center[0], center.center[1] - 0.0008] : center.center}
+					zoom={menuData ? 18 : center.zoom}
 				/>
 			</div>
 		</section>

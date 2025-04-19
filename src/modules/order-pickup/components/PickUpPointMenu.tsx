@@ -13,7 +13,7 @@ export const PickUpPointMenu: FC<PickMenuProps> = ({ menuData, setMenu }) => {
 	return (
 		<section
 			className={clsx(
-				'absolute flex flex-col w-[320px] h-[518px] z-10 p-4 bg-white rounded-2xl transition-all duration-500',
+				'flex flex-col w-[320px] h-[518px] p-4 bg-white rounded-2xl transition-all duration-500 shadow-xl w1150:w-[300px]',
 				{ 'opacity-100 pointer-events-auto': menuData },
 				{ 'opacity-0 pointer-events-none': !menuData }
 			)}
