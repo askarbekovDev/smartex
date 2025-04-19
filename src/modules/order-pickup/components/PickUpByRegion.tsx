@@ -47,8 +47,8 @@ export const PickUpByRegion: FC = () => {
 				</div>
 				<YandexMap
 					coordinatesArr={coordinatesArr}
-					center={menuData ? [center.center[0], center.center[1] - 0.0015] : center.center}
-					zoom={menuData ? 18 : center.zoom}
+					center={menuData ? [center.center[0], center.center[1] - 0.0025] : center.center}
+					zoom={menuData ? 17 : center.zoom}
 				/>
 			</div>
 		</section>

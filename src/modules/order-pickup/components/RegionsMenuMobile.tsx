@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { ArrowDropDown } from '../../../../public/icons';
 import clsx from 'clsx';
 import { regions } from '../bigRegionsData';
-import { RegionsType } from '../types';
+import { PointMenuMobile } from './PointMenuMobile';
 
 type RegionsMenuMobProps = {
 	isMenuOpen: boolean;
@@ -21,31 +21,55 @@ export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 	setMenuData,
 }) => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(isMenuOpen);
-	const [pickPoints, setPickPoints] = useState<string[] | null>(null);
+	const [pickPoints, setPickPoints] = useState<
+		| {
+				adress: string;
+				coordinates: readonly [number, number];
+		  }[]
+		| null
+	>(null);
+	const [pointMenuData, setPointMenuData] = useState<string>('');
 	return (
 		<>
 			<div className='w-full h-0 relative'>
 				{pickPoints && (
 					<div
 						className={clsx(
-							'absolute top-18 left-1 w-fit h-fit bg-white transition-all duration-300 rounded-xl shadow-xl border-1 border-border',
+							'absolute top-18 left-1 max-w-[240px] h-fit bg-white transition-all duration-300 rounded-xl shadow-xl border-1 border-border',
 							{ 'opacity-0 pointer-events-none': menuOpen },
 							{ 'opacity-100 pointer-events-auto': !menuOpen }
 						)}
 					>
 						{pickPoints.map((point, idx) => (
 							<p
+								onClick={() => {
+									setPointMenuData(point.adress);
+									setCenter({
+										center: [point.coordinates[0], point.coordinates[1] - 0.0012],
+										zoom: 17,
+									});
+								}}
+								key={idx}
 								className='bodyLarge text-secondary_text p-3 border-b-1 border-border
-                     cursor-pointer hover:bg-white_hover last:border-b-0'
+                     cursor-pointer hover:bg-white_hover last:border-b-0 truncate'
 							>
-								{point}
+								{point.adress}
 							</p>
 						))}
 					</div>
 				)}
+				<div className={clsx('relative top-17 w-fit', { 'pointer-events-none': !pointMenuData })}>
+					<PointMenuMobile menuData={pointMenuData} setMenu={setPointMenuData} />
+				</div>
 			</div>
 			<section className='w-full h-fit overflow-hidden'>
-				<div className='cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
+				<div
+					className='cursor-pointer'
+					onClick={() => {
+						setMenuOpen(!menuOpen);
+						setPointMenuData('');
+					}}
+				>
 					<div className='flex w-full h-12'>
 						<div
 							className={clsx(
@@ -69,7 +93,7 @@ export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 						</div>
 					</div>
 				</div>
-				<div //Main Drop Down Div
+				<div
 					className={clsx(
 						'overflow-y-scroll transition-all duration-400',
 						{ 'h-full pointer-events-auto': menuOpen },
@@ -90,7 +114,7 @@ export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 										});
 										setMenuOpen(false);
 										{
-											setPickPoints(region.pickUpPoints.map((point) => point.adress));
+											setPickPoints([...region.pickUpPoints]);
 										}
 										// setRegionSelect((prev) =>
 										//   prev === null || prev !== region.region ? region.region : null
