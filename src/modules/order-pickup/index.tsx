@@ -3,6 +3,7 @@
 import { ToggleButton } from '@/UI';
 import React, { FC, useState } from 'react';
 import { PickUpByRegion } from './components';
+import { OrderPickUpContentType } from './types';
 
 export const OrderPickUp: FC = () => {
 	const [content, setContent] = useState<OrderPickUpContentType>('Пункты выдачи');
