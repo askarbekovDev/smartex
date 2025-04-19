@@ -2,13 +2,22 @@
 
 import { YandexMap } from '@/components';
 import React, { FC, useState } from 'react';
-import { ArrowDropDown } from '../../../../public/icons';
+import {
+	ArrowDropDown,
+	CloseIconTablet,
+	TGisMapRef,
+	WhatsAppIcon,
+	YandexMapRef,
+} from '../../../../public/icons';
 import clsx from 'clsx';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export const PickUpByRegion: FC = () => {
 	type RegionsType = (typeof regions)[number]['region'];
 
 	const [menuOpen, setMenuOpen] = useState<boolean>(true);
+	const [menuData, setMenuData] = useState<string>('');
 	const [regionSelect, setRegionSelect] = useState<RegionsType | null>(null);
 	const [center, setCenter] = useState<{ center: [number, number]; zoom: number }>({
 		center: [42.875593, 74.592535],
@@ -145,6 +154,7 @@ export const PickUpByRegion: FC = () => {
 										<div
 											onClick={() => {
 												setCenter({ center: [...point.coordinates], zoom: 15 });
+												setMenuData(point.adress);
 											}}
 											key={id}
 											className={clsx(
@@ -168,9 +178,47 @@ export const PickUpByRegion: FC = () => {
 			</section>
 
 			<div className='flex w-full h-full rounded-r-2xl overflow-hidden'>
-        <div className='relative w-0 h-full'>
-          <div className='absolute w-[320px] h-[518px] bg-red-400 z-10'></div>
-        </div>
+				<div className='relative w-0 h-full'>
+					<div className='absolute flex flex-col w-[320px] h-[518px] z-10 p-4 bg-white rounded-2xl'>
+						<div className='flex items-center justify-between border-b-1 border-border pb-3'>
+							<h6 className='h6'>Пункты выдачи</h6>
+							<CloseIconTablet />
+						</div>
+						<div className='flex flex-col gap-3'>
+							<p className='bodyBold pt-6'>{menuData}</p>
+							<p className='supportBadge text-[13px]! text-secondary_text'>Режим работы</p>
+							<p className='text-secondary_text'>
+								<span className='bodyText'>Ежедневно: </span>
+								<span className='bodyBold'>09:00- 18:00</span>
+							</p>
+							<p className='text-secondary_text'>
+								<span className='bodyText'>Выходной день: </span>
+								<span className='bodyBold'>Воскресенье</span>
+							</p>
+							<Link href='#' className='flex items-center'>
+								<WhatsAppIcon />
+								<span className='bodyBold pl-3'>996 0550 550 550</span>
+							</Link>
+						</div>
+						<div className='w-full h-[196px] rounded-lg overflow-hidden my-6'>
+							<Image
+								alt='PickUp Point'
+								src='/images/pickup-point-img.jpeg'
+								width={288}
+								height={196}
+								className='h-full w-full object-cover'
+							></Image>
+						</div>
+						<div className='flex items-center justify-between pt-2 border-t-1 border-border'>
+							<Link href='#'>
+								<YandexMapRef />
+							</Link>
+							<Link href='#'>
+								<TGisMapRef />
+							</Link>
+						</div>
+					</div>
+				</div>
 				<YandexMap coordinatesArr={coordinatesArr} center={center.center} zoom={center.zoom} />
 			</div>
 		</section>
