@@ -45,7 +45,7 @@ export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 								onClick={() => {
 									setPointMenuData(point.adress);
 									setCenter({
-										center: [point.coordinates[0], point.coordinates[1] - 0.0012],
+										center: [point.coordinates[0], point.coordinates[1] + 0.002],
 										zoom: 17,
 									});
 								}}
@@ -116,10 +116,6 @@ export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 										{
 											setPickPoints([...region.pickUpPoints]);
 										}
-										// setRegionSelect((prev) =>
-										//   prev === null || prev !== region.region ? region.region : null
-										// );
-										// setMenuData('');
 									}}
 									className={clsx(
 										`flex items-center w-full h-10 bodyLarge px-4 border-b-1 border-border 
@@ -129,28 +125,6 @@ export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 									{region.region}
 									<div className={clsx('transition-all duration-200')}></div>
 								</div>
-								{/* <div>
-                {region.pickUpPoints.map((point, id) => (
-                  <div
-                    onClick={() => {
-                      setCenter({ center: [...point.coordinates], zoom: 15 });
-                      setMenuData(point.adress);
-                    }}
-                    key={id}
-                    className={clsx(
-                      `flex items-center w-full bodyLarge text-secondary_text px-4 border-b-1 border-border
-                      transition-all duration-100 cursor-pointer hover:bg-white_hover`,
-                      {
-                        'h-0 opacity-0 pointer-events-none duration-300':
-                          regionSelect !== region.region,
-                      },
-                      { 'h-10 pointer-events-auto duration-300': regionSelect === region.region }
-                    )}
-                  >
-                    {point.adress}
-                  </div>
-                ))}
-              </div> */}
 							</div>
 						))}
 					</div>

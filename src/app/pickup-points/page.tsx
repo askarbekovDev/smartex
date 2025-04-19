@@ -6,7 +6,6 @@ const PickUpPoints: FC = () => {
 		<>
 			<IntroPickupPoints />
 			<OrderPickUp />
-			hello
 		</>
 	);
 };

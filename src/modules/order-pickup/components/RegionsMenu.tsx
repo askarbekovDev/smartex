@@ -37,8 +37,8 @@ export const RegionsMenu: FC<RegionsMenuProps> = ({ isMenuOpen, setCenter, setMe
 					</div>
 					<div
 						className={clsx(
-							'flex items-center justify-center w-10 h-full border-1 border-border rounded-tr-lg',
-							{ 'rounded-br-0': menuOpen },
+							'flex items-center justify-center w-10 h-full border-1 border-border rounded-tr-lg w1050:bg-white',
+							{ 'rounded-br-0 border-b-0': menuOpen },
 							{ 'rounded-br-lg': !menuOpen }
 						)}
 					>
@@ -56,7 +56,7 @@ export const RegionsMenu: FC<RegionsMenuProps> = ({ isMenuOpen, setCenter, setMe
 				)}
 			>
 				<div
-					className={clsx(`w-full pt-3 bg-white w1050:border-1 w1050:border-border 
+					className={clsx(`w-full pt-3 bg-white w1050:border-1 w1050:border-border w1050:border-t-0
           w1050:border-b-0 rounded-b-lg w750:border-0 w750:pb-5 w750:px-4`)}
 				>
 					{regions.map((region, idx) => (

@@ -1,5 +1,5 @@
-export { PickUpByRegion } from './PickUpByRegion';
-export { PickUpPointMenu } from './PickUpPointMenu';
+export { AllPickUpPoints } from './AllPickUpPoints';
+export { PointMenu } from './PointMenu';
 export { RegionsMenu } from './RegionsMenu';
 export { RegionsMenuMobile } from './RegionsMenuMobile';
 export { PointMenuMobile } from './PointMenuMobile';

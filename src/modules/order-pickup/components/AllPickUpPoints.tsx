@@ -4,9 +4,9 @@ import { YandexMap } from '@/components';
 import React, { FC, useState } from 'react';
 import { regions } from '../bigRegionsData';
 import clsx from 'clsx';
-import { PickUpPointMenu, RegionsMenu, RegionsMenuMobile } from './index';
+import { PointMenu, RegionsMenu, RegionsMenuMobile } from './index';
 
-export const PickUpByRegion: FC = () => {
+export const AllPickUpPoints: FC = () => {
 	const [menuData, setMenuData] = useState<string>('');
 	const [center, setCenter] = useState<{ center: [number, number]; zoom: number }>({
 		center: [42.875593, 74.582535],
@@ -42,7 +42,7 @@ export const PickUpByRegion: FC = () => {
 							{ 'pointer-events-none': !menuData }
 						)}
 					>
-						<PickUpPointMenu menuData={menuData} setMenu={setMenuData} />
+						<PointMenu menuData={menuData} setMenu={setMenuData} />
 					</div>
 				</div>
 				<YandexMap

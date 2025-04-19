@@ -9,7 +9,7 @@ type PickMenuProps = {
 	setMenu: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export const PickUpPointMenu: FC<PickMenuProps> = ({ menuData, setMenu }) => {
+export const PointMenu: FC<PickMenuProps> = ({ menuData, setMenu }) => {
 	return (
 		<section
 			className={clsx(
