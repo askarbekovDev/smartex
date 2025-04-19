@@ -2,10 +2,9 @@
 
 import { YandexMap } from '@/components';
 import React, { FC, useState } from 'react';
-import { PickUpPointMenu } from './PickUpPointMenu';
 import { regions } from '../bigRegionsData';
-import { RegionsMenu } from './RegionsMenu';
 import clsx from 'clsx';
+import { PickUpPointMenu, RegionsMenu, RegionsMenuMobile } from './index';
 
 export const PickUpByRegion: FC = () => {
 	const [menuData, setMenuData] = useState<string>('');
@@ -25,7 +24,7 @@ export const PickUpByRegion: FC = () => {
 		<section className='flex gap-6 w-full h-[650px] relative w750:flex-col'>
 			<div className='hidden w750:block w-full h-12 relative'>
 				<div className='absolute w-full z-10'>
-					<RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={false} />
+					<RegionsMenuMobile setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={false} />
 				</div>
 			</div>
 			<div className='block w1050:hidden'>
