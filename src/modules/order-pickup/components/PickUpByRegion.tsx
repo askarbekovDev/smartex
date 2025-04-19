@@ -23,9 +23,11 @@ export const PickUpByRegion: FC = () => {
 
 	return (
 		<section className='flex gap-6 w-full h-[650px] relative w750:flex-col'>
-      <div className='hidden w750:block w-full h-12 relative'>
-      <div className='absolute w-full z-10'><RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={false} /></div>
-      </div>
+			<div className='hidden w750:block w-full h-12 relative'>
+				<div className='absolute w-full z-10'>
+					<RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={false} />
+				</div>
+			</div>
 			<div className='block w1050:hidden'>
 				<RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={true} />
 			</div>
@@ -36,7 +38,7 @@ export const PickUpByRegion: FC = () => {
 					</div>
 					<div
 						className={clsx(
-							'absolute z-10 w1050:left-84 w1050:top-1 w950:left-76.5 w850:left-71.5',
+							'absolute z-10 w1050:left-84 w1050:top-1 w950:left-76.5 w850:left-71.5 w750:hidden',
 							{ 'pointer-events-auto': menuData },
 							{ 'pointer-events-none': !menuData }
 						)}

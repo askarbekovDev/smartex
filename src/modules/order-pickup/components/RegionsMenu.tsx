@@ -21,8 +21,8 @@ export const RegionsMenu: FC<RegionsMenuProps> = ({ isMenuOpen, setCenter, setMe
 	return (
 		<section
 			className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white rounded-l-2xl truncate
-      w1050:h-fit w1050:rounded-2xl w1050:bg-background w1050:shadow-xl w1150:w-[330px] w950:w-[300px] w850:w-[280px]
-      w750:w-full w750:p-0 w750:rounded-none'
+      w1050:h-fit w1050:rounded-2xl w1050:bg-background w1050:shadow-xl w1150:w-[330px] w950:w-[300px] w850:w-[290px]
+      w750:w-full w750:p-0 w750:rounded-none w750:shadow-none'
 		>
 			<div className='cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
 				<div className='flex w-full h-10 w750:h-12'>
@@ -37,7 +37,7 @@ export const RegionsMenu: FC<RegionsMenuProps> = ({ isMenuOpen, setCenter, setMe
 					</div>
 					<div
 						className={clsx(
-							'flex items-center justify-center w-10 h-full border-[0.5px] border-primary rounded-tr-lg',
+							'flex items-center justify-center w-10 h-full border-1 border-border rounded-tr-lg',
 							{ 'rounded-br-0': menuOpen },
 							{ 'rounded-br-lg': !menuOpen }
 						)}
@@ -56,7 +56,8 @@ export const RegionsMenu: FC<RegionsMenuProps> = ({ isMenuOpen, setCenter, setMe
 				)}
 			>
 				<div
-					className={clsx('w-full pt-3 bg-white w1050:border-1 w1050:border-border rounded-b-lg')}
+					className={clsx(`w-full pt-3 bg-white w1050:border-1 w1050:border-border 
+          w1050:border-b-0 rounded-b-lg w750:border-0 w750:pb-5 w750:px-4`)}
 				>
 					{regions.map((region, idx) => (
 						<div key={idx}>
