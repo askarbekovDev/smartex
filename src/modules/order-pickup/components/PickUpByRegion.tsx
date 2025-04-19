@@ -25,6 +25,14 @@ export const PickUpByRegion: FC = () => {
 			],
 		},
 		{
+			region: 'Чуй',
+			regionCenter: [42.875969, 74.603701],
+			pickUpPoints: [
+				{ adress: 'ул. Фрунзе 139', coordinates: [42.858287, 74.300717] },
+				{ adress: 'ул. Осмонова 33', coordinates: [42.901427, 74.953622] },
+			],
+		},
+		{
 			region: 'Баткен',
 			regionCenter: [40.060518, 70.819638],
 			pickUpPoints: [
@@ -72,15 +80,14 @@ export const PickUpByRegion: FC = () => {
 				{ adress: 'ул. Асан Сатымкулов 47', coordinates: [42.511464, 72.278241] },
 			],
 		},
-		{
-			region: 'Чуй',
-			regionCenter: [42.875969, 74.603701],
-			pickUpPoints: [
-				{ adress: 'ул. Крупская 156', coordinates: [42.877073, 74.474442] },
-				{ adress: 'ул. Ленина 391А', coordinates: [42.870386, 74.729779] },
-			],
-		},
 	] as const;
+
+	const coordinatesArr: [number, number][] = [];
+	regions.map((coordinatesInReg) => {
+		coordinatesInReg.pickUpPoints.map((coordinates) => {
+			coordinatesArr.push([...coordinates.coordinates]);
+		});
+	});
 
 	return (
 		<section className='flex gap-6 w-full h-[650px] relative'>
@@ -161,14 +168,10 @@ export const PickUpByRegion: FC = () => {
 			</section>
 
 			<div className='flex w-full h-full rounded-r-2xl overflow-hidden'>
-				<YandexMap
-					coordinatesArr={[
-						[42.846284, 74.585663],
-						[42.875593, 74.592535],
-					]}
-					center={center.center}
-					zoom={center.zoom}
-				/>
+        <div className='relative w-0 h-full'>
+          <div className='absolute w-[320px] h-[518px] bg-red-400 z-10'></div>
+        </div>
+				<YandexMap coordinatesArr={coordinatesArr} center={center.center} zoom={center.zoom} />
 			</div>
 		</section>
 	);

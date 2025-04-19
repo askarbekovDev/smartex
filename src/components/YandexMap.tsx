@@ -28,7 +28,12 @@ export const YandexMap: FC<YandexMapProps> = ({ coordinatesArr, center, zoom }) 
 	}, [zoom]);
 
 	return (
-		<YMaps>
+		<YMaps
+			query={{
+				lang: 'ru_RU',
+				load: 'package.full', // обязательно
+			}}
+		>
 			<Map
 				state={{ center, zoom }}
 				instanceRef={(ref) => {
