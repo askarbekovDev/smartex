@@ -21,10 +21,11 @@ export const RegionsMenu: FC<RegionsMenuProps> = ({ isMenuOpen, setCenter, setMe
 	return (
 		<section
 			className='h-full w-[350px] p-4 shrink-0 overflow-hidden bg-white rounded-l-2xl truncate
-      w1050:h-fit w1050:rounded-2xl w1050:bg-background w1050:shadow-xl w1150:w-[330px] w950:w-[300px] w850:w-[280px]'
+      w1050:h-fit w1050:rounded-2xl w1050:bg-background w1050:shadow-xl w1150:w-[330px] w950:w-[300px] w850:w-[280px]
+      w750:w-full w750:p-0 w750:rounded-none'
 		>
 			<div className='cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
-				<div className='flex w-full h-10'>
+				<div className='flex w-full h-10 w750:h-12'>
 					<div
 						className={clsx(
 							'flex items-center pl-4 w-full h-full bg-primary rounded-tl-lg bodyLarge text-white overflow-hidden',

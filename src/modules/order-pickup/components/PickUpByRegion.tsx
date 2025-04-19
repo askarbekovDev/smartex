@@ -22,8 +22,10 @@ export const PickUpByRegion: FC = () => {
 	});
 
 	return (
-		<section className='flex gap-6 w-full h-[650px] relative w750:flex-col w750:h-fit'>
-      <div className='w-full h-0 relative hidden w750:block'></div>
+		<section className='flex gap-6 w-full h-[650px] relative w750:flex-col'>
+      <div className='hidden w750:block w-full h-12 relative'>
+      <div className='absolute w-full z-10'><RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={false} /></div>
+      </div>
 			<div className='block w1050:hidden'>
 				<RegionsMenu setCenter={setCenter} setMenuData={setMenuData} isMenuOpen={true} />
 			</div>
