@@ -30,7 +30,7 @@ export const YandexMap: FC<YandexMapProps> = ({ coordinatesArr, center, zoom }) 
 	return (
 		<YMaps>
 			<Map
-				defaultState={{ center, zoom: zoom ?? 12 }}
+				state={{ center, zoom }}
 				instanceRef={(ref) => {
 					if (ref) mapRef.current = ref;
 				}}

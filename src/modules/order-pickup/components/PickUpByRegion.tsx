@@ -6,74 +6,78 @@ import { ArrowDropDown } from '../../../../public/icons';
 import clsx from 'clsx';
 
 export const PickUpByRegion: FC = () => {
-	const [pickUpRegion, setPickUpRegion] = useState<RegionsType | null>(null);
-	const [menuOpen, setMenuOpen] = useState<boolean>(true);
-	const [mapPinLocate, setMapPinLocate] = useState<[number, number]>([42.875593, 74.592535]);
-	const [zoom, setZoom] = useState<number>(12);
 	type RegionsType = (typeof regions)[number]['region'];
+
+	const [menuOpen, setMenuOpen] = useState<boolean>(true);
+	const [regionSelect, setRegionSelect] = useState<RegionsType | null>(null);
+	const [center, setCenter] = useState<{ center: [number, number]; zoom: number }>({
+		center: [42.875593, 74.592535],
+		zoom: 12,
+	});
 
 	const regions = [
 		{
 			region: 'Бишкек',
+			regionCenter: [42.875969, 74.603701],
 			pickUpPoints: [
 				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+				{ adress: 'пр. Чынгыза Айтматова 43', coordinates: [42.846284, 74.585663] },
 			],
 		},
 		{
 			region: 'Баткен',
+			regionCenter: [40.060518, 70.819638],
 			pickUpPoints: [
-				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+				{ adress: 'ул. Нургазыева 51', coordinates: [40.05434, 70.82863] },
+				{ adress: 'ул. Турсунбай Сейдакматов 8', coordinates: [40.072376, 70.807034] },
 			],
 		},
 		{
 			region: 'Жалал - Абад',
+			regionCenter: [40.938049, 72.993309],
 			pickUpPoints: [
-				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+				{ adress: 'ул. Тоголок Молдо 79', coordinates: [40.943383, 72.989177] },
+				{ adress: 'ул. Барпы-Cейил 282', coordinates: [40.929574, 73.011024] },
 			],
 		},
 		{
 			region: 'Иссык - Куль',
+			regionCenter: [42.649982, 77.087725],
 			pickUpPoints: [
-				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+				{ adress: 'ул. Аэропорт 5', coordinates: [42.64254, 77.064169] },
+				{ adress: 'ул. Колесникова 2', coordinates: [42.652255, 77.097882] },
 			],
 		},
 		{
 			region: 'Нарын',
+			regionCenter: [41.42833, 75.997635],
 			pickUpPoints: [
-				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+				{ adress: 'ул. Ленина 104', coordinates: [41.427714, 75.98672] },
+				{ adress: 'ул. Токтосуновой 24', coordinates: [41.427998, 75.999503] },
 			],
 		},
 		{
 			region: 'Ош',
+			regionCenter: [40.517525, 72.80557],
 			pickUpPoints: [
-				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+				{ adress: 'ул. Мамырова 114/2', coordinates: [40.512849, 72.792185] },
+				{ adress: 'ул. Аскара Шакирова 40', coordinates: [40.514289, 72.818147] },
 			],
 		},
 		{
 			region: 'Талас',
+			regionCenter: [42.520755, 72.250591],
 			pickUpPoints: [
-				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+				{ adress: 'ул. Омурбекова 110Б', coordinates: [42.530476, 72.200735] },
+				{ adress: 'ул. Асан Сатымкулов 47', coordinates: [42.511464, 72.278241] },
 			],
 		},
 		{
 			region: 'Чуй',
+			regionCenter: [42.875969, 74.603701],
 			pickUpPoints: [
-				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
-			],
-		},
-		{
-			region: 'Образец',
-			pickUpPoints: [
-				{ adress: 'ул. Московская 123', coordinates: [42.875593, 74.592535] },
-				{ adress: 'пр. Чынгыза Айтматова, 43', coordinates: [42.846284, 74.585663] },
+				{ adress: 'ул. Крупская 156', coordinates: [42.877073, 74.474442] },
+				{ adress: 'ул. Ленина 391А', coordinates: [42.870386, 74.729779] },
 			],
 		},
 	] as const;
@@ -104,20 +108,26 @@ export const PickUpByRegion: FC = () => {
 						{regions.map((region, idx) => (
 							<div key={idx}>
 								<div
-									onClick={() =>
-										setPickUpRegion((prev) =>
+									onClick={() => {
+										setCenter({
+											center: [...region.regionCenter],
+											zoom: region.region === 'Бишкек' ? 12 : region.region === 'Чуй' ? 10 : 13,
+										});
+										setRegionSelect((prev) =>
 											prev === null || prev !== region.region ? region.region : null
-										)
-									}
-									className='flex items-center justify-between w-full h-10 bodyLarge px-4 
-                  border-b-1 border-border cursor-pointer transition-all duration-100 hover:text-secondary'
+										);
+									}}
+									className={clsx(
+										`flex items-center justify-between w-full h-10 bodyLarge px-4 border-b-1 border-border 
+                    cursor-pointer transition-all duration-100 hover:bg-white_hover`
+									)}
 								>
 									{region.region}
 									<div
 										className={clsx(
 											'transition-all duration-200',
-											{ 'rotate-270': pickUpRegion !== region.region },
-											{ 'rotate-360': pickUpRegion === region.region }
+											{ 'rotate-270': regionSelect !== region.region },
+											{ 'rotate-360': regionSelect === region.region }
 										)}
 									>
 										<ArrowDropDown />
@@ -127,18 +137,17 @@ export const PickUpByRegion: FC = () => {
 									{region.pickUpPoints.map((point, id) => (
 										<div
 											onClick={() => {
-												setMapPinLocate([...point.coordinates]);
-												setZoom(15);
+												setCenter({ center: [...point.coordinates], zoom: 15 });
 											}}
 											key={id}
 											className={clsx(
 												`flex items-center w-full bodyLarge text-secondary_text px-4 border-b-1 border-border
-                      transition-all duration-100 cursor-pointer hover:text-secondary`,
+                      transition-all duration-100 cursor-pointer hover:bg-white_hover`,
 												{
 													'h-0 opacity-0 pointer-events-none duration-300':
-														pickUpRegion !== region.region,
+														regionSelect !== region.region,
 												},
-												{ 'h-10 pointer-events-auto duration-300': pickUpRegion === region.region }
+												{ 'h-10 pointer-events-auto duration-300': regionSelect === region.region }
 											)}
 										>
 											{point.adress}
@@ -157,8 +166,8 @@ export const PickUpByRegion: FC = () => {
 						[42.846284, 74.585663],
 						[42.875593, 74.592535],
 					]}
-					center={mapPinLocate}
-          zoom={zoom}
+					center={center.center}
+					zoom={center.zoom}
 				/>
 			</div>
 		</section>
