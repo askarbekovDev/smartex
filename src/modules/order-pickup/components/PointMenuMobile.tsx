@@ -20,7 +20,7 @@ export const PointMenuMobile: FC<PointMenuProps> = ({ menuData, setMenu }) => {
 		>
 			<div className='flex items-center justify-between border-b-1 border-border pb-3'>
 				<h6 className='h6'>Пункты выдачи</h6>
-				<div onClick={() => setMenu('')}>
+				<div className='cursor-pointer' onClick={() => setMenu('')}>
 					<CloseIconTablet />
 				</div>
 			</div>

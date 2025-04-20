@@ -18,7 +18,6 @@ type RegionsMenuMobProps = {
 export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 	isMenuOpen,
 	setCenter,
-	setMenuData,
 }) => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(isMenuOpen);
 	const [pickPoints, setPickPoints] = useState<
@@ -35,7 +34,8 @@ export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 				{pickPoints && (
 					<div
 						className={clsx(
-							'absolute top-18 left-1 max-w-[240px] h-fit bg-white transition-all duration-300 rounded-xl shadow-xl border-1 border-border',
+							`absolute top-18 left-1 max-w-[240px] h-fit bg-white transition-all duration-300 rounded-xl 
+              shadow-xl border-1 border-border overflow-hidden`,
 							{ 'opacity-0 pointer-events-none': menuOpen },
 							{ 'opacity-100 pointer-events-auto': !menuOpen }
 						)}
@@ -51,7 +51,7 @@ export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
 								}}
 								key={idx}
 								className='bodyLarge text-secondary_text p-3 border-b-1 border-border
-                     cursor-pointer hover:bg-white_hover last:border-b-0 truncate'
+                     cursor-pointer hover:bg-white_hover last:border-b-0 truncate hover:bg-hover_white'
 							>
 								{point.adress}
 							</p>
