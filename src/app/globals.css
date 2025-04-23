@@ -20,7 +20,7 @@
 	--background-hover: #00000011; /* hover color over var(--background) */
 	--primary-hover: #071668e7; /* hover color over var(--primary) */
 	--info-hover: #0b559f; /* hover color over var(--info) */
-	--white-hover: #d3d3d334; /* hover color over var(--white) */
+	--white-hover: #071E681a; /* hover color over var(--white) */
 	--secondary-hover: #ff9500ca; /* hover color over var(--secondary) */
 
 	--font-lato: 'Lato', sans-serif;
@@ -63,7 +63,6 @@ body {
 		display: block;
 	}
 }
-
 
 .h1 {
 	font-family: var(--font-rubik);
@@ -163,6 +162,13 @@ body {
 	line-height: 20px;
 	letter-spacing: 0px;
 }
+.bodyEmphasized {
+	font-family: var(--font-lato);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
 
 .uiNavLink {
 	font-family: var(--font-lato);
@@ -202,6 +208,18 @@ body {
 	font-size: 12px;
 	line-height: 14px;
 	letter-spacing: 0px;
+}
+.father__other {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	flex: 1 1 150px;
+}
+
+.other {
+	display: flex;
+	gap: 8px;
+	align-items: center;
 }
 
 .hide-native-scrollbar {

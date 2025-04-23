@@ -1,4 +1,4 @@
-import { HowSmartexHelpsCard } from '@/components/how-smartex-helps/HowSmartexHelpsCard';
+import { HowSmartexHelpsCard } from '@/modules/how-smartex-helps/components/HowSmartexHelpsCard';
 import React from 'react';
 
 const data = [

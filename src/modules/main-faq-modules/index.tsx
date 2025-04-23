@@ -63,7 +63,7 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 				{variant !== 'green' && (
 					<div className='w-[40px] w750:hidden h-[500px] bg-gray-200 ml-2 mr-2 relative rounded-full overflow-hidden'>
 						<div
-							className='absolute left-[3.5px]  w-[12px] bg-orange-500 rounded-full transition-all duration-200'
+							className='absolute left-[3.5px] w-[12px] bg-orange-500 rounded-full transition-all duration-200'
 							style={{
 								height: '120px',
 								top: `min(calc(${scrollPercent}% + 5px), calc(100% - 120px - 5px))`,
@@ -79,8 +79,10 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 						' h-fit border w750:hidden border-gray-300 rounded-lg flex justify-between p-4 shadow-sm items-start gap-4'
 					)}
 				>
-					{activeItem && (
+					{activeItem ? (
 						<p className='text-sm text-gray-600 leading-relaxed'>{activeItem?.description}</p>
+					) : (
+						<p>Вас что то интересует ?</p>
 					)}
 					{variant === 'green' && (
 						<Image src={FaqIcon} alt='FaqIcon' className='w-6 h-6 mt-1 shrink-0' />

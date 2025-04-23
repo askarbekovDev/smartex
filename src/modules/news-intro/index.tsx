@@ -1,6 +1,5 @@
 import { StatisticsWrapper } from '@/UI';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import { CornerSmoother } from '../../../public/icons';
 
