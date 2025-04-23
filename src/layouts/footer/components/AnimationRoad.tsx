@@ -1,0 +1,27 @@
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import React from 'react';
+import CarIcon from '../../../../public/icons/car-icon.svg';
+import Road from '../../../../public/icons/road.svg';
+
+export const AnimationRoad = () => {
+	return (
+		<div className='relative w-full mx-auto h-[100px] bg-primary rounded-t-[1rem] overflow-hidden'>
+			<Image
+				src={Road}
+				alt='Road'
+				className='w-full h-full pointer-events-none'
+				draggable={false}
+				priority
+			/>
+			<motion.div
+				initial={{ x: '-10%' }}
+				animate={{ x: '100%' }}
+				transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+				className='absolute bottom-2 z-1 inset-0 left-0 w-full h-auto'
+			>
+				<Image src={CarIcon} alt='Car' className='drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]' />
+			</motion.div>
+		</div>
+	);
+};

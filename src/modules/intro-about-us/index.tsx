@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export const IntroAboutUs: FC = () => {
 	return (
-		<div className='container'>
+		<section className='container'>
 			<div className='w-full relative w850:hidden'>
 				<div className='absolute p-4 pl-px top-[80px] left-[-1px] rounded-tr-2xl rounded-br-2xl bg-background'>
 					<h1 className='h2 pt-1 pb-6 w1150:text-[28px]! w1150:pb-3 w1150:pt-0'>
@@ -53,7 +53,7 @@ export const IntroAboutUs: FC = () => {
 					<Link
 						href='/'
 						className='flex items-center justify-center w-[250px] h-15 rounded-2xl bg-success uiBtnText text-white 
-						w1150:w-[173px] w1150:rounded-[14px]'
+						hover:bg-success_hover transition-all duration-200 w1150:w-[173px] w1150:rounded-[14px]'
 					>
 						<span className='pr-5 w1150:pr-3'>Смотреть</span> <PlayIcon />
 					</Link>
@@ -68,8 +68,8 @@ export const IntroAboutUs: FC = () => {
 
 			<div className='hidden w850:block pt-4'>
 				<div className='flex justify-between items-center gap-2'>
-					<h4 className='h4 text-primary-text'>Прозрачные тарифы</h4>
-					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>
+					<h4 className='sectionTitle text-primary_text'>Физический опыт компании</h4>
+					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15 shrink-0'>
 						<Image
 							alt='The Alien'
 							src='/images/alien-like.svg'
@@ -108,6 +108,6 @@ export const IntroAboutUs: FC = () => {
 					</Link>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

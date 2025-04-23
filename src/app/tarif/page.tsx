@@ -1,15 +1,7 @@
 import { TarifPage } from '@/modules';
 
 const Tarif = () => {
-	return (
-		<div className='container'>
-			<TarifPage />
-      <br />
-      <br />
-      <br />
-      <br />
-		</div>
-	);
+	return <TarifPage />;
 };
 
 export default Tarif;
