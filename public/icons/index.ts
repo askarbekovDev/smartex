@@ -12,3 +12,7 @@ export { PhoneIcon } from './phone-icon';
 export { PhoneIconBlack } from './phone-icon-black';
 export { PlayIcon } from './play-icon';
 export { TelegramIcon } from './telegram-icon';
+export { ArrowDropDown } from './arrow-drop-down';
+export { WhatsAppIcon } from './whatsapp-icon';
+export { YandexMapRef } from './yandex-map-ref';
+export { TGisMapRef } from './2gis-map-ref';

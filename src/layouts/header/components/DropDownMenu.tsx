@@ -52,6 +52,7 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) =
 				</div>
 				{headerNavLinks.map((navLink, idx) => (
 					<Link
+						onClick={() => setMenuOpen(false)}
 						className='hover:text-secondary hover:border-b-secondary border-b-1 border-transparent'
 						key={idx}
 						href={navLink.href}
