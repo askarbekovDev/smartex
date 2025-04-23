@@ -17,7 +17,7 @@ export const SmartexTeam: FC = () => {
 			? 'Наша команда SMARTEX'
 			: content === 'Сотрудники'
 			? 'Команда SMARTEX'
-			: 'Забота и поддержка с \n SMARTEX';
+			: 'Забота и поддержка с \nSMARTEX';
 
 	const contentToAppear =
 		content === 'Наша команда'
