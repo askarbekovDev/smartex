@@ -26,7 +26,7 @@ export const OrderPickUp: FC = () => {
 				/>
 			</div>
 			<div className='pt-17 w1150:pt-10 w850:pt-6'>
-				<AllPickUpPoints />
+				<AllPickUpPoints content={content}/>
 				{/* <OurTeam content={content} />
 				<OurEmployees content={content} />
 				<SocialResponsibility content={content} /> */}
