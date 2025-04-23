@@ -10,16 +10,14 @@ import CategorySelectStyled from './components';
 export const SmartexShops = () => {
 	const [activeCategoryId, setActiveCategoryId] = useState<string>('Авто запчасти');
 	const [state, setState] = useState('США');
-	console.log(state);
 	const activeItem = smart2.find((item) => item.title === activeCategoryId);
-	console.log(activeItem);
 	return (
 		<div className='py-10'>
 			<div className='mb-10'>
 				<IntroBlockTarif />
 			</div>
-			<div className='flex w-full justify-between my-8 w450:flex-col'>
-				<p className='h2 '>Магазины SMARTEX</p>
+			<div className='flex w-full justify-between my-8 w550:flex-col-reverse w550:gap-[40px]'>
+				<p className='h2  w750:font-medium! w750:text-[24px]!'>Магазины SMARTEX</p>
 				<ToggleButton setState={setState} buttons={['США', 'Турция', 'Китай']} defaultWidth={59} />
 			</div>
 			<div className='w750:hidden'>
