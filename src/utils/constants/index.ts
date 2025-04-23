@@ -1,6 +1,6 @@
 export const headerNavLinks = [
 	{ title: 'Главная', href: '/' },
-	{ title: 'Как это работает', href: '#' },
+	{ title: 'Как это работает', href: '/our-work' },
 	{ title: 'Тарифы', href: '#' },
 	{ title: 'О компании', href: '/about-us' },
 	{ title: 'Магазины', href: '#' },
