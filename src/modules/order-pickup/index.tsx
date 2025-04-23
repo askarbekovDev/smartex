@@ -2,7 +2,7 @@
 
 import { ToggleButton } from '@/UI';
 import React, { FC, useState } from 'react';
-import { AllPickUpPoints } from './components';
+import { AllPickUpPoints, FreeDeliveryBish } from './components';
 import { OrderPickUpContentType } from './types';
 
 export const OrderPickUp: FC = () => {
@@ -26,7 +26,8 @@ export const OrderPickUp: FC = () => {
 				/>
 			</div>
 			<div className='pt-17 w1150:pt-10 w850:pt-6'>
-				<AllPickUpPoints content={content}/>
+				<AllPickUpPoints content={content} />
+				<FreeDeliveryBish content={content} />
 				{/* <OurTeam content={content} />
 				<OurEmployees content={content} />
 				<SocialResponsibility content={content} /> */}

@@ -13,7 +13,7 @@ export const PointMenuMobile: FC<PointMenuProps> = ({ menuData, setMenu }) => {
 	return (
 		<section
 			className={clsx(
-				`flex flex-col h-[518px] p-4 bg-white rounded-2xl transition-all duration-300 shadow-xl w-[250px]`,
+				`flex flex-col w-full h-[518px] p-4 bg-white rounded-2xl transition-all duration-300 shadow-xl w1050:w-[290px] w750:w-[250px]`,
 				{ 'opacity-100 pointer-events-auto': menuData },
 				{ 'opacity-0 pointer-events-none': !menuData }
 			)}

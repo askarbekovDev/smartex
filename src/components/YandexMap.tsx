@@ -31,7 +31,7 @@ export const YandexMap: FC<YandexMapProps> = ({ coordinatesArr, center, zoom }) 
 		<YMaps
 			query={{
 				lang: 'ru_RU',
-				load: 'package.full', // обязательно
+				load: 'package.full',
 			}}
 		>
 			<Map
