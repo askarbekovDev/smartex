@@ -1,6 +1,5 @@
 import { NewsCard } from '@/components';
 import { Pagination, ToggleButton } from '@/UI';
-import React from 'react';
 
 export const NewsRoom = () => {
 	return (

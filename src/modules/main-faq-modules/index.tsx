@@ -4,9 +4,10 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import FaqIcon from '../../../public/icons/faq-icon.svg';
-import { smart } from './constants';
+import { smart, smart2 } from './constants';
 
 export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
+	const [activeCategoryId, setActiveCategoryId] = useState<number | null>(1);
 	const [activeId, setActiveId] = useState<number | null>(1);
 	const [scrollPercent, setScrollPercent] = useState(0);
 	const scrollRef = useRef<HTMLDivElement>(null);
@@ -29,6 +30,7 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 	}, []);
 
 	const activeItem = smart.find((item) => item.id === activeId);
+	const activeCategory = smart2.find((item) => item.id === activeCategoryId);
 
 	return (
 		<section className='w-full'>
@@ -42,26 +44,22 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 						'w750:overflow-hidden'
 					)}
 				>
-					{smart.map((item) => {
-						return (
-							<SelectFaq
-								key={item.id}
-								variant={variant}
-								title={item.title}
-								image={item.image}
-								description={item?.description}
-								isActive={activeId === item.id}
-								onClick={() => {
-									setActiveId((prev) => {
-										const newId = prev === item.id ? null : item.id;
-										return newId;
-									});
-								}}
-							/>
-						);
-					})}
+					{(variant === 'orange' ? smart2 : smart).map((item) => (
+						<SelectFaq
+							key={item.id}
+							variant={variant}
+							title={item.title}
+							image={item.image}
+							description={item?.description}
+							isActive={activeId === item.id}
+							onClick={() => {
+								setActiveId((prev) => (prev === item.id ? null : item.id));
+								setActiveCategoryId((prev) => (prev === item.id ? null : item.id));
+							}}
+						/>
+					))}
 				</div>
-
+				{/*  */}
 				{variant !== 'green' && (
 					<div className='w-[40px] w750:hidden h-[500px] bg-gray-200 ml-2 mr-2 relative rounded-full overflow-hidden'>
 						<div
@@ -73,8 +71,14 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 						/>
 					</div>
 				)}
-
-				<div className='w-full max-w-[558px] h-fit border w750:hidden border-gray-300 rounded-lg flex justify-between p-4 shadow-sm items-start gap-4'>
+				{/*  */}
+				<div
+					className={clsx(
+						'w-full max-w-[558px] ',
+						variant === 'orange' ? 'hidden' : '',
+						' h-fit border w750:hidden border-gray-300 rounded-lg flex justify-between p-4 shadow-sm items-start gap-4'
+					)}
+				>
 					{activeItem && (
 						<p className='text-sm text-gray-600 leading-relaxed'>{activeItem?.description}</p>
 					)}
@@ -82,6 +86,27 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 						<Image src={FaqIcon} alt='FaqIcon' className='w-6 h-6 mt-1 shrink-0' />
 					)}
 				</div>
+				{/*  */}
+				{variant === 'orange' && (
+					<div className='w-full max-w-[650px] w750:hidden border border-border p-4 rounded-[18px]'>
+						<div className='grid grid-cols-4 gap-x-[12px] gap-y-[16px]'>
+							{activeCategory?.options?.map((brand) => (
+								<div
+									key={brand.id}
+									className='w-full max-w-[170px] h-[60px] border border-border p-1 flex items-center justify-center rounded-[10px]'
+								>
+									<Image
+										src={brand.images}
+										alt={brand.titles}
+										width={170}
+										height={45}
+										className='object-contain max-w-full max-h-full'
+									/>
+								</div>
+							))}
+						</div>
+					</div>
+				)}
 			</div>
 		</section>
 	);

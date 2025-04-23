@@ -11,7 +11,7 @@ type SelectFaqProps = {
 	isActive: boolean;
 	onClick?: () => void;
 	description?: string;
-}
+};
 
 export const SelectFaq = ({
 	title = 'Заголовок',
