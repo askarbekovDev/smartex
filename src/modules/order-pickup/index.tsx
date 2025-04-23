@@ -4,6 +4,7 @@ import { ToggleButton } from '@/UI';
 import React, { FC, useState } from 'react';
 import { AllPickUpPoints, FreeDeliveryBish } from './components';
 import { OrderPickUpContentType } from './types';
+import { FreeDeliverySmartex } from './components/FreeDeliverySmartex';
 
 export const OrderPickUp: FC = () => {
 	const [content, setContent] = useState<OrderPickUpContentType>('Пункты выдачи');
@@ -28,9 +29,7 @@ export const OrderPickUp: FC = () => {
 			<div className='pt-17 w1150:pt-10 w850:pt-6'>
 				<AllPickUpPoints content={content} />
 				<FreeDeliveryBish content={content} />
-				{/* <OurTeam content={content} />
-				<OurEmployees content={content} />
-				<SocialResponsibility content={content} /> */}
+				<FreeDeliverySmartex content={content} />
 			</div>
 		</section>
 	);
