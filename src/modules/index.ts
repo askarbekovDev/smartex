@@ -14,5 +14,7 @@ export { IntroAboutUs } from './intro-about-us';
 export { CompanyStorySection } from './company-story';
 export { SmartexTeam } from './smartex-team';
 export { NewsRoom } from './news-room';
+export { ProhibitedGoods } from './tarif-modules/components/prohibited-goods/index';
+export { TarifPage } from './tarif-modules/index';
 export { IntroPickupPoints } from './intro-pickup-points';
 export { OrderPickUp } from './order-pickup';
