@@ -1,3 +1,4 @@
+import { Footer, Header } from '@/layouts';
 import {
 	IntroSection,
 	NewsSection,
@@ -9,11 +10,13 @@ import {
 export default function Home() {
 	return (
 		<>
+			<Header />
 			<IntroSection />
 			<SearchSection />
 			<PinduoduoSection />
 			<NewsSection />
 			<PopularQuestionsSection />
+			<Footer />
 		</>
 	);
 }

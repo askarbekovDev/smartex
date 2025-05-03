@@ -52,6 +52,7 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) =
 				</div>
 				{headerNavLinks.map((navLink, idx) => (
 					<Link
+						onClick={() => setMenuOpen(false)}
 						className='hover:text-secondary hover:border-b-secondary border-b-1 border-transparent'
 						key={idx}
 						href={navLink.href}
@@ -63,7 +64,10 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) =
 					<Link className='w-full text-center text-white py-3 rounded-lg bg-success' href='#'>
 						Войти
 					</Link>
-					<Link className='w-full text-center py-3 rounded-lg border-[1px] border-success' href='#'>
+					<Link
+						className='w-full text-center py-3 rounded-lg border-[1px] border-success'
+						href='/register/contacts'
+					>
 						Регистрация
 					</Link>
 				</span>

@@ -15,3 +15,7 @@ export { TelegramIcon } from './telegram-icon';
 export { Call } from './call';
 export { Location } from './location';
 export { ArrowRight } from './arrowRight';
+export { ArrowDropDown } from './arrow-drop-down';
+export { WhatsAppIcon } from './whatsapp-icon';
+export { YandexMapRef } from './yandex-map-ref';
+export { TGisMapRef } from './2gis-map-ref';
