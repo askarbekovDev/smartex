@@ -14,3 +14,4 @@ export { PlayIcon } from './play-icon';
 export { TelegramIcon } from './telegram-icon';
 export { Call } from './call';
 export { Location } from './location';
+export { ArrowRight } from './arrowRight';

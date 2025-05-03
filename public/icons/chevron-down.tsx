@@ -1,0 +1,12 @@
+import React from 'react';
+
+export const ChevronDown = () => {
+	return (
+		<svg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			<path
+				d='M7.73882 8.22687L14.49 1.26494C14.9113 0.8305 14.6559 0 14.1011 0L0.598693 0C0.0438802 0 -0.211495 0.8305 0.209755 1.26494L6.96094 8.22687C7.18469 8.45775 7.51507 8.45769 7.73882 8.22687Z'
+				fill='#959595'
+			/>
+		</svg>
+	);
+};

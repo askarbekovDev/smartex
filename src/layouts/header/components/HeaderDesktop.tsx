@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
 import Image from 'next/image';
-import { BurgerMenu, MobileNumsMenu, NavLinks, SocialMediaLinks } from '@/layouts/header/components';
+import {
+	BurgerMenu,
+	MobileNumsMenu,
+	NavLinks,
+	SocialMediaLinks,
+} from '@/layouts/header/components';
 
 export const HeaderDesktop: FC = () => {
 	return (

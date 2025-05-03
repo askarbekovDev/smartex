@@ -101,6 +101,7 @@ export const ActualVacancy = () => {
 						/>
 					</CommonModal>
 				)}
+				
 			</div>
 		</div>
 	);

@@ -14,3 +14,4 @@ export { IntroAboutUs } from './intro-about-us';
 export { CompanyStorySection } from './company-story';
 export { SmartexTeam } from './smartex-team';
 export { NewsRoom } from './news-room';
+export { RegisterIdentification } from './register-identification';
