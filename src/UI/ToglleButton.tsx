@@ -4,7 +4,6 @@ import clsx from 'clsx';
 
 type ToggleButtonProps<T, U extends readonly string[]> = {
 	buttons: U;
-	defaultWidth: number;
 	setState: React.Dispatch<React.SetStateAction<T>>;
 };
 
@@ -28,7 +27,7 @@ export const ToggleButton = <T, U extends readonly string[]>({
 		if (buttonRefs.current[activeIndex]) {
 			setButtonWidth(buttonRefs.current[activeIndex]?.offsetWidth || 0);
 		}
-	}, [activeIndex]);	
+	}, [activeIndex]);
 
 	return (
 		<div className='relative w-fit h-[40px] w450:h-[50px] rounded border border-border flex'>

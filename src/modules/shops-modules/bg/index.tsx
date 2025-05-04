@@ -15,7 +15,9 @@ export const IntroBlockTarif: FC = () => {
 					className='absolute flex flex-col p-4 pl-px bg-background top-[169px] rounded-tr-2xl rounded-br-2xl gap-6
           w1150:gap-4 w1150:top-[105px]'
 				>
-					<p className='h3'>Популярные магазины для вашего удобства</p>
+					<h1 className='h2 pt-1 pb-6 w1150:text-[28px]! w1150:pb-3 w1150:pt-0'>
+						Популярные магазины для вашего удобства
+					</h1>
 					<div className={clsx('flex gap-4')}>
 						<StatisticsWrapper title='50+' subTitle='Магазинов по всему миру' />
 						<StatisticsWrapper title='3+' subTitle='Стран доставки' />
@@ -56,7 +58,7 @@ export const IntroBlockTarif: FC = () => {
 				<div className='flex justify-between'>
 					<div>
 						<h6 className='text-[30px] font-bold pb-3 text-primary-text w550:text-[px]'>
-							Прозрачные тарифы
+							Популярные магазины для вашего удобства
 						</h6>
 					</div>
 					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>

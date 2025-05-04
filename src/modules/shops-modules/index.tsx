@@ -8,6 +8,7 @@ import { IntroBlockTarif } from './bg';
 import CategorySelectStyled from './components';
 
 export const SmartexShops = () => {
+	const [content, setContent] = useState<WhatWeDoBlockContType>('История компании');
 	const [activeCategoryId, setActiveCategoryId] = useState<string>('Авто запчасти');
 	const [state, setState] = useState('США');
 	const activeItem = smart2.find((item) => item.title === activeCategoryId);
@@ -16,9 +17,12 @@ export const SmartexShops = () => {
 			<div className='mb-10'>
 				<IntroBlockTarif />
 			</div>
-			<div className='flex w-full justify-between my-8 w550:flex-col-reverse w550:gap-[40px]'>
-				<p className='h2  w750:font-medium! w750:text-[24px]!'>Магазины SMARTEX</p>
-				<ToggleButton setState={setState} buttons={['США', 'Турция', 'Китай']} defaultWidth={59} />
+			<div className='flex justify-between my-8 pt-[100px] w1050:pt-15 w1050:flex-col-reverse w850:pt-20'>
+				<h2 className='sectionTitle w1050:pt-10'>Магазины SMARTEX</h2>
+				<ToggleButton
+					buttons={['История компании', 'Наша миссия', 'Зарубежные склады'] as const}
+					setState={setContent}
+				/>
 			</div>
 			<div className='w750:hidden'>
 				<FAQ variant='orange' />
