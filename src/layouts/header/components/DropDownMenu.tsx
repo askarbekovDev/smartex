@@ -61,7 +61,7 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) =
 					</Link>
 				))}
 				<span className='flex flex-col gap-4 uiBtnText mt-2 w450:pt-4'>
-					<Link className='w-full text-center text-white py-3 rounded-lg bg-success' href='#'>
+					<Link className='w-full text-center text-white py-3 rounded-lg bg-success' href='/login'>
 						Войти
 					</Link>
 					<Link

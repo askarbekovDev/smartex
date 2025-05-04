@@ -18,7 +18,7 @@ export const NavLinks: FC = () => {
 			<span className='flex gap-5 uiBtnText w1350:gap-3'>
 				<Link
 					className='text-white px-4 py-2 rounded-2xl bg-success hover:bg-success_hover transition-all duration-200'
-					href='#'
+					href='/login'
 				>
 					Войти
 				</Link>

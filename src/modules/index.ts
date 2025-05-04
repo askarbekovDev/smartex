@@ -19,3 +19,4 @@ export { ProhibitedGoods } from './tarif-modules/components/prohibited-goods/ind
 export { TarifPage } from './tarif-modules/index';
 export { IntroPickupPoints } from './intro-pickup-points';
 export { OrderPickUp } from './order-pickup';
+export { LoginSection } from './login';
