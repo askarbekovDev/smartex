@@ -1,4 +1,4 @@
-import { RegisterContactSection } from '@/modules/register-contact';
+import { RegisterContactSection } from '@/modules';
 import React from 'react';
 
 const RegisterContacts = () => {

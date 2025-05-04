@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckboxVector } from '../../public/icons/checkbox-vector';
+import { CheckboxVector } from '../../public/icons';
 
 type CheckboxPropsType = {
 	name: string;

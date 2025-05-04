@@ -1,4 +1,4 @@
-import { ForgotPasswordOtpSection } from '@/modules/forgot-password-otp';
+import { ForgotPasswordOtpSection } from '@/modules';
 import React from 'react';
 
 const ForgotPasswordOtp = () => {

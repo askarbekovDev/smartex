@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import CurvePrimaryShape from '../../../public/images/curve-primary-shape.png';
 import React from 'react';
-import { PrimaryLogo } from '../../../public/icons/primary-logo';
+import { PrimaryLogo } from '../../../public/icons';
 
 export const RegisterIdShape = () => {
 	return (

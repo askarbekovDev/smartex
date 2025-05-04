@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft } from '../../public/icons/arrow-left';
+import { ArrowLeft } from '../../public/icons';
 
 export const PrevButton = () => {
 	return (

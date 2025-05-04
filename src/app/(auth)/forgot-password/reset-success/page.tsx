@@ -1,4 +1,4 @@
-import { ResetPasswordSuccessSection } from '@/modules/reset-success';
+import { ResetPasswordSuccessSection } from '@/modules';
 import React from 'react';
 
 const ResetPasswordSuccess = () => {

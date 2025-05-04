@@ -1,4 +1,4 @@
-import { ResetPasswordSection } from '@/modules/reset-password';
+import { ResetPasswordSection } from '@/modules';
 import React from 'react';
 
 const ResetPassword = () => {

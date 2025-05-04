@@ -6,7 +6,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { registerAddressSchema, RegisterFormType } from './form.schema';
 import { PrevButton } from '@/UI/PrevButton';
 import { Input } from '@/UI';
-import { CheckboxVector } from '../../../../../public/icons/checkbox-vector';
 import { Button } from '@/UI/Button';
 import Checkbox from '@/UI/Checkbox';
 

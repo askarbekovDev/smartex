@@ -1,4 +1,4 @@
-import { RegisterAddressSection } from '@/modules/register-address';
+import { RegisterAddressSection } from '@/modules';
 import React from 'react';
 
 const RegisterAddress = () => {

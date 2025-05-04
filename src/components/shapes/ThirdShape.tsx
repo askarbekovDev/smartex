@@ -2,7 +2,7 @@ import React from 'react';
 import PrimaryShape from '../../../public/images/primary-shape-3.png';
 import SecondaryShape from '../../../public/images/subshape-2.png';
 import Image from 'next/image';
-import { LogoWithText } from '../../../public/icons/logo-with-text';
+import { LogoWithText } from '../../../public/icons';
 
 export const ThirdShape = () => {
 	return (

@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { EyeSeen } from '../../public/icons/eye-seen';
-import { EyeUnseen } from '../../public/icons/eye-unseen';
+import { EyeSeen } from '../../public/icons';
+import { EyeUnseen } from '../../public/icons';
 import clsx from 'clsx';
 
 type InputPropsType = {

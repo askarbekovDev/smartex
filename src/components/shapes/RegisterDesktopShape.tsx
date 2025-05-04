@@ -2,7 +2,7 @@ import React from 'react';
 import PrimaryShape from '../../../public/images/shape-1.png';
 import SecondaryShape from '../../../public/images/sub-shape-1.png';
 import Image from 'next/image';
-import { LogoWithText } from '../../../public/icons/logo-with-text';
+import { LogoWithText } from '../../../public/icons';
 
 export const RegisterDesktopShape = () => {
 	return (

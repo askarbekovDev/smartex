@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { ChevronDown } from '../../public/icons/chevron-down';
+import { ChevronDown } from '../../public/icons';
 
 type Option = {
 	label: string;
