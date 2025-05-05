@@ -1,4 +1,4 @@
-import { TarifPage } from '@/modules';
+import { TarifPage } from '@/modules/tarif-modules';
 
 const Tarif = () => {
 	return <TarifPage />;
