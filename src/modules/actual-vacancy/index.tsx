@@ -12,7 +12,7 @@ const CommonModal = dynamic(() => import('@/UI/modal/CommonModal').then((mod) =>
 
 const VacancyModalForm = dynamic(
 	() =>
-		import('@/modules/actual-vacancy/components/VacancyModalForm').then(
+		import('@/modules/actual-vacancy/components/form/VacancyModalForm').then(
 			(mod) => mod.VacancyModalForm
 		),
 	{
@@ -101,7 +101,6 @@ export const ActualVacancy = () => {
 						/>
 					</CommonModal>
 				)}
-				
 			</div>
 		</div>
 	);
