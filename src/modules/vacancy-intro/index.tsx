@@ -56,13 +56,7 @@ export const VacancyIntro = () => {
 							Стань частью команды Smartex!
 						</h4>
 						<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>
-							<Image
-								alt='The Alien'
-								src='/images/alien-like.svg'
-								width={0}
-								height={0}
-								layout='responsive'
-							/>
+							<Image alt='The Alien' src='/images/alien-like.svg' width={47} height={56} />
 						</div>
 					</div>
 					<div className='hidden w650:flex mt-4 flex-col gap-4'>

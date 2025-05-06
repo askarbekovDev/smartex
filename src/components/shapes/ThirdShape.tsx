@@ -13,6 +13,7 @@ export const ThirdShape = () => {
 					alt='smartex-primary-shape'
 					width={725}
 					height={612}
+					priority
 					className='w-full w950:w-full'
 				/>
 			</div>

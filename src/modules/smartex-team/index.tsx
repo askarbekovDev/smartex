@@ -5,7 +5,7 @@ import {
 	employeesContent,
 	smartexTeamContent,
 	socialResponsibilityContent,
-} from '@/utils/constants';
+} from '@/utils/constants/headerNav';
 import React, { FC, useState } from 'react';
 import { OurEmployees, OurTeam, SocialResponsibility } from './components';
 

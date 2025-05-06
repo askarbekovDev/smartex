@@ -6,7 +6,7 @@ import {
 	companyHystoryContent,
 	ourMissionContent,
 	overseasWarehousesContent,
-} from '@/utils/constants';
+} from '@/utils/constants/headerNav';
 import React, { FC, useState } from 'react';
 
 export const CompanyStorySection: FC = () => {

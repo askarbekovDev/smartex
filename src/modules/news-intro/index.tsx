@@ -9,7 +9,7 @@ export const NewsIntro = () => {
 			<div>
 				<div className='w-full relative w850:hidden'>
 					<div className='absolute p-4 pl-px top-[80px] left-[-1px] rounded-tr-2xl rounded-br-2xl bg-background'>
-					<h1 className='h2 pt-1 pb-6 w1150:text-[28px]! w1150:pb-3 w1150:pt-0'>
+						<h1 className='h2 pt-1 pb-6 w1150:text-[28px]! w1150:pb-3 w1150:pt-0'>
 							Новости и обновления Smartex
 						</h1>
 						<div className='flex items-center gap-6 w1150:gap-4 w1150:top-[105px]'>
@@ -54,15 +54,11 @@ export const NewsIntro = () => {
 
 				<div className='hidden w850:block pt-4'>
 					<div className='flex justify-between items-center'>
-						<h4 className='sectionTitle w450:text-[20px]! text-primary_text'>Новости и обновления Smartex</h4>
+						<h4 className='sectionTitle w450:text-[20px]! text-primary_text'>
+							Новости и обновления Smartex
+						</h4>
 						<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15 shrink-0'>
-							<Image
-								alt='The Alien'
-								src='/images/alien-like.svg'
-								width={0}
-								height={0}
-								layout='responsive'
-							/>
+							<Image alt='The Alien' src='/images/alien-like.svg' width={47} height={56} />
 						</div>
 					</div>
 
@@ -88,8 +84,13 @@ export const NewsIntro = () => {
 						<StatisticsWrapper title='98+' subTitle='Отзывов' textCenter={true} wFull={true} />
 					</div>
 					<div className='hidden w850:block mt-4'>
-                        <StatisticsWrapper title='3' subTitle='Новые услуги за этот год' textCenter={true} wFull={true} />
-                    </div>
+						<StatisticsWrapper
+							title='3'
+							subTitle='Новые услуги за этот год'
+							textCenter={true}
+							wFull={true}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

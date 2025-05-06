@@ -1,8 +1,7 @@
 import React from 'react';
-import { ForgotPasswordLeftBlock } from '../forgot-password/components/ForgotPasswordLeftBlock';
-import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
 import { Button } from '@/UI/Button';
 import { SuccessIcon } from '../../../public/icons';
+import { AuthHeadLine, ForgotPasswordLeftBlock } from '@/components';
 
 export const ResetPasswordSuccessSection = () => {
 	return (

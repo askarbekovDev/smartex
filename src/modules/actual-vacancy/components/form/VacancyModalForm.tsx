@@ -1,25 +1,15 @@
 'use client';
+
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { CloseIconTablet } from '../../../../../public/icons';
 import clsx from 'clsx';
-import { IVacancyFormProps } from '../../actual-vacancy.types';
-import { VacancyFormData, vacancyFormSchema } from './form-schema';
 import { Input } from '@/UI';
 import { Textarea } from '@/UI/Textarea';
 import { FileUpload } from '@/UI/FileUpload';
-
-const fields: {
-	name: 'fullName' | 'email' | 'phoneNumber';
-	label: string;
-	placeholder: string;
-	type: string;
-}[] = [
-	{ name: 'fullName', label: '*Ф.И.О', placeholder: '*Ф.И.О', type: 'text' },
-	{ name: 'email', label: '*Электронный адрес', placeholder: '*Электронный адрес', type: 'text' },
-	{ name: 'phoneNumber', label: '*Номер телефона', placeholder: '*Номер телефона', type: 'text' },
-];
+import { FIELDS, IVacancyFormProps } from '../..';
+import { VacancyFormData, vacancyFormSchema } from '../../schemas/form-schema';
 
 export const VacancyModalForm = ({ title, feedbackOpen, setFeedbackOpen }: IVacancyFormProps) => {
 	const {
@@ -58,7 +48,7 @@ export const VacancyModalForm = ({ title, feedbackOpen, setFeedbackOpen }: IVaca
 		>
 			<div
 				className={clsx(
-					`relative rounded-2xl w-full h-fit bg-white p-12 w750:p-10 pointer-events-auto w550:bg-background w550:px-7 w450:px-5`,
+					`relative rounded-2xl w-full max-h-[90vh] overflow-scroll bg-white p-12 w750:p-10 pointer-events-auto w550:bg-background w550:px-7 w450:px-5`,
 					{ 'pointer-events-none': !feedbackOpen }
 				)}
 			>
@@ -71,7 +61,7 @@ export const VacancyModalForm = ({ title, feedbackOpen, setFeedbackOpen }: IVaca
 				</div>
 
 				<form onSubmit={handleSubmit(onSubmit)} className='w-full pt-6 space-y-4'>
-					{fields.map(({ name, label, placeholder, type }) => (
+					{FIELDS.map(({ name, label, placeholder, type }) => (
 						<Controller
 							key={name}
 							name={name}

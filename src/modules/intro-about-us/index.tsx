@@ -70,13 +70,7 @@ export const IntroAboutUs: FC = () => {
 				<div className='flex justify-between items-center gap-2'>
 					<h4 className='sectionTitle text-primary_text'>Физический опыт компании</h4>
 					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15 shrink-0'>
-						<Image
-							alt='The Alien'
-							src='/images/alien-like.svg'
-							width={0}
-							height={0}
-							layout='responsive'
-						/>
+						<Image alt='The Alien' src='/images/alien-like.svg' width={47} height={56} />
 					</div>
 				</div>
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import { WizardPropsType } from './wizard-step.types';
 import clsx from 'clsx';
+import { WizardPropsType } from '@/types/wizardStep';
 
-const Wizard = ({ position, wizardStepData }: WizardPropsType) => {
+export const Wizard = ({ position, wizardStepData }: WizardPropsType) => {
 	return (
 		<div className='w-full flex justify-between items-center px-3 mt-[32px] w750:mt-[58px] w650:mt-0 gap-3'>
 			{wizardStepData.map((el) => (
@@ -32,5 +32,3 @@ const Wizard = ({ position, wizardStepData }: WizardPropsType) => {
 		</div>
 	);
 };
-
-export default Wizard;

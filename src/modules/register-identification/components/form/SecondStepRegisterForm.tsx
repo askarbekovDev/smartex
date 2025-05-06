@@ -5,11 +5,10 @@ import { NextButton } from '@/UI/NextButton';
 import { PrevButton } from '@/UI/PrevButton';
 import { Select } from '@/UI/Select';
 import React from 'react';
-import { SecondStepSchema, secondStepSchema } from './form-schema';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { FileUpload } from '@/UI/FileUpload';
-import RequirementInfo from '../RequirementInfo';
+import { RequirementInfo, secondStepSchema, SecondStepSchema } from '../..';
 
 export const SecondStepRegisterForm = () => {
 	const {

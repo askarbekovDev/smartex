@@ -3,22 +3,11 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { registerAddressSchema, RegisterFormType } from './form.schema';
 import { PrevButton } from '@/UI/PrevButton';
 import { Input } from '@/UI';
 import { Button } from '@/UI/Button';
 import Checkbox from '@/UI/Checkbox';
-
-const fields: {
-	name: 'cityAndVilage' | 'street' | 'apartment';
-	label: string;
-	placeholder: string;
-	type: string;
-}[] = [
-	{ name: 'cityAndVilage', label: '*Город/село', placeholder: '*Город/село', type: 'text' },
-	{ name: 'street', label: '*Улица', placeholder: '*Улица', type: 'text' },
-	{ name: 'apartment', label: '*Дом/квартира', placeholder: '*Дом/квартира', type: 'text' },
-];
+import { FIELDS, registerAddressSchema, RegisterFormType } from '../..';
 
 export const RegisterAddressForm = () => {
 	const {
@@ -44,7 +33,7 @@ export const RegisterAddressForm = () => {
 			onSubmit={handleSubmit(onSubmit)}
 			className='w-full pt-6 flex flex-col gap-4 items-center'
 		>
-			{fields.map(({ name, label, placeholder, type }) => (
+			{FIELDS.map(({ name, label, placeholder, type }) => (
 				<Controller
 					key={name}
 					name={name}
