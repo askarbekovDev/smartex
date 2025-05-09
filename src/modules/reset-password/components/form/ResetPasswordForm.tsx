@@ -1,26 +1,11 @@
 'use client';
 
 import React from 'react';
-import { ResetPasswordFormType, resetPasswordSchema } from './reset-password-schema';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Input } from '@/UI';
 import { Button } from '@/UI/Button';
-
-const fields: {
-	name: keyof ResetPasswordFormType;
-	label: string;
-	placeholder: string;
-	type?: string;
-}[] = [
-	{ name: 'password', label: '*Пароль', placeholder: '*Пароль', type: 'password' },
-	{
-		name: 'confirmPassword',
-		label: '*Повторите пароль',
-		placeholder: '*Повторите пароль',
-		type: 'password',
-	},
-];
+import { FORM_FIELDS, ResetPasswordFormType, resetPasswordSchema } from '../..';
 
 export const ResetPasswordForm = () => {
 	const {
@@ -44,7 +29,7 @@ export const ResetPasswordForm = () => {
 			onSubmit={handleSubmit(onSubmit)}
 			className='w-full pt-6 space-y-4 flex flex-col justify-center items-center gap-2'
 		>
-			{fields.map(({ name, label, placeholder, type }, index) => (
+			{FORM_FIELDS.map(({ name, label, placeholder, type }, index) => (
 				<Controller
 					key={index}
 					name={name}

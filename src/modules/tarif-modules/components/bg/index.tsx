@@ -6,7 +6,7 @@ import { CornerSmoother } from '../../../../../public/icons';
 
 export const IntroBlockTarif: FC = () => {
 	return (
-		<div className=''>
+		<div className='container'>
 			<div className='w-full relative w850:hidden'>
 				<div className='absolute left-0 top-[152px] bottom-px w-[17px] h-[17px] rotate-270'>
 					<CornerSmoother />
@@ -15,7 +15,9 @@ export const IntroBlockTarif: FC = () => {
 					className='absolute flex flex-col p-4 pl-px bg-background top-[169px] rounded-tr-2xl rounded-br-2xl gap-6
           w1150:gap-4 w1150:top-[105px]'
 				>
-					<p className='h3'>Прозрачные тарифы</p>
+					<h1 className='h2 pt-1 pb-6 w1150:text-[28px]! w1150:pb-3 w1150:pt-0'>
+						Прозрачные тарифы
+					</h1>
 					<div className={clsx('flex gap-4')}>
 						<StatisticsWrapper title='100+' subTitle='Новых клиентов ' />
 						<StatisticsWrapper title='50+' subTitle='Публикаций ' />
@@ -50,25 +52,13 @@ export const IntroBlockTarif: FC = () => {
 					</div>
 				</div>
 			</div>
-			{/*  */}
 			<div className='hidden w850:block pt-4'>
-				<div className='flex justify-between'>
-					<div>
-						<h6 className='text-[30px] font-bold pb-3 text-primary-text w550:text-[px]'>
-							Прозрачные тарифы
-						</h6>
-					</div>
-					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15'>
-						<Image
-							alt='The Alien'
-							src='/images/alien-like.svg'
-							width={0}
-							height={0}
-							layout='responsive'
-						/>
+				<div className='flex justify-between items-center gap-2'>
+					<h4 className='sectionTitle text-primary_text'>Прозрачные тарифы</h4>
+					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15 shrink-0'>
+						<Image alt='The Alien' src='/images/alien-like.svg' width={47} height={56} />
 					</div>
 				</div>
-
 				<div className='grid gap-4 grid-cols-2 pt-4 b-green-400 w550:gap-3 w420:grid-cols-1 w370:gap-2'>
 					<StatisticsWrapper
 						title='100+'

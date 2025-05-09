@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { DropDownMenu, MobileNumsMenu, SocialMediaLinks } from '@/layouts/header/components';
 import { BurgerMobile, CloseIconMobile } from '../../../../public/icons';
+import MainLogoImage from '../../../../public/icons/main-logo.svg';
 
 export const HeaderMobile: FC = () => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -27,7 +28,7 @@ export const HeaderMobile: FC = () => {
 					})}
 				>
 					<Link href='/'>
-						<Image src='images/main-logo.svg' width={110} height={34} alt='Smartex' />
+						<Image src={MainLogoImage} width={110} height={34} alt='Smartex' />
 					</Link>
 				</div>
 				<div

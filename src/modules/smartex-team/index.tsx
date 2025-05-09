@@ -5,9 +5,10 @@ import {
 	employeesContent,
 	smartexTeamContent,
 	socialResponsibilityContent,
-} from '@/utils/constants';
+} from '@/utils/constants/headerNav';
 import React, { FC, useState } from 'react';
 import { OurEmployees, OurTeam, SocialResponsibility } from './components';
+import { SmartexTeamContentType } from './types';
 
 export const SmartexTeam: FC = () => {
 	const [content, setContent] = useState<SmartexTeamContentType>('Наша команда');
@@ -32,7 +33,6 @@ export const SmartexTeam: FC = () => {
 				<h2 className='sectionTitle pr-2 whitespace-pre-line w1050:pt-10'>{sectionTitle}</h2>
 				<ToggleButton
 					buttons={['Наша команда', 'Сотрудники', 'Социальная ответственность'] as const}
-					defaultWidth={145}
 					setState={setContent}
 				/>
 			</div>

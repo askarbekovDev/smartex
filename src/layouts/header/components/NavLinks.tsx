@@ -1,4 +1,4 @@
-import { headerNavLinks } from '@/utils/constants';
+import { headerNavLinks } from '@/utils/constants/headerNav';
 import Link from 'next/link';
 import React, { FC } from 'react';
 

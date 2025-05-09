@@ -36,7 +36,7 @@ export const DesctopDownload = () => {
 						</div>
 					</div>
 					<div className='bg-white w-full h-[360px] w850:h-[330px] relative'>
-						<Image src={White} alt='white' className='w-full h-[360px] w850:h-[330px]' />
+						<Image src={White} alt='white' className='w-auto h-[360px] w850:h-[330px] mx-auto' />
 						<Image
 							src={Green}
 							alt='green'

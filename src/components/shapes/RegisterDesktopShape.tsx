@@ -13,6 +13,7 @@ export const RegisterDesktopShape = () => {
 					alt='smartex-primary-shape'
 					width={649}
 					height={418}
+					priority
 					className='w950:w-full'
 				/>
 			</div>

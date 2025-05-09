@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import React, { FC, useEffect } from 'react';
 import { CloseIconTablet } from '../../../../public/icons';
-import { headerNavLinks } from '@/utils/constants';
+import { headerNavLinks } from '@/utils/constants/headerNav';
 import { Backdrop } from '@/UI';
 
 type DropDownMenuProps = {

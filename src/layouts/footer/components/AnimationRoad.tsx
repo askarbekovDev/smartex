@@ -10,9 +10,8 @@ export const AnimationRoad = () => {
 			<Image
 				src={Road}
 				alt='Road'
-				className='w-full h-full pointer-events-none'
+				className='absolute w-full h-full left-1/2 -translate-y-1/2 top-1/2 transform -translate-x-1/2 pointer-events-none'
 				draggable={false}
-				priority
 			/>
 			<motion.div
 				initial={{ x: '-10%' }}

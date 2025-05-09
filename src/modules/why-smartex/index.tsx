@@ -1,5 +1,5 @@
 import { WhySmartexCard } from '@/modules/why-smartex/components/WhySmartextCard';
-import { whySmartexContent } from '@/utils/constants';
+import { whySmartexContent } from '@/utils/constants/headerNav';
 import React from 'react';
 
 export const WhySmartexSection = () => {
