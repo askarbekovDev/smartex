@@ -1,4 +1,3 @@
-import { FAQ } from '@/modules/main-faq-modules';
 import { TarifCard } from '../../../../components/tarif-card';
 import { array_tarif } from '../../../../components/tarif-card/lib';
 
