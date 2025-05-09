@@ -4,7 +4,6 @@ import clsx from 'clsx';
 
 type ToggleButtonProps<T, U extends readonly string[]> = {
 	buttons: U;
-	defaultWidth: number;
 	setState?: React.Dispatch<React.SetStateAction<T>>;
 };
 

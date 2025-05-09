@@ -8,6 +8,7 @@ import {
 	overseasWarehousesContent,
 } from '@/utils/constants/headerNav';
 import React, { FC, useState } from 'react';
+import { WhatWeDoBlockContType } from '../smartex-team/types';
 
 export const CompanyStorySection: FC = () => {
 	const [content, setContent] = useState<WhatWeDoBlockContType>('История компании');
@@ -25,7 +26,6 @@ export const CompanyStorySection: FC = () => {
 				<h2 className='sectionTitle w1050:pt-10'>{content}</h2>
 				<ToggleButton
 					buttons={['История компании', 'Наша миссия', 'Зарубежные склады'] as const}
-					defaultWidth={165}
 					setState={setContent}
 				/>
 			</div>

@@ -9,7 +9,7 @@ import { ShippingSelector } from './lib';
 
 export const ShippingCalculator = () => {
 	return (
-		<section className='flex gap-[23px] w850:flex-wrap mx-auto mt-6'>
+		<div className='flex gap-[23px] w850:flex-wrap mt-6'>
 			<div
 				className={clsx(
 					'w-full max-w-[655px] h-[448px] w850:max-w-full bg-white rounded-[16px] py-[50px] px-[16px] w550:h-full'
@@ -24,7 +24,6 @@ export const ShippingCalculator = () => {
 					<Image src={Warning} alt='Warning' />
 				</div>
 				<div className='flex gap-6 mt-3 w550:flex-wrap justify-center w550:gap-4 '>
-					{/* vesy */}
 					<div className='father__other'>
 						<CustomInput placeholder='Вес' />
 						<div className='other'>
@@ -32,7 +31,6 @@ export const ShippingCalculator = () => {
 							<p className='bodyText'>Кг</p>
 						</div>
 					</div>
-					{/* vysota */}
 					<div className='father__other'>
 						<CustomInput placeholder='Высота' />
 						<div className='other'>
@@ -40,7 +38,6 @@ export const ShippingCalculator = () => {
 							<p className='bodyText'>См</p>
 						</div>
 					</div>
-					{/* shirina */}
 					<div className='father__other'>
 						<CustomInput placeholder='Ширина' />
 						<div className='other'>
@@ -48,7 +45,6 @@ export const ShippingCalculator = () => {
 							<p className='bodyText'>См</p>
 						</div>
 					</div>
-					{/* dlina */}
 					<div className='father__other'>
 						<CustomInput placeholder='Длина' />
 						<div className='other'>
@@ -56,7 +52,6 @@ export const ShippingCalculator = () => {
 							<p className='bodyText'>См</p>
 						</div>
 					</div>
-					{/*  */}
 				</div>
 				<div className='mt-4'>
 					<CustomInput
@@ -75,11 +70,6 @@ export const ShippingCalculator = () => {
 			>
 				<div className='w-full max-w-[150px] w850:max-w-[133px] w550:w-full w550:max-w-[200px] mx-auto'>
 					<Image src={InoDostavka} alt='InoDostavka' className=' w550:w-full' />
-					{/* <Image
-						src={InoDostavkaMobile}
-						alt='InoDostavkaMobile'
-						className='object-cover w-full h-auto'
-					/> */}
 				</div>
 
 				<div className='w-full max-w-[430px] h-full flex flex-col w850:items-start items-center'>
@@ -106,6 +96,6 @@ export const ShippingCalculator = () => {
 					</p>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 };

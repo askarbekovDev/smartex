@@ -7,7 +7,7 @@ import FaqIcon from '../../../public/icons/faq-icon.svg';
 import { smart } from './constants';
 
 export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
-	const [activeId, setActiveId] = useState<number | null>(1);
+	const [activeIndex, setActiveIndex] = useState<number | null>(0);
 	const [scrollPercent, setScrollPercent] = useState(0);
 	const scrollRef = useRef<HTMLDivElement>(null);
 	const handleScroll = () => {
@@ -28,7 +28,7 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 		return () => el.removeEventListener('scroll', handleScroll);
 	}, []);
 
-	const activeItem = smart.find((item) => item.id === activeId);
+	const activeItem = smart.find((item) => item.id === activeIndex);
 
 	return (
 		<section className='w-full'>
@@ -42,38 +42,21 @@ export const FAQ = ({ variant }: { variant: 'red' | 'orange' | 'green' }) => {
 						'w750:overflow-hidden'
 					)}
 				>
-					{smart.map((item) => {
+					{smart.map((item, index) => {
 						return (
 							<SelectFaq
 								key={item.id}
 								variant={variant}
+								index={index}
 								title={item.title}
 								image={item.image}
-								description={item?.description}
-								isActive={activeId === item.id}
-								onClick={() => {
-									setActiveId((prev) => {
-										const newId = prev === item.id ? null : item.id;
-										return newId;
-									});
-								}}
+								isActive={activeIndex === item.id}
+								scrollPercent={scrollPercent}
+								setActiveIndex={setActiveIndex}
 							/>
 						);
 					})}
 				</div>
-
-				{variant !== 'green' && (
-					<div className='w-[40px] w750:hidden h-[500px] bg-gray-200 ml-2 mr-2 relative rounded-full overflow-hidden'>
-						<div
-							className='absolute left-[3.5px] w-[12px] bg-orange-500 rounded-full transition-all duration-200'
-							style={{
-								height: '120px',
-								top: `min(calc(${scrollPercent}% + 5px), calc(100% - 120px - 5px))`,
-							}}
-						/>
-					</div>
-				)}
-
 				<div
 					className={clsx(
 						'w-full max-w-[558px] ',

@@ -22,7 +22,6 @@ export const OrderPickUp: FC = () => {
 				<h2 className='sectionTitle pr-2 whitespace-pre-line w1050:pt-10'>{sectionTitle}</h2>
 				<ToggleButton
 					buttons={['Пункты выдачи', 'Бесплатная доставка', 'Условия для доставки'] as const}
-					defaultWidth={145}
 					setState={setContent}
 				/>
 			</div>

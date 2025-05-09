@@ -29,9 +29,8 @@ export const ShippingSelector = () => {
 
 	return (
 		<div className='relative w-full max-w-full mx-auto'>
-			{/* Selected option display (dropdown trigger) */}
 			<div
-				className='flex items-center p-4 bg-gray-100 border border-gray-300 rounded-[1rem] cursor-pointer'
+				className='flex items-center p-4 bg-background border border-border rounded-[1rem] cursor-pointer'
 				onClick={toggleDropdown}
 			>
 				<div className='flex items-center flex-1'>
@@ -56,14 +55,13 @@ export const ShippingSelector = () => {
 				</svg>
 			</div>
 
-			{/* Dropdown options */}
 			{isOpen && (
-				<div className='absolute w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10'>
+				<div className='absolute w-full mt-1 bg-background border border-border rounded-lg shadow-lg z-10 h-[288px] overflow-scroll'>
 					{options.map((option) => (
 						<div
 							key={option.id}
-							className={`flex items-center p-4 cursor-pointer hover:bg-gray-50 border-b border-gray-100 last:border-b-0 ${
-								option.id === selectedOption ? 'bg-purple-100 border border-purple-400' : ''
+							className={`flex items-center p-4 cursor-pointer hover:bg-white first:rounded-lg last:rounded-lg border-b border-background last:border-b-0 ${
+								option.id === selectedOption ? 'bg-white border' : ''
 							}`}
 							onClick={() => selectOption(option.id)}
 						>

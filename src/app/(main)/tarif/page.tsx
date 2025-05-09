@@ -1,7 +1,13 @@
-import { TarifPage } from '@/modules/tarif-modules';
+import { IntroBlockTarif } from '@/modules/tarif-modules/components/bg';
+import { Tarifficator } from '@/modules/tarif-modules/components/tarifficator/Tarifficator';
 
 const Tarif = () => {
-	return <TarifPage />;
+	return (
+		<>
+			<IntroBlockTarif />
+			<Tarifficator />
+		</>
+	);
 };
 
 export default Tarif;
