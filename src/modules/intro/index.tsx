@@ -84,13 +84,7 @@ export const IntroSection: FC = () => {
 						<h1 className='h4 text-secondary text-[30px]! w550:text-[24px]!'>SMARTEX</h1>
 					</div>
 					<div className='p-2 border-1 border-border rounded-[60px] bg-white w-15 h-15 shrink-0'>
-						<Image
-							alt='The Alien'
-							src='/images/alien-like.svg'
-							width={0}
-							height={0}
-							layout='responsive'
-						/>
+						<Image alt='The Alien' src='/images/alien-like.svg' width={47} height={56} />
 					</div>
 				</div>
 

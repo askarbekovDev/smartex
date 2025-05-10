@@ -1,4 +1,3 @@
-import { Footer, Header } from '@/layouts';
 import type { Metadata } from 'next';
 import { Lato, Roboto, Rubik } from 'next/font/google';
 import './globals.css';
@@ -36,9 +35,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${rubik.variable} ${lato.variable} ${roboto.variable} antialiased`}>
-				<Header />
 				{children}
-				<Footer />
 			</body>
 		</html>
 	);

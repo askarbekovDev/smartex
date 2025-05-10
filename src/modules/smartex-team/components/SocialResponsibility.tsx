@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import React, { FC } from 'react';
 import { CornerSmoother } from '../../../../public/icons';
+import { SmartexTeamContentType } from '../types';
 
 type SocialRespProps = {
 	content: SmartexTeamContentType;

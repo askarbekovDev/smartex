@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import React, { FC, useEffect } from 'react';
 import { CloseIconTablet } from '../../../../public/icons';
-import { headerNavLinks } from '@/utils/constants';
+import { headerNavLinks } from '@/utils/constants/headerNav';
 import { Backdrop } from '@/UI';
 
 type DropDownMenuProps = {
@@ -61,10 +61,13 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({ menuOpen, setMenuOpen }) =
 					</Link>
 				))}
 				<span className='flex flex-col gap-4 uiBtnText mt-2 w450:pt-4'>
-					<Link className='w-full text-center text-white py-3 rounded-lg bg-success' href='#'>
+					<Link className='w-full text-center text-white py-3 rounded-lg bg-success' href='/login'>
 						Войти
 					</Link>
-					<Link className='w-full text-center py-3 rounded-lg border-[1px] border-success' href='#'>
+					<Link
+						className='w-full text-center py-3 rounded-lg border-[1px] border-success'
+						href='/register/contacts'
+					>
 						Регистрация
 					</Link>
 				</span>

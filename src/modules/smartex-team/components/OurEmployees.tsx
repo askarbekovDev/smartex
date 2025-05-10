@@ -1,6 +1,7 @@
 import { TeamMemberCard } from '@/components';
 import clsx from 'clsx';
 import React, { FC } from 'react';
+import { SmartexTeamContentType } from '../types';
 
 type OurEmployeesProps = {
 	content: SmartexTeamContentType;

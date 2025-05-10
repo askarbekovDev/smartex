@@ -1,56 +1,89 @@
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
-import { ArrowIconDescripton } from '../../../public/icons';
 import DontIcon from '../../../public/icons/dont-icon.svg';
 import FaqIcon from '../../../public/icons/faq-icon.svg';
+import { ArrowIconDescripton } from '../../../public/icons';
+import { useEffect } from 'react';
 
 type SelectFaqProps = {
 	title?: string;
+	description: string;
 	variant?: 'green' | 'red' | 'orange';
 	image?: StaticImageData;
-	isActive: boolean;
-	onClick?: () => void;
-	description?: string;
+	index: number;
+	activeIndex: number | null;
+	setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>;
+	setScrollPercent?: React.Dispatch<React.SetStateAction<number>>;
+	scrollRef?: React.RefObject<HTMLDivElement | null>;
 };
 
 export const SelectFaq = ({
 	title = 'Заголовок',
 	image,
+	index,
 	variant = 'green',
-	isActive,
-	onClick,
+	activeIndex,
 	description,
+	setActiveIndex,
+	setScrollPercent,
+	scrollRef,
 }: SelectFaqProps) => {
 	const icon = image || (variant === 'red' ? DontIcon : FaqIcon);
 	const baseClass =
-		'min-h-[56px] border border-solid px-[4px] text-wrap break-normal whitespace-normal w-full rounded-[8px] flex items-center cursor-pointer transition-colors duration-200 border border-solid border-[#CAC9C9] w750:rounded-none w750:border-0 w750:border-b w750:border-b-gray-300';
+		'min-h-[56px] border px-[16px] text-wrap break-normal whitespace-normal w-full rounded-[8px] flex items-center cursor-pointer transition-colors duration-200 border-border w750:rounded-none w750:border-0 w750:border-b w750:border-b-gray-300';
 
-	const activeClass = isActive
-		? 'bg-success text-background border-success'
-		: 'bg-background text-primary border-[#CAC9C9]';
+	const activeClass =
+		activeIndex === index
+			? 'bg-success text-background border-success'
+			: 'bg-background text-primary border-border';
+
+	const handleScroll = () => {
+		const el = scrollRef ? scrollRef.current : '';
+		if (!el) return;
+
+		const scrollTop = el.scrollTop;
+		const scrollHeight = el.scrollHeight - el.clientHeight;
+		const percent = (scrollTop / scrollHeight) * 100;
+
+		if (setScrollPercent) {
+			setScrollPercent(percent);
+		}
+	};
+
+	useEffect(() => {
+		const el = scrollRef ? scrollRef.current : '';
+		if (!el) return;
+		el.addEventListener('scroll', handleScroll);
+		return () => el.removeEventListener('scroll', handleScroll);
+	}, []);
 
 	switch (variant) {
 		case 'green':
 			return (
 				<>
 					<div
-						className={`flex bodyLarge text-primary justify-between break-normal whitespace-normal gap-3 ${baseClass} ${activeClass}`}
-						onClick={onClick}
+						className={`flex justify-between break-normal whitespace-normal gap-3 ${baseClass} ${activeClass}`}
+						onClick={() => setActiveIndex(index)}
 					>
-						<div className={clsx('my-[18px] ml-[16px]', isActive ? 'text-white' : 'text-primary')}>
+						<p
+							className={clsx('bodyLarge text-primary_text my-[18px]', {
+								'text-white': activeIndex === index,
+							})}
+						>
 							{title}
-						</div>
+						</p>
 						<Image src={FaqIcon} alt='FaqIcon' />
 					</div>
-
-					{isActive && (
+					{activeIndex === index && (
 						<div
 							className={clsx(
 								'hidden w750:block transition-[max-height,opacity] duration-700 ease-in-out',
-								isActive ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+								activeIndex === index ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'
 							)}
 						>
-							<p className='bodyText  leading-relaxed'>{description}</p>
+							<p className='font-rubik font-normal text-[16px] text-primary_text leading-[20px]'>
+								{description}
+							</p>
 						</div>
 					)}
 				</>
@@ -60,25 +93,24 @@ export const SelectFaq = ({
 			return (
 				<>
 					<div
-						className={`w-full w750:w-full w750:max-w-full  flex  justify-between gap-3 ${baseClass} rounded-[8px] border border-solid border-gray-200 ${activeClass}`}
-						onClick={onClick}
+						className={clsx(
+							`w-full w750:w-full w750:max-w-full flex justify-between gap-3 ${baseClass} rounded-[8px] border border-solid border-gray-200`,
+							{
+								'border-secondary': activeIndex === index,
+							}
+						)}
+						onClick={() => setActiveIndex(index)}
 					>
-						<div className='flex flex-row-reverse gap-2'>
+						<div className='flex flex-row-reverse items-center gap-[10px] bodyLarge text-primary_text'>
 							{title}
-							<Image src={DontIcon} alt='DontIcon' />
+							<div className='border-0 w750:border border-border w-[38px] h-[38px] rounded-[100px] flex justify-center items-center'>
+								<Image src={DontIcon} alt='DontIcon' />
+							</div>
 						</div>
-						<ArrowIconDescripton isActive={isActive} />
+						<div className='hidden w750:block'>
+							<ArrowIconDescripton isActive={activeIndex === index} />
+						</div>
 					</div>
-					{isActive && (
-						<div
-							className={clsx(
-								'w750:block hidden transition-[max-height,opacity] duration-700 ease-in-out',
-								isActive ? 'h-[100px] block' : 'hidden'
-							)}
-						>
-							<p className='text-sm text-gray-600 leading-relaxed'>{description}</p>
-						</div>
-					)}
 				</>
 			);
 
@@ -86,10 +118,12 @@ export const SelectFaq = ({
 			return (
 				<>
 					<div
-						className={`w750:w-full flex-row-reverse justify-end gap-3 ${baseClass} ${activeClass}`}
-						onClick={onClick}
+						className={clsx(`w750:w-full flex-row-reverse justify-end gap-3 ${baseClass}`, {
+							'border-secondary': activeIndex === index,
+						})}
+						onClick={() => setActiveIndex(index)}
 					>
-						<div>{title}</div>
+						<p className='bodyLarge text-primary_text'>{title}</p>
 						<Image src={icon} alt='SmartIcon' />
 					</div>
 				</>

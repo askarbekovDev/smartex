@@ -1,7 +1,13 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
 import Image from 'next/image';
-import { BurgerMenu, MobileNumsMenu, NavLinks, SocialMediaLinks } from '@/layouts/header/components';
+import MainLogoImage from '../../../../public/icons/main-logo.svg';
+import {
+	BurgerMenu,
+	MobileNumsMenu,
+	NavLinks,
+	SocialMediaLinks,
+} from '@/layouts/header/components';
 
 export const HeaderDesktop: FC = () => {
 	return (
@@ -14,7 +20,7 @@ export const HeaderDesktop: FC = () => {
 			</div>
 			<div className='container flex items-center justify-between w-full h-20'>
 				<Link href='/'>
-					<Image src='images/main-logo.svg' width={110} height={34} alt='Smartex' />
+					<Image src={MainLogoImage} width={110} height={34} alt='Smartex' />
 				</Link>
 				<BurgerMenu />
 				<NavLinks />

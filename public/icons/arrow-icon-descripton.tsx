@@ -2,14 +2,14 @@ import clsx from 'clsx';
 
 type ArrowIconDescriptonProps = {
 	isActive?: boolean;
-}
+};
 
 export const ArrowIconDescripton = ({ isActive = false }: ArrowIconDescriptonProps) => {
 	return (
 		<svg
 			className={clsx(
 				'w-4 h-4 transition-transform duration-300 ease-in-out fill-current',
-				isActive ? 'rotate-180 text-white' : 'rotate-0 text-[#959595]'
+				isActive ? 'rotate-0 text-icons' : '-rotate-90 text-icons'
 			)}
 			viewBox='0 0 14 8'
 			xmlns='http://www.w3.org/2000/svg'
