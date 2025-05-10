@@ -3,7 +3,7 @@ export const headerNavLinks = [
 	{ title: 'Как это работает', href: '/how-it-works' },
 	{ title: 'Тарифы', href: '/tarif' },
 	{ title: 'О компании', href: '/about-us' },
-	{ title: 'Магазины', href: '#' },
+	{ title: 'Магазины', href: '/shops' },
 	{ title: 'Пункт выдачи', href: '/pickup-points' },
 ];
 

@@ -1,6 +1,5 @@
 'use client';
-
-import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
+import { Map, Placemark, YMaps } from '@pbe/react-yandex-maps';
 import { FC, useEffect, useRef } from 'react';
 
 type YandexMapProps = {

@@ -1,11 +1,6 @@
 import { Footer, Header } from '@/layouts';
-import {
-	IntroSection,
-	NewsSection,
-	PinduoduoSection,
-	PopularQuestionsSection,
-	SearchSection,
-} from '@/modules';
+import { IntroSection, PinduoduoSection, PopularQuestionsSection, SearchSection } from '@/modules';
+import { NewsSection } from '@/modules/news-section';
 
 export default function Home() {
 	return (
