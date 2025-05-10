@@ -2,16 +2,23 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { Date } from '../../public/icons';
+import Link from 'next/link';
 
 type NewsCardProps = {
 	idx: number;
-}
+};
 
 export const NewsCard = ({ idx }: NewsCardProps) => {
 	const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
+	const handleExpand = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+		e.stopPropagation();
+		setIsExpanded(!isExpanded);
+	};
+
 	return (
-		<div
+		<Link
+			href={'/news/1'}
 			className={`w-full rounded-[16px] bg-white overflow-hidden ${idx === 2 ? 'w950:hidden' : ''}`}
 		>
 			<div className='w-full h-[200px] rounded-b-[16px] w450:h-[230px] w650:h-[270px] relative overflow-hidden'>
@@ -27,22 +34,22 @@ export const NewsCard = ({ idx }: NewsCardProps) => {
 				<p className='text-success bodyBold'>Блог</p>
 				<h5 className='text-secondary h5 w550:text-[18px]!'>SMARTEX</h5>
 				<div className='flex items-center gap-2'>
-					<Date width='24px' height='24px'/>
+					<Date width='24px' height='24px' />
 					<p className='bodySmall text-secondary_text text-[13px] leading-[16px]'>1 месяц назад</p>
 				</div>
-				<p className={`bodyText text-secondary_text ${isExpanded ? "" : "line-clamp-2"}`}>
+				<p className={`bodyText text-secondary_text ${isExpanded ? '' : 'line-clamp-2'}`}>
 					Вы можете производить оплату с личного кабинета с помощью Mbank и ELQR :Оплата по QR-коду
 					и Mbank через личный
 				</p>
 				<div className='justify-end mt-3 hidden w650:flex '>
 					<button
 						className='w-[40%] h-[20px] text-info bodyText underline underline-offset-4'
-						onClick={() => setIsExpanded(!isExpanded)}
+						onClick={(e) => handleExpand(e)}
 					>
 						{isExpanded ? 'Свернуть' : 'Читать больше'}
 					</button>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };

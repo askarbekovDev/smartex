@@ -22,7 +22,7 @@ const CategorySelectStyled = ({
 	const toggleOpen = () => setIsOpen((prev) => !prev);
 
 	return (
-		<div className='relative w-full border border-border rounded-lg bg-white'>
+		<div className='w-full border border-border rounded-lg bg-white'>
 			<div
 				className='flex items-center justify-between border-border px-4 py-3 cursor-pointer'
 				onClick={toggleOpen}
@@ -39,7 +39,7 @@ const CategorySelectStyled = ({
 			</div>
 
 			{isOpen && (
-				<div className='w-full flex flex-col absolute top-[50px] left-0 max-h-[330px] overflow-scroll'>
+				<div className='flex flex-col max-h-[330px] overflow-scroll'>
 					{SHOPS_ITEMS.map((item, index) => (
 						<button
 							key={index}
