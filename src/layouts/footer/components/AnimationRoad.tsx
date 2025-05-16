@@ -17,12 +17,12 @@ export const AnimationRoad = () => {
 				initial={{ x: '-10%' }}
 				animate={{ x: '100%' }}
 				transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
-				className='absolute top-1/2 transform -translate-y-1/2 z-1 inset-0 left-0 w-full h-auto'
+				className='absolute top-0 z-1 inset-0 left-0 w-full h-auto'
 			>
 				<Image
 					src={AirPlane}
 					alt='Car'
-					width={150}
+					width={250}
 					height={150}
 					className='drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'
 				/>
