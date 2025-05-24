@@ -1,4 +1,6 @@
-import { AuthHeadLine, RegisterIdLeftBlock, Wizard } from '@/components';
+import { RegisterIdLeftBlock } from '@/components/auth/RegisterIdLeftBlock';
+import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
+import { Wizard } from '@/components/wizard-step/Wizard';
 import { WIZARD_STEP_DATA } from '@/utils/constants/wizardStep';
 import { SecondStepRegisterForm } from '../..';
 

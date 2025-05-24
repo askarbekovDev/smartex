@@ -1,8 +1,8 @@
 'use client';
 
-import { OtpInput } from '@/UI';
 import { Button } from '@/UI/Button';
-import React, { useState } from 'react';
+import { OtpInput } from '@/UI/OtpInput';
+import { useState } from 'react';
 
 export const ForgotPasswordOtpForm = () => {
 	const [otp, setOtp] = useState('');

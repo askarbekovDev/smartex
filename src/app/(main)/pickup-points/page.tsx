@@ -1,5 +1,6 @@
-import { IntroPickupPoints, OrderPickUp } from '@/modules';
-import React, { FC } from 'react';
+import { IntroPickupPoints } from '@/modules/intro-pickup-points';
+import { OrderPickUp } from '@/modules/order-pickup';
+import { FC } from 'react';
 
 const PickUpPoints: FC = () => {
 	return (

@@ -1,8 +1,8 @@
-import { StatisticsWrapper } from '@/UI';
-import React, { FC } from 'react';
-import { CornerSmoother, PlayIcon } from '../../../public/icons';
+import { StatisticsWrapper } from '@/UI/StatisticsWrapper';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FC } from 'react';
+import { CornerSmoother, PlayIcon } from '../../../public/icons';
 
 export const IntroAboutUs: FC = () => {
 	return (

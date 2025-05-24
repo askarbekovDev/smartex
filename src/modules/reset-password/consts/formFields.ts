@@ -1,4 +1,4 @@
-import { FormFieldsType } from '..';
+import { FormFieldsType } from '../types/formFields';
 
 export const FORM_FIELDS: FormFieldsType[] = [
 	{ name: 'password', label: '*Пароль', placeholder: '*Пароль', type: 'password' },

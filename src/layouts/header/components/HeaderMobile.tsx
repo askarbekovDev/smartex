@@ -1,12 +1,14 @@
 'use client';
 
 import clsx from 'clsx';
-import React, { FC, useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { DropDownMenu, MobileNumsMenu, SocialMediaLinks } from '@/layouts/header/components';
+import Link from 'next/link';
+import { FC, useState } from 'react';
 import { BurgerMobile, CloseIconMobile } from '../../../../public/icons';
 import MainLogoImage from '../../../../public/icons/main-logo.svg';
+import { DropDownMenu } from './DropDownMenu';
+import { MobileNumsMenu } from './MobileNumsMenu';
+import { SocialMediaLinks } from './SocialMediaLinks';
 
 export const HeaderMobile: FC = () => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(false);

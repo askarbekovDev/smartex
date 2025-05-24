@@ -1,4 +1,4 @@
-import { IVacancyCardProps } from '../..';
+import { IVacancyCardProps } from '../../types/actualVacancy';
 
 export const ActualVacancyCard = ({ vacancy, handleOpenModal }: IVacancyCardProps) => {
 	return (

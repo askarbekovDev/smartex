@@ -1,4 +1,4 @@
-import { NewsCard } from '@/components';
+import { NewsCard } from '@/components/NewsCard';
 import Image from 'next/image';
 import { Date } from '../../../public/icons';
 

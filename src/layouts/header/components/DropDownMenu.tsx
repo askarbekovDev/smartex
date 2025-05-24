@@ -1,11 +1,11 @@
 'use client';
 
+import { Backdrop } from '@/UI/Backdrop';
+import { headerNavLinks } from '@/utils/constants/headerNav';
 import clsx from 'clsx';
 import Link from 'next/link';
 import React, { FC, useEffect } from 'react';
 import { CloseIconTablet } from '../../../../public/icons';
-import { headerNavLinks } from '@/utils/constants/headerNav';
-import { Backdrop } from '@/UI';
 
 type DropDownMenuProps = {
 	menuOpen: boolean;

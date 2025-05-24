@@ -1,5 +1,6 @@
 import { CommonModal } from '@/UI/modal/CommonModal';
-import { VacancyModalForm, VacancyModalProps } from '../..';
+import { VacancyModalProps } from '../../types/vacancyModal';
+import { VacancyModalForm } from '../form/VacancyModalForm';
 
 export const VacancyModal = ({ title, feedbackOpen, setFeedbackOpen }: VacancyModalProps) => {
 	return (

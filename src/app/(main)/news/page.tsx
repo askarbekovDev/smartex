@@ -1,4 +1,5 @@
-import { NewsIntro, NewsRoom } from '@/modules';
+import { NewsIntro } from '@/modules/news-intro';
+import { NewsRoom } from '@/modules/news-room';
 
 const News = () => {
 	return (

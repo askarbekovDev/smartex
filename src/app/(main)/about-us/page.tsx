@@ -1,5 +1,8 @@
-import React, { FC } from 'react';
-import { IntroAboutUs, SmartexTeam, CompanyStorySection, WhySmartexSection } from '@/modules';
+import { CompanyStorySection } from '@/modules/company-story';
+import { IntroAboutUs } from '@/modules/intro-about-us';
+import { SmartexTeam } from '@/modules/smartex-team';
+import { WhySmartexSection } from '@/modules/why-smartex';
+import { FC } from 'react';
 
 const AboutUs: FC = () => {
 	return (

@@ -1,4 +1,4 @@
-import { StatisticsWrapper } from '@/UI';
+import { StatisticsWrapper } from '@/UI/StatisticsWrapper';
 import Image from 'next/image';
 import { CornerSmoother } from '../../../public/icons';
 

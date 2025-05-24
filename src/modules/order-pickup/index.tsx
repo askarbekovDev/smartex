@@ -1,10 +1,10 @@
 'use client';
 
-import { ToggleButton } from '@/UI';
-import React, { FC, useState } from 'react';
+import { ToggleButton } from '@/UI/ToglleButton';
+import { FC, useState } from 'react';
 import { AllPickUpPoints, FreeDeliveryBish } from './components';
-import { OrderPickUpContentType } from './types';
 import { FreeDeliverySmartex } from './components/FreeDeliverySmartex';
+import { OrderPickUpContentType } from './types';
 
 export const OrderPickUp: FC = () => {
 	const [content, setContent] = useState<OrderPickUpContentType>('Пункты выдачи');

@@ -1,5 +1,6 @@
-import { HeaderDesktop, HeaderMobile } from '@/layouts/header/components';
-import React, { FC } from 'react';
+import { FC } from 'react';
+import { HeaderDesktop } from './components/HeaderDesktop';
+import { HeaderMobile } from './components/HeaderMobile';
 
 export const Header: FC = () => {
 	return (

@@ -1,5 +1,7 @@
-import { AuthHeadLine, RegisterAddressLeftBlock, RegsiterDesktopLeftBlock } from '@/components';
-import { LoginForm } from '../..';
+import { RegisterAddressLeftBlock } from '@/components/auth/RegisterAddressLeftBlock';
+import { RegsiterDesktopLeftBlock } from '@/components/auth/RegsiterDesktopLeftBlock';
+import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
+import { LoginForm } from '../form/LoginForm';
 
 export const LoginSection = () => {
 	return (

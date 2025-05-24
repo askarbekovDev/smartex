@@ -1,13 +1,11 @@
-import Link from 'next/link';
-import React, { FC } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FC } from 'react';
 import MainLogoImage from '../../../../public/icons/main-logo.svg';
-import {
-	BurgerMenu,
-	MobileNumsMenu,
-	NavLinks,
-	SocialMediaLinks,
-} from '@/layouts/header/components';
+import { BurgerMenu } from './BurgerMenu';
+import { MobileNumsMenu } from './MobileNumsMenu';
+import { NavLinks } from './NavLinks';
+import { SocialMediaLinks } from './SocialMediaLinks';
 
 export const HeaderDesktop: FC = () => {
 	return (

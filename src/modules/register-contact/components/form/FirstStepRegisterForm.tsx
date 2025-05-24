@@ -1,6 +1,6 @@
 'use client';
 
-import { Input } from '@/UI';
+import { Input } from '@/UI/Input';
 import { NextButton } from '@/UI/NextButton';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';

@@ -1,6 +1,8 @@
-import { AuthHeadLine, RegisterAddressLeftBlock, Wizard } from '@/components';
+import { RegisterAddressLeftBlock } from '@/components/auth/RegisterAddressLeftBlock';
+import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
+import { Wizard } from '@/components/wizard-step/Wizard';
 import { WIZARD_STEP_DATA } from '@/utils/constants/wizardStep';
-import { RegisterAddressForm } from '../..';
+import { RegisterAddressForm } from '../form/RegisterAddressForm';
 
 export const RegisterAddressSection = () => {
 	return (

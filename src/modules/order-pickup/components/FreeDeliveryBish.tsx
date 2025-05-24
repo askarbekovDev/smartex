@@ -1,11 +1,11 @@
 'use client';
 
-import { YandexMap } from '@/components';
-import React, { FC, useState } from 'react';
-import { regions } from '../bigRegionsData';
+import { YandexMap } from '@/components/YandexMap';
 import clsx from 'clsx';
-import { PointMenuMobile } from './index';
+import { FC, useState } from 'react';
+import { regions } from '../bigRegionsData';
 import { OrderPickUpContentType } from '../types';
+import { PointMenuMobile } from './index';
 
 type FreeDeliveryProps = {
 	content: OrderPickUpContentType;

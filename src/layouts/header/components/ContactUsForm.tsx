@@ -6,7 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import clsx from 'clsx';
 import { CloseIconTablet, MailIcon } from '../../../../public/icons';
-import { Backdrop, CustomInput } from '@/UI';
+import { Backdrop } from '@/UI/Backdrop';
+import { CustomInput } from '@/UI/CustomInput';
 
 const formSchema = z.object({
 	fullName: z.string().min(3, 'Введите полное имя'),

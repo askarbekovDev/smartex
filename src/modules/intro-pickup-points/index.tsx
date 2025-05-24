@@ -1,7 +1,7 @@
-import { StatisticsWrapper } from '@/UI';
-import React, { FC } from 'react';
-import { CornerSmoother } from '../../../public/icons';
+import { StatisticsWrapper } from '@/UI/StatisticsWrapper';
 import Image from 'next/image';
+import { FC } from 'react';
+import { CornerSmoother } from '../../../public/icons';
 
 export const IntroPickupPoints: FC = () => {
 	return (

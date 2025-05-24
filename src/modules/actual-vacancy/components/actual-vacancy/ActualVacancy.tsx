@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
 import { Loader } from '@/UI/loader/Loader';
-import { ACTUAL_VACANCY, ActualVacancyCard } from '../..';
+import dynamic from 'next/dynamic';
+import { useState } from 'react';
+import { ACTUAL_VACANCY } from '../../consts/actualVacancy';
+import { ActualVacancyCard } from '../vacancy-card/ActualVacancyCard';
 
 const VacancyModal = dynamic(
 	() => import('../vacancy-modal/VacancyModal').then((mod) => mod.VacancyModal),

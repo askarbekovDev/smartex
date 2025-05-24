@@ -1,7 +1,7 @@
-import { Pagination } from '@/UI';
+import { Pagination } from '@/UI/Pagination';
 import clsx from 'clsx';
 import Image from 'next/image';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { CornerSmoother } from '../../../../public/icons';
 import { SmartexTeamContentType } from '../types';
 
