@@ -1,12 +1,10 @@
 'use client';
 
-import {
-	AnimationRoad,
-	DesctopDownload,
-	FooterLinks,
-	LegalLinks,
-	MobileDownload,
-} from './components';
+import { AnimationRoad } from './components/AnimationRoad';
+import { DesctopDownload } from './components/DesctopDownload';
+import { FooterLinks } from './components/FooterLinks';
+import { LegalLinks } from './components/LegalLinks';
+import { MobileDownload } from './components/MobileDownload';
 
 export const Footer = () => {
 	return (

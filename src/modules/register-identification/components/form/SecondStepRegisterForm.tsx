@@ -7,7 +7,8 @@ import { PrevButton } from '@/UI/PrevButton';
 import { Select } from '@/UI/Select';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
-import { RequirementInfo, secondStepSchema, SecondStepSchema } from '../..';
+import { secondStepSchema, SecondStepSchema } from '../../schemas/form.schema';
+import { RequirementInfo } from '../requirement-info/RequirementInfo';
 
 export const SecondStepRegisterForm = () => {
 	const {

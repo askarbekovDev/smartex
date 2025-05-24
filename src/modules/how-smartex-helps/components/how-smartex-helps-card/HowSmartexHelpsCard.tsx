@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { HowSmartexHelpsCardProps } from '../..';
+import { HowSmartexHelpsCardProps } from '../../types/how-smartex-helps/howSmartexHelps';
 
 export const HowSmartexHelpsCard = ({ el, index }: HowSmartexHelpsCardProps) => {
 	return (

@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { FC, useState } from 'react';
 import { regions } from '../bigRegionsData';
 import { OrderPickUpContentType } from '../types';
-import { PointMenuMobile } from './index';
+import { PointMenuMobile } from './PointMenuMobile';
 
 type FreeDeliveryProps = {
 	content: OrderPickUpContentType;

@@ -1,4 +1,4 @@
-import { FormFieldsType } from '..';
+import { FormFieldsType } from '../types/registeContactForm';
 
 export const FIELDS: FormFieldsType[] = [
 	{ name: 'lastName', label: '*Фамилия', placeholder: '*Фамилия', type: 'text' },

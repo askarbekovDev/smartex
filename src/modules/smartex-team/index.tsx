@@ -7,7 +7,9 @@ import {
 	socialResponsibilityContent,
 } from '@/utils/constants/headerNav';
 import { FC, useState } from 'react';
-import { OurEmployees, OurTeam, SocialResponsibility } from './components';
+import { OurEmployees } from './components/OurEmployees';
+import { OurTeam } from './components/OurTeam';
+import { SocialResponsibility } from './components/SocialResponsibility';
 import { SmartexTeamContentType } from './types';
 
 export const SmartexTeam: FC = () => {

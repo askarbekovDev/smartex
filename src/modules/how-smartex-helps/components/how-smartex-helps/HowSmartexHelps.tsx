@@ -1,4 +1,5 @@
-import { HowSmartexHelpsCard, SMARTEX_HELPS } from '../..';
+import { SMARTEX_HELPS } from '../../consts/smartexHelps';
+import { HowSmartexHelpsCard } from '../how-smartex-helps-card/HowSmartexHelpsCard';
 
 export const HowSmartexHelps = () => {
 	return (

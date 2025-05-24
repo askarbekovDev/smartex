@@ -5,7 +5,9 @@ import clsx from 'clsx';
 import { FC, useState } from 'react';
 import { regions } from '../bigRegionsData';
 import { OrderPickUpContentType } from '../types';
-import { PointMenu, RegionsMenu, RegionsMenuMobile } from './index';
+import { PointMenu } from './PointMenu';
+import { RegionsMenu } from './RegionsMenu';
+import { RegionsMenuMobile } from './RegionsMenuMobile';
 
 type AllPickUpProps = {
 	content: OrderPickUpContentType;

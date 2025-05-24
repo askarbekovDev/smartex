@@ -4,7 +4,8 @@ import { Input } from '@/UI/Input';
 import { NextButton } from '@/UI/NextButton';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
-import { FIELDS, RegisterFormType, registerSchema } from '../..';
+import { FIELDS } from '../../consts/formFields';
+import { RegisterFormType, registerSchema } from '../../schemas/form.schema';
 
 export const FirstStepRegisterForm = () => {
 	const {

@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
+import { useEffect } from 'react';
+import { ArrowIconDescripton } from '../../../public/icons';
 import DontIcon from '../../../public/icons/dont-icon.svg';
 import FaqIcon from '../../../public/icons/faq-icon.svg';
-import { ArrowIconDescripton } from '../../../public/icons';
-import { useEffect } from 'react';
 
 type SelectFaqProps = {
 	title?: string;

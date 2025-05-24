@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import React, { FC, useState } from 'react';
 import { ArrowDropDown } from '../../../../public/icons';
-import clsx from 'clsx';
-import { RegionsType } from '../types';
 import { regions } from '../bigRegionsData';
+import { RegionsType } from '../types';
 
 type RegionsMenuProps = {
 	isMenuOpen: boolean;
