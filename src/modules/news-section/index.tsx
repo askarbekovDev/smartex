@@ -1,4 +1,4 @@
-import { NewsCard } from '@/components';
+import { NewsCard } from '@/components/NewsCard';
 
 export const NewsSection = () => {
 	return (

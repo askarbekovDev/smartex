@@ -1,5 +1,6 @@
-import { RegsiterDesktopLeftBlock, Wizard } from '@/components';
+import { RegsiterDesktopLeftBlock } from '@/components/auth/RegsiterDesktopLeftBlock';
 import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
+import { Wizard } from '@/components/wizard-step/Wizard';
 import { WIZARD_STEP_DATA } from '@/utils/constants/wizardStep';
 import { FirstStepRegisterForm } from '../..';
 

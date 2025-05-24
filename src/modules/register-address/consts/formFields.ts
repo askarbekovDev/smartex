@@ -1,4 +1,4 @@
-import { FormFields } from '..';
+import { FormFields } from '../types/formFields';
 
 export const FIELDS: FormFields[] = [
 	{ name: 'cityAndVilage', label: '*Город/село', placeholder: '*Город/село', type: 'text' },

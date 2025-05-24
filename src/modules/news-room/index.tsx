@@ -1,5 +1,6 @@
-import { NewsCard } from '@/components';
-import { Pagination, ToggleButton } from '@/UI';
+import { NewsCard } from '@/components/NewsCard';
+import { Pagination } from '@/UI/Pagination';
+import { ToggleButton } from '@/UI/ToglleButton';
 
 export const NewsRoom = () => {
 	return (

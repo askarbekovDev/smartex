@@ -1,4 +1,4 @@
-import { FormFields } from '..';
+import { FormFields } from '../types/formFields';
 
 export const FORM_FIELDS: FormFields[] = [
 	{ name: 'email', label: '*Почта', placeholder: '*E-mail адрес', type: 'email' },

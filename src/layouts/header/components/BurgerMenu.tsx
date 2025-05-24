@@ -1,8 +1,7 @@
 'use client';
 
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { BurgerTablet } from '../../../../public/icons';
-import { Backdrop } from '@/UI/Backdrop';
 import { DropDownMenu } from './DropDownMenu';
 
 export const BurgerMenu: FC = () => {

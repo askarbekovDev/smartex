@@ -1,12 +1,10 @@
 'use client';
 
-import { Backdrop } from '@/UI';
-import clsx from 'clsx';
-import React, { useEffect } from 'react';
-import { CloseIconTablet } from '../../../public/icons';
+import { useEffect } from 'react';
+import { Backdrop } from '../Backdrop';
 import { IModalProps } from './modal.types';
 
-export const CommonModal = ({feedbackOpen, setFeedbackOpen, children }: IModalProps) => {
+export const CommonModal = ({ feedbackOpen, setFeedbackOpen, children }: IModalProps) => {
 	useEffect(() => {
 		const handleBackButton = () => {
 			setFeedbackOpen(false);
@@ -24,7 +22,7 @@ export const CommonModal = ({feedbackOpen, setFeedbackOpen, children }: IModalPr
 	return (
 		<>
 			<Backdrop isOpen={feedbackOpen} setIsOpen={setFeedbackOpen} increaseZ={true} />
-			{ children }
+			{children}
 		</>
 	);
 };

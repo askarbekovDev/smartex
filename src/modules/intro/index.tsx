@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React, { FC } from 'react';
 import { CornerSmoother } from '../../../public/icons';
-import { StatisticsWrapper } from '@/UI';
 import Link from 'next/link';
+import { StatisticsWrapper } from '@/UI/StatisticsWrapper';
 
 export const IntroSection: FC = () => {
 	return (

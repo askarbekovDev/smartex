@@ -1,7 +1,7 @@
 'use client';
-import { ToggleButton } from '@/UI';
 import { ScrollBar } from '@/UI/scroll-bar/ScrollBar';
 import { SelectFaq } from '@/UI/select-faq';
+import { ToggleButton } from '@/UI/ToglleButton';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import { SHOPS_ITEMS } from '../../consts/shopsItem';

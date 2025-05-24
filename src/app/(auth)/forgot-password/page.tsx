@@ -1,4 +1,4 @@
-import { ForgotPasswordSection } from '@/modules';
+import { ForgotPasswordSection } from '@/modules/forgot-password/components/forgot-password/ForgotPassword';
 
 const ForgotPassword = () => {
 	return <ForgotPasswordSection />;

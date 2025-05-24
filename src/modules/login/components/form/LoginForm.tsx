@@ -1,12 +1,14 @@
 'use client';
 
-import { Input } from '@/UI';
 import { Button } from '@/UI/Button';
 import Checkbox from '@/UI/Checkbox';
+import { Input } from '@/UI/Input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
 import { Controller, useForm } from 'react-hook-form';
-import { FORM_FIELDS, LoginFormType, loginSchema } from '../..';
+import { FORM_FIELDS } from '../../consts/formFields';
+import type { LoginFormType } from '../../schemas/login.schema';
+import { loginSchema } from '../../schemas/login.schema';
 
 export const LoginForm = () => {
 	const {

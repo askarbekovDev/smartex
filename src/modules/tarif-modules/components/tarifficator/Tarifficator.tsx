@@ -1,12 +1,12 @@
 'use client';
 
-import { ToggleButton } from '@/UI';
-import React, { useState } from 'react';
-import { TarifSection } from '../tarif';
-import { ProhibitedGoods } from '@/modules';
-import { WeightCalculation } from '../weight-calculation';
+import { ProhibitedGoods } from '@/modules/prohibited-goods/components/prohibited-goods/ProhibitedGoods';
 import { TariffBlockType } from '@/modules/smartex-team/types';
+import { ToggleButton } from '@/UI/ToglleButton';
+import { useState } from 'react';
 import { ShippingCalculator } from '../shipping-calculator';
+import { TarifSection } from '../tarif';
+import { WeightCalculation } from '../weight-calculation';
 
 export const Tarifficator = () => {
 	const [content, setContent] = useState<TariffBlockType>('Тарифы');

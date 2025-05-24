@@ -1,13 +1,13 @@
 'use client';
 
-import { WhatWeDoCard } from '@/components';
-import { ToggleButton } from '@/UI';
+import { WhatWeDoCard } from '@/components/WhatWeDoCard';
+import { ToggleButton } from '@/UI/ToglleButton';
 import {
 	companyHystoryContent,
 	ourMissionContent,
 	overseasWarehousesContent,
 } from '@/utils/constants/headerNav';
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { WhatWeDoBlockContType } from '../smartex-team/types';
 
 export const CompanyStorySection: FC = () => {

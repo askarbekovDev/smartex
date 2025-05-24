@@ -1,12 +1,13 @@
 'use client';
 
-import { Input } from '@/UI';
 import { Button } from '@/UI/Button';
 import Checkbox from '@/UI/Checkbox';
+import { Input } from '@/UI/Input';
 import { PrevButton } from '@/UI/PrevButton';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
-import { FIELDS, registerAddressSchema, RegisterFormType } from '../..';
+import { FIELDS } from '../../consts/formFields';
+import { registerAddressSchema, RegisterFormType } from '../../schemas/form.schema';
 
 export const RegisterAddressForm = () => {
 	const {

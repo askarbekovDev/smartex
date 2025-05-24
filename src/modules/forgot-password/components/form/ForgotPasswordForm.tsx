@@ -1,10 +1,10 @@
 'use client';
 
-import { Input } from '@/UI';
 import { Button } from '@/UI/Button';
+import { Input } from '@/UI/Input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
-import { ForgotPasswordFormType, forgotPasswordSchema } from '../..';
+import { ForgotPasswordFormType, forgotPasswordSchema } from '../../schemas/forgotPassword.schema';
 
 export const ForgotPasswordForm = () => {
 	const {

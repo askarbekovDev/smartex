@@ -1,4 +1,4 @@
-import { CustomInput } from '@/UI';
+import { CustomInput } from '@/UI/CustomInput';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Shirina from '../../../../../public/icons/shirina-icon.svg';

@@ -1,4 +1,5 @@
-import { ActualVacancy, VacancyIntro } from '@/modules';
+import { ActualVacancy } from '@/modules/actual-vacancy/components/actual-vacancy/ActualVacancy';
+import { VacancyIntro } from '@/modules/vacancy-intro';
 
 const Vacancy = () => {
 	return (

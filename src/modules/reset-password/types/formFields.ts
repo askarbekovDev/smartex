@@ -1,4 +1,4 @@
-import { ResetPasswordFormType } from '..';
+import { ResetPasswordFormType } from '../schemas/ResetPassword.schema';
 
 export type FormFieldsType = {
 	name: keyof ResetPasswordFormType;

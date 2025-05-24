@@ -1,7 +1,7 @@
 'use client';
 
-import { Input } from '@/UI';
 import { FileUpload } from '@/UI/FileUpload';
+import { Input } from '@/UI/Input';
 import { NextButton } from '@/UI/NextButton';
 import { PrevButton } from '@/UI/PrevButton';
 import { Select } from '@/UI/Select';

@@ -1,14 +1,15 @@
 'use client';
 
-import { Input } from '@/UI';
 import { FileUpload } from '@/UI/FileUpload';
+import { Input } from '@/UI/Input';
 import { Textarea } from '@/UI/Textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
 import clsx from 'clsx';
 import { Controller, useForm } from 'react-hook-form';
-import { FIELDS, IVacancyFormProps } from '../..';
 import { CloseIconTablet } from '../../../../../public/icons';
+import { FIELDS } from '../../consts/formFields';
 import { VacancyFormData, vacancyFormSchema } from '../../schemas/form-schema';
+import { IVacancyFormProps } from '../../types/actualVacancy';
 
 export const VacancyModalForm = ({ title, feedbackOpen, setFeedbackOpen }: IVacancyFormProps) => {
 	const {

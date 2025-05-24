@@ -1,4 +1,4 @@
-import { StatisticsWrapper } from '@/UI';
+import { StatisticsWrapper } from '@/UI/StatisticsWrapper';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { FC } from 'react';

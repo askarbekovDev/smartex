@@ -1,12 +1,12 @@
 'use client';
 
-import { ToggleButton } from '@/UI';
+import { ToggleButton } from '@/UI/ToglleButton';
 import {
 	employeesContent,
 	smartexTeamContent,
 	socialResponsibilityContent,
 } from '@/utils/constants/headerNav';
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { OurEmployees, OurTeam, SocialResponsibility } from './components';
 import { SmartexTeamContentType } from './types';
 

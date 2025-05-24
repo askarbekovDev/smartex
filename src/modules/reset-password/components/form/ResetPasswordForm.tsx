@@ -1,10 +1,11 @@
 'use client';
 
-import { Input } from '@/UI';
 import { Button } from '@/UI/Button';
+import { Input } from '@/UI/Input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
-import { FORM_FIELDS, ResetPasswordFormType, resetPasswordSchema } from '../..';
+import { FORM_FIELDS } from '../../consts/formFields';
+import { ResetPasswordFormType, resetPasswordSchema } from '../../schemas/ResetPassword.schema';
 
 export const ResetPasswordForm = () => {
 	const {
