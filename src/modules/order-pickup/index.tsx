@@ -2,7 +2,8 @@
 
 import { ToggleButton } from '@/UI/ToglleButton';
 import { FC, useState } from 'react';
-import { AllPickUpPoints, FreeDeliveryBish } from './components';
+import { AllPickUpPoints } from './components/AllPickUpPoints';
+import { FreeDeliveryBish } from './components/FreeDeliveryBish';
 import { FreeDeliverySmartex } from './components/FreeDeliverySmartex';
 import { OrderPickUpContentType } from './types';
 

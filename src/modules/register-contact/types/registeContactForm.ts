@@ -1,4 +1,4 @@
-import { RegisterFormType } from '..';
+import { RegisterFormType } from '../schemas/form.schema';
 
 export type FormFieldsType = {
 	name: keyof RegisterFormType;

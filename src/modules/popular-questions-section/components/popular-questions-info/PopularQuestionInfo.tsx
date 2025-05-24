@@ -1,9 +1,9 @@
 'use client';
 
-import { SelectFaq } from '@/UI/select-faq';
-import React, { useState } from 'react';
-import { POPULAR_QUESTIONS } from '../../consts/popularQuestions';
 import { FaqContent } from '@/components/faq-content/FaqContent';
+import { SelectFaq } from '@/UI/select-faq';
+import { useState } from 'react';
+import { POPULAR_QUESTIONS } from '../../consts/popularQuestions';
 
 export const PopularQuestionInfo = () => {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);

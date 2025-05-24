@@ -1,4 +1,4 @@
-import { REQUIREMENT_INFO_DATA } from '../..';
+import { REQUIREMENT_INFO_DATA } from '../../consts/requirementInfo';
 
 export const RequirementInfo = () => {
 	return (

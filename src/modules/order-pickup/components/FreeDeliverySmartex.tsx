@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { OrderPickUpContentType } from '../types';
 
 type FreeDelSmrtx = {

@@ -2,7 +2,7 @@ import { RegsiterDesktopLeftBlock } from '@/components/auth/RegsiterDesktopLeftB
 import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
 import { Wizard } from '@/components/wizard-step/Wizard';
 import { WIZARD_STEP_DATA } from '@/utils/constants/wizardStep';
-import { FirstStepRegisterForm } from '../..';
+import { FirstStepRegisterForm } from '../form/FirstStepRegisterForm';
 
 export const RegisterContactSection = () => {
 	return (

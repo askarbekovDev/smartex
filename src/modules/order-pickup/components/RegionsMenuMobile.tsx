@@ -1,6 +1,6 @@
+import clsx from 'clsx';
 import React, { FC, useState } from 'react';
 import { ArrowDropDown } from '../../../../public/icons';
-import clsx from 'clsx';
 import { regions } from '../bigRegionsData';
 import { PointMenuMobile } from './PointMenuMobile';
 
@@ -15,10 +15,7 @@ type RegionsMenuMobProps = {
 	setMenuData: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({
-	isMenuOpen,
-	setCenter,
-}) => {
+export const RegionsMenuMobile: FC<RegionsMenuMobProps> = ({ isMenuOpen, setCenter }) => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(isMenuOpen);
 	const [pickPoints, setPickPoints] = useState<
 		| {

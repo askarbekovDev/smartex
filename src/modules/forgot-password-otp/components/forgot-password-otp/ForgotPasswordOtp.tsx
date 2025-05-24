@@ -1,6 +1,6 @@
 import { ForgotPasswordLeftBlock } from '@/components/auth/ForgotPasswordLeftBlock';
 import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
-import { ForgotPasswordOtpForm } from '../..';
+import { ForgotPasswordOtpForm } from '../form/ForgotPasswordOtpForm';
 
 export const ForgotPasswordOtpSection = () => {
 	return (

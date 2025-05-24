@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC } from 'react';
 import { CloseIconTablet, TGisMapRef, WhatsAppIcon, YandexMapRef } from '../../../../public/icons';
-import clsx from 'clsx';
 
 type PickMenuProps = {
 	menuData: string;
