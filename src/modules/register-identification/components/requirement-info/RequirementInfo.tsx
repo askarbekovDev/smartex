@@ -1,4 +1,3 @@
-import React from 'react';
 import { REQUIREMENT_INFO_DATA } from '../..';
 
 export const RequirementInfo = () => {

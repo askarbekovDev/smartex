@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import React from 'react';
-import { Date } from '../../../public/icons';
 import { NewsCard } from '@/components';
+import Image from 'next/image';
+import { Date } from '../../../public/icons';
 
 export const NewsDetail = () => {
 	return (

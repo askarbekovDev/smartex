@@ -1,7 +1,6 @@
 import { RegisterDesktopShape } from '@/components/shapes/RegisterDesktopShape';
-import RegisterSmartexAlien from '../../../public/images/register-alien.png';
-import React from 'react';
 import Image from 'next/image';
+import RegisterSmartexAlien from '../../../public/images/register-alien.png';
 
 export const ForgotPasswordLeftBlock = () => {
 	return (

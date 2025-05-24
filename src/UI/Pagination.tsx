@@ -1,6 +1,4 @@
-import React from 'react';
-import { PaginationLeftArrow } from '../../public/icons';
-import { PaginationRightArrow } from '../../public/icons';
+import { PaginationLeftArrow, PaginationRightArrow } from '../../public/icons';
 
 export const Pagination = () => {
 	return (

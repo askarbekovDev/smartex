@@ -1,4 +1,3 @@
-import React from 'react';
 import { AuthHeadLinePropsType } from '../../utils/constants/headLine';
 
 export const AuthHeadLine = ({ title, firstSubtitle, secondSubtitle }: AuthHeadLinePropsType) => {

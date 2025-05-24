@@ -1,4 +1,3 @@
-import React from 'react';
 import { AuthHeadLine, RegisterAddressLeftBlock, Wizard } from '@/components';
 import { WIZARD_STEP_DATA } from '@/utils/constants/wizardStep';
 import { RegisterAddressForm } from '../..';

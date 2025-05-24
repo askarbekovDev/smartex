@@ -1,8 +1,7 @@
+import { faqContentProps } from '@/types/faqContent';
 import clsx from 'clsx';
 import Image from 'next/image';
-import React from 'react';
 import FaqIcon from '../../../public/icons/faq-icon.svg';
-import { faqContentProps } from '@/types/faqContent';
 
 export const FaqContent = ({ variant, content }: faqContentProps) => {
 	return (

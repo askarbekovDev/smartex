@@ -1,11 +1,11 @@
 'use client';
 import { ToggleButton } from '@/UI';
-import Image from 'next/image';
-import { useRef, useState } from 'react';
-import CategorySelectStyled from '../category-select/CategorySelectStyled';
-import { SHOPS_ITEMS } from '../../consts/shopsItem';
-import { SelectFaq } from '@/UI/select-faq';
 import { ScrollBar } from '@/UI/scroll-bar/ScrollBar';
+import { SelectFaq } from '@/UI/select-faq';
+import Image from 'next/image';
+import React, { useRef, useState } from 'react';
+import { SHOPS_ITEMS } from '../../consts/shopsItem';
+import CategorySelectStyled from '../category-select/CategorySelectStyled';
 import { ShopsItemContent } from '../shops-item-content/ShopsItemContent';
 
 export const SmartexShops = () => {
@@ -28,7 +28,7 @@ export const SmartexShops = () => {
 						className='flex flex-col gap-4 w-full max-h-[500px] max-w-[317px] w750:max-w-full overflow-y-auto hide-native-scrollbar'
 					>
 						{SHOPS_ITEMS.map((question, index) => (
-							<>
+							<React.Fragment key={index}>
 								<SelectFaq
 									key={index}
 									index={index}
@@ -41,7 +41,7 @@ export const SmartexShops = () => {
 									setActiveIndex={setActiveIndex}
 									variant='orange'
 								/>
-							</>
+							</React.Fragment>
 						))}
 					</div>
 					{SHOPS_ITEMS.length > 7 ? <ScrollBar scrollPercent={scrollPercent} /> : ''}

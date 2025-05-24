@@ -1,7 +1,6 @@
 import { StatisticsWrapper } from '@/UI';
-import React from 'react';
-import { CornerSmoother } from '../../../public/icons';
 import Image from 'next/image';
+import { CornerSmoother } from '../../../public/icons';
 
 export const VacancyIntro = () => {
 	return (

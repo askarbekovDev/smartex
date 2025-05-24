@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowLeft } from '../../public/icons';
 
 export const PrevButton = () => {

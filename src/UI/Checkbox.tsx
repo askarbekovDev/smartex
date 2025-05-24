@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckboxVector } from '../../public/icons';
 
 type CheckboxPropsType = {

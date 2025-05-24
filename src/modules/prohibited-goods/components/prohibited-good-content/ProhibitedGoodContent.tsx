@@ -1,5 +1,3 @@
-import React from 'react';
-
 type Subtitles = {
 	title: Readonly<string>;
 	question: Readonly<string>;

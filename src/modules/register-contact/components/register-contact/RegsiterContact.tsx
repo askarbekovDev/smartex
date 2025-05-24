@@ -1,8 +1,7 @@
-import React from 'react';
-import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
-import { FirstStepRegisterForm } from '../..';
 import { RegsiterDesktopLeftBlock, Wizard } from '@/components';
+import { AuthHeadLine } from '@/components/head-lines/AuthHeadLine';
 import { WIZARD_STEP_DATA } from '@/utils/constants/wizardStep';
+import { FirstStepRegisterForm } from '../..';
 
 export const RegisterContactSection = () => {
 	return (

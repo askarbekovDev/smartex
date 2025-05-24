@@ -1,4 +1,3 @@
-import React from 'react';
 import { AuthHeadLine, RegisterAddressLeftBlock, RegsiterDesktopLeftBlock } from '@/components';
 import { LoginForm } from '../..';
 

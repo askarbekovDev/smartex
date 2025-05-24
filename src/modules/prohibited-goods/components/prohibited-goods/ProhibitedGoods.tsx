@@ -1,10 +1,10 @@
 'use client';
 
+import { ScrollBar } from '@/UI/scroll-bar/ScrollBar';
 import { SelectFaq } from '@/UI/select-faq';
+import clsx from 'clsx';
 import React, { useRef, useState } from 'react';
 import { PROHIBITED_GOODS } from '../../consts/prohibitedGoods';
-import { ScrollBar } from '@/UI/scroll-bar/ScrollBar';
-import clsx from 'clsx';
 import { ProhibitedGoodContent } from '../prohibited-good-content/ProhibitedGoodContent';
 import { ProhibitedGoodMobileContent } from '../prohibited-good-mobile-content/ProhibitedGoodMobileContent';
 
@@ -27,7 +27,7 @@ export const ProhibitedGoods = () => {
 						)}
 					>
 						{PROHIBITED_GOODS.map((question, index) => (
-							<>
+							<React.Fragment key={index}>
 								<SelectFaq
 									key={index}
 									index={index}
@@ -45,7 +45,7 @@ export const ProhibitedGoods = () => {
 										subtitles={question.subtitles}
 									/>
 								)}
-							</>
+							</React.Fragment>
 						))}
 					</div>
 					{PROHIBITED_GOODS.length > 7 ? <ScrollBar scrollPercent={scrollPercent} /> : ''}
