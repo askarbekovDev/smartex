@@ -1,4 +1,3 @@
-import React from 'react';
 import { HowSmartexHelpsCard, SMARTEX_HELPS } from '../..';
 
 export const HowSmartexHelps = () => {

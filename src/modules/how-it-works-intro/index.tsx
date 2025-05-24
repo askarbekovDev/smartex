@@ -1,8 +1,7 @@
 import { StatisticsWrapper } from '@/UI';
 import Image from 'next/image';
-import React from 'react';
-import { CornerSmoother, PlayIcon } from '../../../public/icons';
 import Link from 'next/link';
+import { CornerSmoother, PlayIcon } from '../../../public/icons';
 
 export const HowItWorksIntro = () => {
 	return (

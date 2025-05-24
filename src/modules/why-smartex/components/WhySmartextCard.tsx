@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import { WhySmartexCardProps } from '../why-smartext.types';
 
 export const WhySmartexCard = ({ el }: WhySmartexCardProps) => {

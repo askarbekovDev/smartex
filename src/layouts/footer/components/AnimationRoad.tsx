@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
 import AirPlane from '../../../../public/images/air-plane.png';
 import Line from '../../../../public/images/line.png';
 

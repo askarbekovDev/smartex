@@ -1,6 +1,5 @@
-import React from 'react';
-import clsx from 'clsx';
 import { WizardPropsType } from '@/types/wizardStep';
+import clsx from 'clsx';
 
 export const Wizard = ({ position, wizardStepData }: WizardPropsType) => {
 	return (

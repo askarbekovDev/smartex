@@ -1,7 +1,6 @@
-import React from 'react';
 import { IFooterLink, IFooterLinks } from './footer.types';
 
-export const FooterNav = ({ section }: {section: IFooterLinks}) => {
+export const FooterNav = ({ section }: { section: IFooterLinks }) => {
 	return (
 		<div>
 			<p className='h6 text-white mb-2'>{section.title}</p>

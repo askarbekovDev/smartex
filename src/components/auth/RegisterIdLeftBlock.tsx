@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import React from 'react';
-import AstronautGreenAlien from '../../../public/images/astronaut-green-alien.png';
 import { RegisterIdShape } from '@/components/shapes/RegisterIdShape';
+import Image from 'next/image';
+import AstronautGreenAlien from '../../../public/images/astronaut-green-alien.png';
 
 export const RegisterIdLeftBlock = () => {
 	return (

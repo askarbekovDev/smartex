@@ -1,4 +1,3 @@
-import React from 'react';
 import { IVacancyCardProps } from '../..';
 
 export const ActualVacancyCard = ({ vacancy, handleOpenModal }: IVacancyCardProps) => {

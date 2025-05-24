@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import React from 'react';
+import { Call, Location } from '../../../../public/icons';
 import SmartexLogo from '../../../../public/icons/smartex-logo.svg';
 import SmartexText from '../../../../public/icons/smartex-text.svg';
-import { Call, Location } from '../../../../public/icons';
 import { FooterNav } from './FooterNav';
 
 export const footerLinks = [

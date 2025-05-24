@@ -1,8 +1,7 @@
-import Image from 'next/image';
-import React from 'react';
-import AddressRegAlien from '@/../public/images/address-reg-alien.png';
 import AddressRegAlienMob from '@/../public/images/address-reg-alien-mob.png';
+import AddressRegAlien from '@/../public/images/address-reg-alien.png';
 import { ThirdShape } from '@/components/shapes/ThirdShape';
+import Image from 'next/image';
 
 export const RegisterAddressLeftBlock = () => {
 	return (

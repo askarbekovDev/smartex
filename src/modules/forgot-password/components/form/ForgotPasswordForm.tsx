@@ -1,10 +1,9 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
 import { Input } from '@/UI';
 import { Button } from '@/UI/Button';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Controller, useForm } from 'react-hook-form';
 import { ForgotPasswordFormType, forgotPasswordSchema } from '../..';
 
 export const ForgotPasswordForm = () => {

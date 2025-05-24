@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import AppStore from '../../../../public/icons/app-store.svg';
 import Left from '../../../../public/icons/arrow-left-icon.svg';
 import Right from '../../../../public/icons/arrow-right-icon.svg';

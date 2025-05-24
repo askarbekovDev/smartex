@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import React from 'react';
-import RegisterSmartexAlien from '../../../public/images/register-alien.png';
 import { RegisterDesktopShape } from '@/components/shapes/RegisterDesktopShape';
+import Image from 'next/image';
+import RegisterSmartexAlien from '../../../public/images/register-alien.png';
 
 export const RegsiterDesktopLeftBlock = () => {
 	return (

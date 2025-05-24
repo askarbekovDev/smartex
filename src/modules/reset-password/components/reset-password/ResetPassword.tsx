@@ -1,4 +1,3 @@
-import React from 'react';
 import { AuthHeadLine, ForgotPasswordLeftBlock } from '@/components';
 import { ResetPasswordForm } from '../..';
 

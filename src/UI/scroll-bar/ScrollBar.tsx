@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const ScrollBar = ({ scrollPercent }: { scrollPercent: number }) => {
 	return (
 		<div className='w-[16px] max-h-[500px] flex w750:hidden bg-border relative rounded-[100px] overflow-hidden'>
