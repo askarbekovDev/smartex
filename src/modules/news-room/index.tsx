@@ -1,8 +1,17 @@
+'use client';
+
 import { NewsCard } from '@/components/NewsCard';
 import { Pagination } from '@/UI/Pagination';
 import { ToggleButton } from '@/UI/ToglleButton';
+import { useEffect } from 'react';
 
 export const NewsRoom = () => {
+	useEffect(() => {
+		fetch('/api/news?offset=0')
+			.then((res) => res.json())
+			.then((data) => console.log(data));
+	}, []);
+
 	return (
 		<div className='container'>
 			<div className='pt-[100px] w850:pt-[60px] w650:pt-[86px]'>

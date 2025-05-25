@@ -9,6 +9,8 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@grpc/grpc-js": "^1.13.4",
+		"@grpc/proto-loader": "^0.7.15",
 		"@hookform/resolvers": "^5.0.1",
 		"@pbe/react-yandex-maps": "^1.2.5",
 		"autoprefixer": "^10.4.21",
