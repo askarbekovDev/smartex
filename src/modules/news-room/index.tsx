@@ -6,10 +6,13 @@ import { ToggleButton } from '@/UI/ToglleButton';
 import { useEffect } from 'react';
 
 export const NewsRoom = () => {
+	// Пример из useEffect или сервера
 	useEffect(() => {
-		fetch('/api/news?offset=0')
+		fetch('/api/news')
 			.then((res) => res.json())
-			.then((data) => console.log(data));
+			.then((data) => {
+				console.log('News:', data);
+			});
 	}, []);
 
 	return (
