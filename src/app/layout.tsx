@@ -1,3 +1,4 @@
+import ReduxProvider from '@/provider/ReduxProvider';
 import type { Metadata } from 'next';
 import { Lato, Roboto, Rubik } from 'next/font/google';
 import './globals.css';
@@ -35,7 +36,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${rubik.variable} ${lato.variable} ${roboto.variable} antialiased`}>
-				{children}
+				<ReduxProvider>{children}</ReduxProvider>
 			</body>
 		</html>
 	);

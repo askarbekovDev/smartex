@@ -3,17 +3,10 @@
 import { NewsCard } from '@/components/NewsCard';
 import { Pagination } from '@/UI/Pagination';
 import { ToggleButton } from '@/UI/ToglleButton';
-import { useEffect } from 'react';
+import { useGetNewsQuery } from './api/newsApi';
 
 export const NewsRoom = () => {
-	// Пример из useEffect или сервера
-	useEffect(() => {
-		fetch('/api/news')
-			.then((res) => res.json())
-			.then((data) => {
-				console.log('News:', data);
-			});
-	}, []);
+	const { data } = useGetNewsQuery();
 
 	return (
 		<div className='container'>
@@ -26,8 +19,8 @@ export const NewsRoom = () => {
 						</div>
 					</div>
 					<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
-						{[1, 2, 3, 4, 5, 6].map((el, index) => (
-							<NewsCard key={index} idx={index} />
+						{data?.newsItems.map((el) => (
+							<NewsCard key={el.id} item={el} />
 						))}
 					</div>
 					<div className='mt-10'>
