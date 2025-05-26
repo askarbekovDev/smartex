@@ -1,8 +1,13 @@
+'use client'
+
 import { NewsCard } from '@/components/NewsCard';
 import Image from 'next/image';
 import { Date } from '../../../public/icons';
+import { useGetNewsQuery } from '../news-room/api/newsApi';
 
 export const NewsDetail = () => {
+	const { data } = useGetNewsQuery();
+
 	return (
 		<div className='container'>
 			<div className='pt-[100px] w850:pt-[60px] w650:pt-[86px]'>
@@ -53,8 +58,8 @@ export const NewsDetail = () => {
 						<h2 className='sectionTitle text-primary_text'>Похожие новости</h2>
 					</div>
 					<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
-						{[1, 2, 3].map((el, index) => (
-							<NewsCard key={index} idx={index} />
+						{data?.newsItems.map((el, index) => (
+							<NewsCard key={index} item={el} />
 						))}
 					</div>
 				</div>

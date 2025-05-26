@@ -1,6 +1,11 @@
+'use client'
+
 import { NewsCard } from '@/components/NewsCard';
+import { useGetNewsQuery } from '../news-room/api/newsApi';
 
 export const NewsBlock = () => {
+	const { data } = useGetNewsQuery();
+
 	return (
 		<div className='container'>
 			<div className='py-[100px]'>
@@ -8,8 +13,8 @@ export const NewsBlock = () => {
 					Новости SMARTEX
 				</h2>
 				<div className='grid grid-cols-3 w950:grid-cols-2 w650:grid-cols-1 mt-12 w950:mt-6 gap-6'>
-					{[1, 2, 3].map((el, index) => (
-						<NewsCard key={index} idx={index} />
+					{data?.newsItems.map((el, index) => (
+						<NewsCard key={index} item={el} />
 					))}
 				</div>
 			</div>
