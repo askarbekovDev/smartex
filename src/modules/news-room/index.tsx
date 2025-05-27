@@ -6,7 +6,13 @@ import { ToggleButton } from '@/UI/ToglleButton';
 import { useGetNewsQuery } from './api/newsApi';
 
 export const NewsRoom = () => {
-	const { data } = useGetNewsQuery();
+	const { data, isLoading, error } = useGetNewsQuery();
+
+	if (isLoading) {
+		return <div className='m-auto text-center mt-[100px]'>Загрузка ...</div>;
+	}
+
+	console.log(error, 'error roror');
 
 	return (
 		<div className='container'>

@@ -7,7 +7,7 @@ type CheckboxPropsType = {
 	error?: string;
 };
 
-const Checkbox = ({ name, value, onChange, error }: CheckboxPropsType) => {
+const Checkbox = ({ name, value, onChange }: CheckboxPropsType) => {
 	return (
 		<label className='cursor-pointer'>
 			<input

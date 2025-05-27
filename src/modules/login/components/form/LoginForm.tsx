@@ -9,8 +9,16 @@ import { Controller, useForm } from 'react-hook-form';
 import { FORM_FIELDS } from '../../consts/formFields';
 import type { LoginFormType } from '../../schemas/login.schema';
 import { loginSchema } from '../../schemas/login.schema';
+import { useLoginMutation } from '../../api/loginApi';
+import { useState } from 'react';
+import { showError, showSuccess } from '@/utils/helper/toast';
+import { useRouter } from 'next/navigation';
 
 export const LoginForm = () => {
+	const [isRemember, setIsRemember] = useState<boolean>(false);
+	const [login, { isLoading }] = useLoginMutation();
+	const router = useRouter();
+
 	const {
 		control,
 		handleSubmit,
@@ -19,14 +27,32 @@ export const LoginForm = () => {
 		defaultValues: {
 			email: '',
 			password: '',
-			isRemember: false,
 		},
 		resolver: zodResolver(loginSchema),
 	});
 
-	const onSubmit = (data: LoginFormType) => {
-		console.log('Form Data:', data);
+	const handleSetIsremember = () => {
+		setIsRemember(true);
 	};
+
+	const onSubmit = async (data: LoginFormType) => {
+		const fireBaseToken = process.env.NEXT_PUBLIC_FIREBASE_TOKEN;
+
+		if (!fireBaseToken) {
+			showError('Отсутствует токен Firebase');
+			return;
+		}
+
+		try {
+			const payload = { ...data, fireBaseToken };
+			await login(payload).unwrap();
+			showSuccess('Вы успешно вошли в систему');
+			router.push('/');
+		} catch (err: unknown) {
+			showError(err);
+		}
+	};
+
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
@@ -49,21 +75,17 @@ export const LoginForm = () => {
 				/>
 			))}
 			<div className='w-full flex justify-between items-center'>
-				<Controller
-					name='isRemember'
-					control={control}
-					render={({ field }) => (
-						<div className='flex items-start gap-5 w450:gap-0'>
-							<Checkbox {...field} />
-							<p className='bodyText text-primary_text'>Запомнить меня</p>
-						</div>
-					)}
-				/>
+				<div className='flex items-start gap-5 w450:gap-0'>
+					<Checkbox name='isRemember' value={isRemember} onChange={handleSetIsremember} />
+					<p className='bodyText text-primary_text'>Запомнить меня</p>
+				</div>
 				<Link href='/forgot-password' className='bodyText text-primary_text'>
 					Забыли пароль?
 				</Link>
 			</div>
-			<Button>Войти</Button>
+			<Button isLoading={isLoading} isDisabled={isLoading}>
+				Войти
+			</Button>
 		</form>
 	);
 };

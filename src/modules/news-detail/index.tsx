@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { NewsCard } from '@/components/NewsCard';
 import Image from 'next/image';
@@ -6,7 +6,11 @@ import { Date } from '../../../public/icons';
 import { useGetNewsQuery } from '../news-room/api/newsApi';
 
 export const NewsDetail = () => {
-	const { data } = useGetNewsQuery();
+	const { data, isLoading } = useGetNewsQuery();
+
+	if (isLoading) {
+		return <div className='m-auto text-center mt-[100px]'>Загрузка ...</div>;
+	}
 
 	return (
 		<div className='container'>

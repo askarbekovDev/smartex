@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Date } from '../../public/icons';
+import { getImageSrc } from '@/utils/helper/getImageSrc';
 
 type NewsCardProps = {
 	item: New;
@@ -12,22 +13,18 @@ type NewsCardProps = {
 export const NewsCard = ({ item }: NewsCardProps) => {
 	const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
+	const imgSrc = getImageSrc(item.img);
+
 	const handleExpand = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
 		e.stopPropagation();
 		setIsExpanded(!isExpanded);
 	};
 
 	return (
-		<Link
-			href={'/news/1'}
-			className={`w-full rounded-[16px] bg-white overflow-hidden ${
-				item.id === 2 ? 'w950:hidden' : ''
-			}`}
-		>
+		<Link href={'/news/1'} className={`w-full rounded-[16px] bg-white overflow-hidden`}>
 			<div className='w-full h-[200px] rounded-b-[16px] w450:h-[230px] w650:h-[270px] relative overflow-hidden'>
 				<Image
-					src='/images/new-cart-image.jpg'
-					// src={item.img}
+					src={imgSrc}
 					alt='smartex-news-image'
 					width={358}
 					height={353}

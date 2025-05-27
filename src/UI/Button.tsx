@@ -1,28 +1,51 @@
 import clsx from 'clsx';
+import { Spinner } from './Spinner';
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-	variant?: 'primary' | 'secondary' | 'success' | 'error';
-	size?: 'small' | 'medium' | 'large';
+	isLoading?: boolean;
+	isDisabled?: boolean;
+	size?: 'sm' | 'md' | 'lg' | 'mdPlus';
+	variant?: 'primary' | 'secondary' | 'success' | 'error' | 'white';
 };
 
-const buttonVariantMap = {
-	primary: 'bg-primary hover:bg-primary_hover',
-	secondary: 'bg-secondary hover:bg-secondary_hover',
-	success: 'bg-success hover:bg-success_hover',
-	error: 'bg-error hover:bg-error_hover',
+const variantMap = {
+	error: 'bg-error hover:bg-error_hover text-white',
+	primary: 'bg-primary hover:bg-primary_hover text-white',
+	success: 'bg-success hover:bg-success_hover text-white',
+	secondary: 'bg-secondary hover:bg-secondary_hover text-white',
+	white: 'hover:bg-white_hover border-border',
 } as const;
 
-const buttonSizeMap = {
-	small: 'rounded px-5 py-[0.625rem] font-normal text-[0.813rem] leading-4',
-	medium: 'py-[0.875rem] px-4 rounded-lg font-bold leading-[1.25rem]',
-	large: 'py-5 px-[0.625rem] rounded-2xl font-bold leading-[1.25rem]',
+const sizeMap = {
+	mdPlus: 'p-5 rounded-2xl font-bold leading-[1.25rem]',
+	md: 'py-[0.875rem] px-4 rounded-lg font-bold leading-[1.25rem]',
+	lg: 'py-5 px-[0.625rem] rounded-2xl font-bold leading-[1.25rem]',
+	sm: 'px-5 py-[0.625rem] rounded font-normal text-[0.813rem] leading-4',
 } as const;
 
-const baseStyles = 'w-full font-lato text-white duration-300 transition-[background-color]';
+const progressStyles = 'cursor-progress opacity-80';
+const disabledStyles = 'cursor-not-allowed opacity-80';
+const baseStyles = 'w-full border font-lato duration-300 transition';
 
-export const Button = ({ className, ...props }: ButtonProps) => {
-	const variant = buttonVariantMap[props.variant || 'primary'];
-	const size = buttonSizeMap[props.size || 'medium'];
+export const Button = (props: ButtonProps) => {
+	const { children, isLoading, isDisabled, className, ...restProps } = props;
+	const variant = variantMap[restProps.variant || 'primary'];
+	const size = sizeMap[restProps.size || 'md'];
 
-	return <button className={clsx(baseStyles, variant, size, className)} {...props} />;
+	return (
+		<button
+			{...restProps}
+			disabled={isDisabled || isLoading}
+			className={clsx(
+				baseStyles,
+				variant,
+				size,
+				className,
+				{ isLoading: progressStyles },
+				{ isDisabled: disabledStyles }
+			)}
+		>
+			{isLoading ? <Spinner size={restProps.size} variant={restProps.variant} /> : children}
+		</button>
+	);
 };

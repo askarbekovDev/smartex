@@ -4,7 +4,11 @@ import { NewsCard } from '@/components/NewsCard';
 import { useGetNewsQuery } from '../news-room/api/newsApi';
 
 export const NewsSection = () => {
-	const { data } = useGetNewsQuery();
+	const { data, isLoading } = useGetNewsQuery();
+
+	if (isLoading) {
+		return <div className='m-auto text-center mt-[100px]'>Загрузка ...</div>;
+	}
 
 	return (
 		<section className='container'>
