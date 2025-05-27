@@ -1,21 +1,24 @@
-import { Metadata } from '@grpc/grpc-js';
+import { callUnary } from '@/lib/grpc/callUnary';
+import { extractGrpcError, mapGrpcCodeToHttpStatus } from '@/utils/helper/grpcErrorHelpers';
 import { NextResponse } from 'next/server';
-import { newsClient } from '../../../../grpc/client';
+import type { GetNewsRequest, GetNewsResponse } from '@proto/service';
+import { newsClient } from 'grpc/client';
 
 export async function GET() {
-	return new Promise<NextResponse>((resolve, reject) => {
-		const metadata = new Metadata();
+	try {
+		const request: GetNewsRequest = { offset: 0 };
 
-		metadata.add('authorization', 'Bearer q92J5RrweFpnxkZdOdetn0%gHVYBr.b0CnhvQ45Nwb0ViFDeEV');
-		metadata.add('Accept-Language', 'ru');
+		const response = await callUnary<GetNewsRequest, GetNewsResponse>(
+			newsClient.get.bind(newsClient),
+			request
+		);
 
-		newsClient.Get({ offset: 0 }, metadata, (err: any, response: any) => {
-			if (err) {
-				console.error('gRPC error:', err);
-				reject(NextResponse.json({ error: 'Failed to fetch news' }, { status: 500 }));
-			} else {
-				resolve(NextResponse.json(response));
-			}
-		});
-	});
+		return NextResponse.json(response);
+	} catch (error) {
+		const grpcErr = extractGrpcError(error);
+		return NextResponse.json(
+			{ error: 'Ошибка при получении новостей', details: grpcErr.details },
+			{ status: mapGrpcCodeToHttpStatus(grpcErr.code) }
+		);
+	}
 }

@@ -1,26 +1,15 @@
-import * as grpc from '@grpc/grpc-js';
-import * as protoLoader from '@grpc/proto-loader';
+import { credentials } from '@grpc/grpc-js';
+import { AuthClient, NewsClient } from '@proto/service';
 import fs from 'fs';
 import path from 'path';
 
-const PROTO_PATH = path.join(process.cwd(), 'proto/service.proto');
+const HOST = process.env.NEXT_PUBLIC_SERVER_HOST!;
 
-const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
-	keepCase: true,
-	longs: String,
-	enums: String,
-	defaults: true,
-	oneofs: true,
-});
-
-const protoDescriptor = grpc.loadPackageDefinition(packageDefinition) as any;
 const caCert = fs.readFileSync(path.resolve('grpc/certs/ca.crt'));
 const clientCert = fs.readFileSync(path.resolve('grpc/certs/client.crt'));
 const clientKey = fs.readFileSync(path.resolve('grpc/certs/client.key'));
 
-const credentials = grpc.credentials.createSsl(caCert, clientKey, clientCert);
+const sslCreds = credentials.createSsl(caCert, clientKey, clientCert);
 
-export const newsClient = new protoDescriptor.News(
-	process.env.NEXT_PUBLIC_SERVER_HOST,
-	credentials
-);
+export const newsClient = new NewsClient(HOST, sslCreds);
+export const authClient = new AuthClient(HOST, sslCreds);

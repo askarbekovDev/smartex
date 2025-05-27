@@ -2,6 +2,7 @@ import ReduxProvider from '@/provider/ReduxProvider';
 import type { Metadata } from 'next';
 import { Lato, Roboto, Rubik } from 'next/font/google';
 import './globals.css';
+import { ToastProvider } from '@/components/providers/ToastProvider';
 
 const rubik = Rubik({
 	variable: '--font-rubik',
@@ -36,7 +37,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${rubik.variable} ${lato.variable} ${roboto.variable} antialiased`}>
-				<ReduxProvider>{children}</ReduxProvider>
+				<ReduxProvider>
+					{children}
+					<ToastProvider />
+				</ReduxProvider>
 			</body>
 		</html>
 	);

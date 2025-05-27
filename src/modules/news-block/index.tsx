@@ -1,10 +1,16 @@
-'use client'
+'use client';
 
 import { NewsCard } from '@/components/NewsCard';
 import { useGetNewsQuery } from '../news-room/api/newsApi';
 
 export const NewsBlock = () => {
-	const { data } = useGetNewsQuery();
+	const { data, isLoading, error } = useGetNewsQuery();
+
+	if (isLoading) {
+		return <div className='m-auto text-center mt-[100px]'>Загрузка ...</div>;
+	}
+
+	console.log(error, 'error');
 
 	return (
 		<div className='container'>
