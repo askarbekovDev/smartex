@@ -13,6 +13,9 @@ export const SmartexTeam: FC = () => {
 	const [content, setContent] = useState<SmartexTeamContentType>('Наша команда');
 
 	const sectionTitle =
+	const sectionTitle =
+	const sectionTitle =
+	const sectionTitle =
 		content === 'Наша команда'
 			? 'Наша команда SMARTEX'
 			: content === 'Сотрудники'
