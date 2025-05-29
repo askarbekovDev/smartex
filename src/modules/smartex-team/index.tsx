@@ -36,8 +36,6 @@ export const SmartexTeam: FC = () => {
 					setState={setContent}
 				/>
 			</div>
-			</div>
-			</div>
 			<p className='bodyText pt-4 max-w-[558px] w-full'>{contentToAppear}</p>
 			<div className='pt-17 w1150:pt-10 w850:pt-6'>
 				<OurTeam content={content} />
