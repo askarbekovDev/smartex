@@ -25,7 +25,6 @@ export const SmartexTeam: FC = () => {
 			: content === 'Сотрудники'
 			? employeesContent
 			: socialResponsibilityContent;
-			: socialResponsibilityContent;
 
 	return (
 		<section className='container'>
