@@ -41,11 +41,6 @@ export const SmartexTeam: FC = () => {
 				<OurTeam content={content} />
 				<OurEmployees content={content} />
 				<SocialResponsibility content={content} />
-				<SocialResponsibility content={content} />
-				<SocialResponsibility content={content} />
-				<SocialResponsibility content={content} />
-				<SocialResponsibility content={content} />
-				<SocialResponsibility content={content} />
 			</div>
 		</section>
 	);
