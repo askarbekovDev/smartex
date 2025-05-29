@@ -13,9 +13,6 @@ export const SmartexTeam: FC = () => {
 	const [content, setContent] = useState<SmartexTeamContentType>('Наша команда');
 
 	const sectionTitle =
-	const sectionTitle =
-	const sectionTitle =
-	const sectionTitle =
 		content === 'Наша команда'
 			? 'Наша команда SMARTEX'
 			: content === 'Сотрудники'
@@ -38,6 +35,8 @@ export const SmartexTeam: FC = () => {
 					defaultWidth={145}
 					setState={setContent}
 				/>
+			</div>
+			</div>
 			</div>
 			<p className='bodyText pt-4 max-w-[558px] w-full'>{contentToAppear}</p>
 			<div className='pt-17 w1150:pt-10 w850:pt-6'>
