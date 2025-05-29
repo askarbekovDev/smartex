@@ -22,13 +22,6 @@ export const SmartexTeam: FC = () => {
 			? 'Команда SMARTEX'
 			: 'Забота и поддержка с \nSMARTEX';
 
-			const sectionTitle2 =
-		content === 'Наша команда'
-			? 'Наша команда SMARTEX'
-			: content === 'Сотрудники'
-			? 'Команда SMARTEX'
-			: 'Забота и поддержка с \n SMARTEX';
-
 	const contentToAppear =
 		content === 'Наша команда'
 			? smartexTeamContent
